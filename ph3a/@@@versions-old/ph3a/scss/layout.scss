@@ -1,0 +1,625 @@
+
+/**
+*
+* Custom Global CSS
+*
+*/
+
+body{overflow-x:hidden;}
+
+/*Max-size for Container (Override BS)*/
+.container {
+    max-width: 1140px;
+}
+
+/*CSS Global for Link*/
+a{
+    text-decoration:none;
+    color:inherit;
+    transition:color .15s ease-in-out,
+    background-color .15s ease-in-out,
+    border-color .15s ease-in-out;
+    cursor:pointer;
+    &:hover{color:inherit;}
+    
+}
+
+/*CSS Global for Font-Weight*/
+.fw-400{font-weight:400;}
+.fw-500{font-weight:500;}
+.fw-600{font-weight:600;}
+.fw-700{font-weight:700;}
+
+
+
+
+
+/**
+*
+* Menu Navigation
+*
+*/
+
+$menu-size-height:70px; /*Altura do Menu Principal (Alterando aqui, altera no Menu Wrap e no Menu Fixed, e no Head do Menu Mobile*/
+
+
+/*Menu Wrap Sticky*/
+#header-wrap{ 
+    min-height:$menu-size-height; 
+    background-color:transparent;
+    width:100%;
+}
+
+
+/*Menu Principal Navigation*/
+#desktop-menu{
+    position:relative;
+    width:100%;
+    top:0;
+    left:0;
+    background:#fff;
+    min-height:$menu-size-height; 
+    box-shadow:0 2px 4px rgb(3 27 78 / 10%);
+
+        &.fixed{ /*Menu Principal Fixed*/
+            position:fixed;
+            -webkit-box-shadow: 0 2px 4px rgb(3 27 78 / 10%);
+            box-shadow: 0 2px 4px rgb(3 27 78 / 10%);
+            -webkit-animation: navbarFixed 0.8s;
+            animation: navbarFixed 0.8s;
+            z-index:100;
+        }
+
+        .logo{width:95px;height:29px;margin-right:20px;}
+        @media (min-width: 768px) { .logo {width: 105px;height: 32px;margin-right: 20px;} }
+
+        /*Navigation Toggler*/
+        .navbar-toggler{
+            border-color:transparent;border:0;padding:0;margin-right:12px;
+            &:focus{box-shadow:none;}
+        }
+        .navbar-toggler-icon { 
+            width:30px;height:30px;
+            background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgb(0,0,0)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E"); 
+        }
+
+        /*Menu Principal Botões*/
+        .btn-menu-primary, .btn-menu-secondary{   
+            font-family: Montserrat, Arial, sans-serif;
+            font-size: 13px;
+            background: #ef5929;
+            border:1px solid #ef5929;
+            border-radius: 30px;
+            font-weight: 500;
+            color: #fff;
+        }
+
+        .btn-menu-primary{
+            padding:7px 20px 7px;
+            &:hover,&:active,&:focus{color:#fff;background:#ff4408;border-color:#ff4408;}
+        }
+        .btn-menu-secondary{
+            padding: 7px 18px 7px;
+            color:#ef5929;background:none;margin-right:15px;
+            &:hover,&:active,&:focus{color: #fff;background:#ff4408;border-color:#ff4408;}
+        }
+
+
+        /*Menu Principal Links*/
+        ul.navbar-nav {
+            > li.active > a::before {  width: 60%; }
+            > li {
+                margin-left: 35px;
+                &:last-child {  margin-left: 25px; }
+
+                > a {
+                    font-family: Volte, Arial,sans-serif;
+                    font-size: 16px;
+                    font-weight: 500;
+                    line-height: 20px;
+                    color: #1f1845;
+                    padding: 1px 0 0;
+                    position: relative;
+                    display: block;
+                    -webkit-transition: 0.3s ease-in-out;
+                    -o-transition: 0.3s ease-in-out;
+                    transition: 0.3s ease-in-out;
+                        &::before {
+                            position: absolute;
+                            left: 0;
+                            bottom: -5px;
+                            content: "";
+                            height: 3px;
+                            background-color: #ef5929;
+                            -webkit-transition: width 300ms ease-in-out;
+                            -o-transition: width 300ms ease-in-out;
+                            transition: width 300ms ease-in-out;
+                            width: 0;
+                        }
+                        &:hover::before, &:focus::before {width:60%;}
+                }
+            }
+                
+        }
+
+        /*Menu DropDown Links*/
+        ul.dropdown-menu{
+            margin-top:12px;
+            border: 1px solid rgba(0,0,0,0.15);
+            border-radius: 4px;
+            -webkit-box-shadow: 0 6px 12px rgb(0 0 0 / 18%);
+            box-shadow: 0 6px 12px rgb(0 0 0 / 18%);
+
+            a.dropdown-item {
+                font:500 16px system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue","Noto Sans","Liberation Sans",Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
+                color:#444;
+                margin: 5px 0;
+                padding: 0.45rem 1rem;
+                border-radius:0;
+                border-left:5px solid #fff;
+                -webkit-transition: 0.2s ease-in-out;
+                -o-transition: 0.2s ease-in-out;
+                transition: 0.2s ease-in-out;
+
+                &:hover, &:focus{ color: #ff3e00;background-color: #fff;border-left:5px solid #ff3e00;}
+
+
+            }
+
+        }
+            
+}
+/*END Menu Principal Navigation*/
+
+
+/*Menu Animation*/
+@-webkit-keyframes navbarFixed {
+    0% {
+        opacity: 0;
+        -webkit-transform: translateY(-100%);
+        transform: translateY(-100%);
+    }
+
+    100% {
+        opacity: 1;
+        -webkit-transform: translateY(0);
+        transform: translateY(0);
+    }
+    }
+
+    @keyframes navbarFixed {
+    0% {
+        opacity: 0;
+        -webkit-transform: translateY(-100%);
+        transform: translateY(-100%);
+    }
+
+    100% {
+        opacity: 1;
+        -webkit-transform: translateY(0);
+        transform: translateY(0);
+    }
+}
+
+
+
+
+
+/*
+*
+* OffCanvas Menu Mobile
+*
+*/
+#mobile-menu {
+
+    /*
+    *
+    * OffCanvas BootStrap Override Styles
+    *
+    */
+        .offcanvas.offcanvas-start {width: 270px;}
+        .offcanvas-header {height:$menu-size-height;min-height:$menu-size-height;}
+        .offcanvas-body {padding: 1rem 0.5rem; }
+        .btn-close {
+            border-color: transparent;
+            background-size: 14px;
+            opacity:1;
+            &:focus {
+                box-shadow: none;
+            }
+        }
+        .offcanvas-footer {
+            background: #f5f6fa;
+            padding: 18px;
+            border-top: 1px solid #f2f2f2;
+            a {
+                font: 15px "Open Sans",sans-serif;
+                color: #1f1845;
+                &:hover {
+                    text-decoration: underline;
+                }
+                >i {
+                    font-size: 14px;
+                    margin-right: 6px;
+                    margin-left: -15px;
+                }
+            }
+        }
+
+
+
+    /*
+    *
+    * Mobile OffCanvas Menu Custom
+    *
+    */
+        .logo {width: 95px;height: 29px;}
+        .div-cta {
+            background: #f5f7f9;
+            border-top: 1px solid #e9eaec;
+            border-bottom: 1px solid #e9eaec;
+            padding: 0.6rem;
+        }
+        .btn-cta {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            min-height:40px;
+            padding: 8px 20px 9px 8px;
+            padding-left: 10px;
+            width: 95%;
+            max-width: 236px;
+            text-align: center;
+            font: 500 14px/18px 'MontSerrat',Arial,sans-serif;
+            color: #fff !important;
+            text-decoration: none;
+            border-radius: 30px;
+            box-shadow: inset 0 -3px 0 0 rgb(0 0 0 / 5%);
+            background: #ef5929;
+            white-space: nowrap;
+            &:hover {
+                background: #1a1a1a;
+            }
+            .arrow {
+                font-size: 26px;
+            }
+            .space {
+                margin-right: 32px;
+            }
+        }
+}
+
+
+
+
+/*
+*
+* OffCanvas Menu Navigation
+*
+*/
+#mobile-navigation {
+
+
+    /*
+    *
+    * OffCanvas Menu Links
+    *
+    */
+
+        > a {
+            font-family: Volte, sans-serif;
+            font-size: 17px;
+            font-weight: 500;
+            line-height: 20px;
+            color: #1f1845;
+            padding: 12px 15px;
+            position: relative;
+            display: block;
+            -webkit-transition: 0.3s ease-in-out;
+            -o-transition: 0.3s ease-in-out;
+            transition: 0.3s ease-in-out;
+            border-radius: 10px;
+            margin-bottom: 2px;
+            &:hover {
+                background: #f5f6fa;
+            }
+            >i {
+                font-size: 15px;
+                margin-right: 6px;
+            }
+            >span {
+                font-size: 17px;
+                float: right;
+            }
+        }
+        >a.active {
+            background: #f5f6fa;
+        }
+        hr.divider {
+            border-color: #e9eaec;
+            opacity: 1;
+        }
+
+
+        /*
+        *
+        * Menu Mobile OffCanvas DropDown Links
+        *
+        */
+            ul {
+                li {
+                    padding-left: 35px;
+                    position: relative;
+                    a {
+                        display: block;
+                        font: 500 16px Volte, sans-serif;
+                        color: #1f1845;
+                        padding: 16px 6px 8px;
+                        &:hover {
+                            color: #ef5929;
+                        }
+                    }
+                    &::before {
+                        background: #ef5929;
+                        bottom: auto;
+                        content: "";
+                        height: 8px;
+                        left: 24px;
+                        margin-top: 20px;
+                        position: absolute;
+                        right: auto;
+                        width: 8px;
+                        z-index: 1;
+                        border-radius: 50%;
+                    }
+
+
+                    /*<li >Bullets Effect*/
+                    &::after {
+                        border-left: 1px solid #ef5929;
+                        bottom: 0;
+                        content: "";
+                        left: 27px;
+                        position: absolute;
+                        top: 0;
+                    }
+                    &:last-child {
+                        margin-bottom: 10px;
+                        &::after {
+                            bottom: 50%;
+                        }
+                    }
+
+
+                }
+            }
+
+}
+
+
+/*
+*
+* OffCanvas Custom ScrollBar to Mobile Menu (DropDown Navigation)
+*
+*/
+.offcanvas-scrollbar {
+    overflow-y: auto;
+    overflow-y: overlay !important; /* It's hack to bar not take space, if want can keep just auto*/
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+    &::-webkit-scrollbar {
+        width: 0;
+        height: 0;
+        width: 7px;
+    }
+    &::-webkit-scrollbar-track {
+        border-radius: 10px;
+    }
+    &::-webkit-scrollbar-thumb {
+        box-shadow: inset 0 0 5px grey;
+        background: #909090;
+        border-radius: 10px;
+        &:hover {
+            background: #1F2937;
+        }
+    }
+}
+
+
+
+
+
+
+/*
+*
+* Footer
+*
+*/
+.cv-footer {
+
+    /*
+    margin:30px 0 0;
+    @media (min-width: 768px){ margin:60px 0 0; }
+    @media (min-width: 992px){ margin:100px 0 0; }
+    */
+
+    .footer-1 {
+        background: #2C2C2C;
+        border: 1px solid #2C2C2C;
+    }
+    .footer-2 {
+        background: #22242a;
+        border: 1px solid #22242a;
+        >p {
+            font-family: system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue","Noto Sans","Liberation Sans",Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
+            font-size: 13px;
+            color: #fff;
+            opacity: .6;
+            margin: -2px auto 0;
+        }
+    }
+    p {
+        font-family: 'Volte',Arial,sans-serif;
+        color: #fff;
+        font-size: 15px;
+    }
+    span.tags {
+        font-family: 'Volte',Arial,sans-serif;
+        color: #fff;
+        font-size: 16px;
+        font-weight: 500;
+        opacity: .3;
+    }
+    ul {
+        >li {
+            margin-bottom: 10px;
+        }
+        li {
+            >a {
+                font-family: 'Volte',Arial,sans-serif;
+                color: #fff;
+                font-size: 15px;
+                &:hover {
+                    color: #ef5929;
+                }
+            }
+        }
+    }
+}
+.footer-info {
+    max-width: 350px;
+}
+.footer-social {
+    display: flex;
+    flex-direction: row;
+    >a {
+        >i.fab {
+            display: inline-flex;
+            justify-content: center;
+            align-items: center;
+            width: 34px;
+            height: 34px;
+            border-radius: 50%;
+            font-size: 16px;
+            color: #fff;
+            padding: 5px;
+            background: #ef5929;
+            margin-right: 12px;
+            margin-bottom: 10px;
+            cursor: pointer;
+            &:hover {
+                transition: all .2s ease;
+                transform: translate(0,-2px);
+                background: #fff;
+                color: #2C2C2C;
+            }
+        }
+    }
+}
+
+
+
+
+/*
+*
+* Typography to Terms of Service, Privacy and Ethics
+*
+*/
+
+    $tos-title-ff:'Volte',Arial,sans-serif;
+    $tos-title-color:#2c2b2b;
+    $tos-texto-ff:system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue","Noto Sans","Liberation Sans",Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
+    $tos-texto-color:#212529;
+
+    .cv-tos {
+
+        .dash-divider{width:57px;height:6px;background:linear-gradient(90deg, #EE5929  0%, #ff7a00 100%);}
+
+        h1 {
+            font-size: calc(1.375rem + 1.8vw);
+            font-family: $tos-title-ff;
+            color: $tos-title-color;
+            letter-spacing: -1px;
+            font-weight: 600;
+        }
+        h2 {
+            font-size: calc(1.375rem + 1.5vw);
+            font-family: $tos-title-ff;
+            color: $tos-title-color;
+            letter-spacing: -1px;
+            font-weight: 500;
+
+            span{padding: 5px 10px 3px;width: 28px; text-align: left;background: linear-gradient(90deg, #EE5929 0%, #ff7a00 100%);border-radius: 3px;margin-right: 2px;font-size: 18px;color: #fff;vertical-align: 2px;zoom:1.5;}
+            @media (min-width: 768px) { span {zoom:0;} }
+
+
+        }
+        p {
+            font-family: $tos-texto-ff;
+            color: $tos-texto-color;
+            text-align: justify;
+
+            a {
+                color:#e64607;
+                &:hover{text-decoration: underline;}
+            }
+        }
+        @media (min-width: 992px) {
+            h1 {font-size: 1.9rem; }
+            h2 {font-size: 1.5rem; }
+        }
+
+        ol.tos-nav{
+            list-style: none;
+            counter-reset: my-awesome-counter;
+            padding:10px 0 10px;
+
+            li {
+                counter-increment: my-awesome-counter;
+                margin: 0.5rem 0.25rem;
+                @media (min-width: 768px) { margin: 0.25rem; }
+
+
+                &::before {
+                    content: counter(my-awesome-counter);
+                    background: #ef5929;
+                    width: 1.5rem;
+                    height: 1.5rem;
+                    display: inline-block;
+                    line-height: 1.5rem;
+                    color: #fff;
+                    text-align: center;
+                    margin-right: 0.25rem;
+                    font-size: 14px;
+                    border-radius: 2px;
+                }
+
+                a{
+                    color:#212529;
+                    &:hover{text-decoration:underline;color:#ef5929;}
+
+
+                }
+
+            }
+
+           
+        }
+
+
+        ul{
+            padding-left:1rem;
+            li{
+                margin-bottom:5px;
+                max-width:95%;
+
+                a {
+                    color:#e64607;
+                    &:hover{text-decoration: underline;}
+                }
+            }
+        }
+
+        
+    }
+

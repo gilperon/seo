@@ -1,0 +1,536 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PH3 - Site</title>
+
+    <!-- Bootstrap 5.0 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
+
+    <!--Bootstrap Icons (using icons on mobile menu)-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
+
+    <!-- FontAwesome Icons (using icons on footer) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css">
+
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+
+    <!--Volte Font-->
+    <link href="https://fonts.cdnfonts.com/css/volte" rel="stylesheet">
+
+    <!--CSS Global to PH3 Site-->
+    <link rel="stylesheet" href="css/layout.css">
+
+    <!-- JS Global to PH3 Sitet -->
+    <script src="js/global.js"></script>
+
+    <script>
+       /*Inicio das Animacoes para Imgs*/
+        $(document).ready(function() { iniciar_animacao(100,"animated");});
+    </script>
+</head>
+<body>
+
+    <!--Desktop Menu-->
+    <header id="header-wrap">
+    <nav id="desktop-menu" class="navbar">
+
+        <div class="container">
+            <div class="d-flex justify-content-center align-items-center">
+                <!--Toggle-->
+                <button class="navbar-toggler d-flex d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#mobileMenu" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+                <!--Logo-->
+                <a href="#"><img src="images/logo-ph3.webp" class="logo"></a>
+                <!--Links-->
+                <ul class="navbar-nav d-none d-md-flex flex-row">
+                    <li class="active"><a href="#">Início</a></li>
+                    <li><a href="#">Sobre nós</a></li>
+                    <li class="nav-item dropdown">
+                        <a class="v2-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        Produtos
+                        </a>
+                        <ul class="dropdown-menu position-absolute" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item" href="#">Digital</a></li>
+                            <li><a class="dropdown-item" href="#">Localização</a></li>
+                            <li><a class="dropdown-item" href="#">Workflow</a></li>
+                            <li><a class="dropdown-item" href="#">Quiz</a></li>
+                            <li><a class="dropdown-item" href="#">Vendas</a></li>
+                            <li><a class="dropdown-item" href="#">Cobrança</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">Contato</a></li>
+                    <li class="d-none d-lg-flex"><a href="#">Blog</a></li>
+                    <li><a href="#">Helpdesk</a></li>
+                </ul>
+            </div>
+            <div class="d-flex">
+                <a class="btn-menu-secondary d-none d-lg-flex">Área do cliente</a>
+                <a class="btn-menu-primary">Login</a>
+            </div>   
+        </div>
+    </nav>
+    </header>
+
+
+
+
+    <!--OffCanvas-->
+    <aside id="mobile-menu">
+    <div class="offcanvas offcanvas-start" tabindex="-1" id="mobileMenu" aria-labelledby="mobileMenuLabel">
+    <div class="offcanvas-header">
+    <img src="images/logo-ph3.webp" class="logo">
+    <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+    </div>
+    
+        <div class="d-flex justify-content-center align-items-center div-cta">
+            <a href="#" class="btn-cta">
+            <i class="bi-arrow-right-circle-fill arrow"></i>
+            <div class="space">Acesse sua conta</div>
+            </a>
+        </div>
+        <div class="offcanvas-body offcanvas-scrollbar">
+        <nav id="mobile-navigation">
+            <a href="#"><i class="bi-house icone"></i>Início</a>
+            <a href="#"><i class="bi-sticky"></i>Sobre nós</a>
+            <!--Drop-1-->
+            <a href="#drop-1" data-bs-toggle="collapse" aria-expanded="false" onclick=" $(this).toggleClass('active');">
+                <i class="bi-layers"></i>Produtos
+                <span class="bi-chevron-expand"></span>
+            </a>
+            <ul class="list-unstyled mb-0 position-relative collapse" id="drop-1">
+                <li><a href="#">Digital</a></li>
+                <li><a href="#">Localização</a></li>
+                <li><a href="#">Workflow</a></li>
+                <li><a href="#">Quiz</a></li>
+                <li><a href="#">Vendas</a></li>
+                <li><a href="#">Cobrança</a></li>
+            </ul>
+            <!--End Drop-1-->
+            <a href="#"><i class="bi-textarea"></i>Blog</a>
+            <a href="#"><i class="bi-file-earmark-text"></i>LGPD</a>
+            <hr class="divider">
+            <a href="#"><i class="bi-window"></i>Área do cliente</a>
+            <a href="#"><i class="bi-chat-square-dots"></i>Help Desk</a>
+        </nav>
+        </div>
+        <div class="offcanvas-footer d-flex justify-content-center align-items-center">
+            <a href="#"><i class="bi-envelope"></i>Entre em contato</a>
+        </div>
+    </div>
+    </aside>
+
+
+
+    <!--Wrap-->
+    <section class="d-flex justify-content-center" style="background:#f5f6fa;">
+    <div class="container cv-tos" style="background:#fff;border-left:1px solid #eee;border-right:1px solid #eee;">
+    <div class="row">
+    <div class="col-12">
+
+        <div class="py-3 p-md-5" style="max-width:95%;margin:10px auto;">
+
+            <div class="pb-4">
+            <h1>Política de privacidade PH3A
+            </h1>
+            <p>Data de atualização: 26/04/2018</p>
+            <div class="my-3 mb-4 dash-divider"></div>
+            <p>A PH3A sabe o quanto é importante para você conhecer e estar seguro sobre a utilização dos seus dados pessoais. Por isso, nos preocupamos em esclarecer e divulgar nossa política de utilização dessas informações. Assim, você poderá entender melhor quais informações obtemos e como as utilizamos. Dedique alguns minutos do seu tempo para ler esta política e aproveitar de forma consciente e segura tudo o que a PH3A tem para oferecer. Para assegurar regras claras e precisas a PH3A poderá alterar esta política de tempos em tempos, assim sendo, recomenda sua leitura periodicamente.<br/>Esta política permitirá que você saiba:</p>
+            
+                <ol class="tos-nav">
+                    <li>
+                    <a href="#item1" class=""> Quais são as informações que obtemos. <i class="bi-file-earmark-text d-none"></i></a> 
+                    </li>
+                    <li>
+                    <a href="#cookies" class=""> O que são cookies, qual a sua utilidade e como excluí-los.</a> 
+                    </li>
+                    <li>
+                    <a href="#item3" class=""> Como serão utilizadas estas informações. </a>
+                    </li>
+                    <li>
+                    <a href="#item4" class=""> Quem coleta as informações. </a>
+                    </li>
+                    <li>
+                    <a href="#item5" class=""> Com quem suas informações podem ser compartilhadas. </a>
+                    </li>
+                    <li>
+                    <a href="#item6" class=""> Quais são as suas opções a respeito da coleta, uso e distribuição de suas informações. </a>
+                    </li>
+                    <li>
+                    <a href="#item7" class=""> Como a PH3A trata suas informações relativas a finanças pessoais.</a>
+                    </li>
+                    <li>
+                    <a href="#item8"> O que mais você precisa saber sobre sua privacidade na Internet.</a>
+                    </li>
+                </ol>
+
+
+            </div>
+
+
+            <div id="item1" class="pb-4">
+                <h2 class="mb-4"><span class="d-block d-md-inline-block mb-3 mb-md-0">1</span> Quais são as informações que obtemos</h2>
+                <p>A PH3A coleta informações de diversas formas, em diferentes áreas do portal e informações públicas. Algumas informações pessoais são obtidas quando você se registra ou preenche Formulários, Cookies e ou Cookies Pool/PII (cookies personally identifiable information). Durante o processo de registro ou cadastro a PH3A poderá perguntar seu nome, endereço de e-mail e outras informações pessoais via formulário e cookies. Quanto mais informações corretas você fornecer, melhor será a personalização da sua experiência.</p>
+                <p>A PH3A possui diversos parceiros e/ou patrocinadores que também criam sorteios, promoções, oferecem inúmeros bens, produtos e/ou serviços através de sites que poderão ser acessados dentro das nossas plataformas e ou produtos. As informações que você fornece quando visita e/ou completa transações nesses sites são obtidas por esses parceiros e/ou patrocinadores, estando assim sujeitas às suas próprias práticas de obtenção e uso de dados, sem que caiba qualquer responsabilidade à PH3A pelo manuseio de tais informações. Para obter informações sobre as políticas e normas de privacidade desses parceiros e/ou patrocinadores, sugerimos que você localize as normas de relacionamento específicas dentro do próprio site do parceiro.</p>  
+            </div>
+
+            <div id="cookies" class="pb-4">
+                <h2 class="mb-4"><span class="d-block d-md-inline-block mb-3 mb-md-0">2</span> O que são "cookies", qual sua utilidade e como exclui-los</h2>
+                <p>Cookies são pequenos arquivos de texto enviados ao seu computador e lá são armazenados. Estes pequenos arquivos servem <b>reconhecer e acompanhar a navegação do usuário na Internet</b>.</p>
+                <p>O uso de cookies para acompanhar e armazenar informações possibilitará a PH3A oferecer um serviço mais personalizado,  como sua identificação de acordo com as características e interesses de seus usuários. Com isto, possibilita, inclusive, a oferta de conteúdo e publicidade específicos para cada pessoa,  <b>beneficiando a experiência do usuário na Internet</b>. Em geral, os cookies são utilizados para:</p>  
+
+                <ul>
+                    <li>
+                        Proporcionar serviços diferenciados, lembrando quem você é e quais são os seus hábitos de navegação, consumo, possibilidade de identificação do usuário anônimo, além de  acessar as informações do seu cadastro na PH3A (armazenadas em nossos servidores).
+                    </li>
+                    <li>
+                        Ajudar os parceiros da PH3A a acompanhar visitas e negócios em suas campanhas de marketing, serviços, produtos ou lojas. Calcular a dimensão da audiência de visitantes da PH3A e seus parceiros.
+                    </li>
+                    <li>
+                        Medir certos padrões de navegação, mapeando quais áreas do portal PH3A e site de parceiros você visitou e seus hábitos de visita como um todo. Usamos essa informação para verificar a rotina de navegação dos nossos usuários, e assim oferecer conteúdo e/ou serviços cada vez mais personalizados.
+                    </li>
+                    <li>
+                        Facilitar e agilizar o preenchimento de formulários. E as informações contidas nos cookies de cada usuário podem ser utilizadas para preencher previamente os formulários de coleta de dados existentes na Internet, sendo também uma forma de identificá-lo (cookies personally identifiable information - PII).
+                    </li>
+                </ul>
+
+                <p>Os anunciantes, parceiros e/ou patrocinadores e/ou clientes da PH3A, poderão utilizar seus próprios cookies, os quais não são cobertos por esta política. Sugerimos que você consulte as políticas de privacidade dessas empresas.</p>  
+
+                <p><b>Você poderá excluir com facilidade qualquer cookie que tenha sido instalado na pasta de cookies do seu navegador. Veja abaixo instruções sobre como ativar e desativar cookies em vários navegadores</b> <i>(lembrando que uma vez identificado via cookie, fará parte de uma base histórica de navegação anterior à limpeza ou exclusão dos cookies. Verifique as páginas de suporte de configurações de cookies do navegador para ver as instruções mais atualizadas disponíveis):</i></p>
+
+
+                    <p class="h5 mt-4">
+                        <i class="bi-terminal-fill" style="color:#ef5929;"></i> Google Chrome 
+                    </p>
+                    <ul>
+                        <li>
+                            Clique no ícone de configurações, na barra de ferramentas do navegador (três linhas horizontais paralelas).
+                        </li>
+                        <li>
+                            Selecione “Configurações”.
+                        </li>
+                        <li>
+                            Clique em “Mostrar configurações avançadas”.
+                        </li>
+                        <li>
+                            Na seção “Privacidade”, clique no botão “Configurações de conteúdo”.
+                        </li>
+                        <li>
+                            Para habilitar cookies: Na seção “Cookies”, escolha “Permitir a configuração de dados locais”. Isso irá permitir tantos cookies primários quanto de terceiros. Para permitir apenas cookies primários, escolha “Bloquear cookies de terceiros e dados do site”.
+                        </li>
+                        <li>
+                            Para desabilitar cookies: Na seção “Cookies”, escolha “Bloquear as configurações de quaisquer dados por sites”.
+                        </li>
+                        <li>
+                            Note que há vários níveis de habilitação e desabilitação de cookies no Chrome. Para obter mais informações sobre outras configurações de cookies oferecidas no Chrome, consulte a seguinte página do Google: <a href="https://support.google.com/chrome/answer/95647" target="_blank">Gerenciar cookies no Chrome</a>.
+                        </li>
+                    </ul>
+
+
+                    <p class="h5 mt-4">
+                        <i class="bi-terminal-fill" style="color:#ef5929;"></i> Mozilla Firefox 
+                    </p>
+                    <ul>
+                        <li>
+                            Clique no botão de menu (três linhas horizontais paralelas) e escolha “Preferências”.
+                        </li>
+                        <li>
+                            Selecione o painel de Privacidade.
+                        </li>
+                        <li>
+                            Defina a opção “O Firefox deve:” para “Usar minhas configurações”.
+                        </li>
+                        <li>
+                            Para habilitar cookies: marque a opção “Aceitar cookies de sites”.
+                        </li>
+                        <li>
+                            Para desabilitar cookies: desmarque a opção “Aceitar cookies de sites”.
+                        </li>
+                        <li>
+                            Observe que há vários níveis de habilitação e desabilitação de cookies no Firefox. Para obter mais informações, consulte a seguinte página do Mozilla: <a href="https://support.mozilla.org/pt-BR/kb/ative-e-desative-os-cookies-que-os-sites-usam" target="_blank">Gerenciar cookies no Mozilla</a>.
+                        </li>
+                    </ul>
+
+
+                    <p class="h5 mt-4">
+                        <i class="bi-terminal-fill" style="color:#ef5929;"></i> Safari em OSX
+                    </p>
+                    <ul>
+                        <li>
+                            Clique em “Safari” na barra de menu e selecione a opção “Preferências”.
+                        </li>
+                        <li>
+                            Clique em “Privacidade”.
+                        </li>
+                        <li>
+                            Para habilitar cookies: na seção “Cookies e dados de sites:”, clique em “Permitir Sempre” ou “Permitir dos sites que eu visito” ou “Permitir apenas do site atual”, conforme desejado.
+                        </li>
+                        <li>
+                            Para desabilitar cookies: na seção “Cookies e dados de sites:”, clique em “Bloquear sempre”.
+                        </li>
+                        <li>
+                            Observe que há vários níveis de habilitação e desabilitação de cookies no Safari. Para obter mais informações sobre outras configurações de cookie oferecidas no Safari, consulte a seguinte página da Apple: <a href="https://support.apple.com/kb/PH19214?locale=pt_BR&viewlocale=pt_BR" target="_blank">Gerenciar cookies no Safari</a>.
+                        </li>
+                    </ul>
+
+                    <p class="h5 mt-4">
+                        <i class="bi-terminal-fill" style="color:#ef5929;"></i> Opera
+                    </p>
+                    <ul>
+                        <li>
+                            No menu principal, selecione “Configurações” (ou “Preferências”, ao utilizar o OS X).
+                        </li>
+                        <li>
+                            Clique em “Avançado”.
+                        </li>
+                        <li>
+                            Na seção “Cookies”, selecione uma opção de gerenciamento de cookies.
+                        </li>
+                        <li>
+                            Para habilitar cookies: marque a opção “Aceitar” ou “Aceitar apenas dos sites que visitei”, conforme desejado.
+                        </li>
+                        <li>
+                            Para desabilitar cookies: marque a opção “Nunca aceitar cookies!”.
+                        </li>
+                        <li>
+                            Observe que há vários níveis de habilitação e desabilitação de cookies no Opera. Para obter mais informações sobre outras configurações de cookies oferecidas no Opera, consulte a seguinte página do software Opera: <a href="https://www.opera.com/help/tutorials/security/privacy/" target="_blank">Gerenciar cookies no Opera</a>.
+                        </li>
+                    </ul>
+
+
+                    <p class="h5 mt-4">
+                        <i class="bi-terminal-fill" style="color:#ef5929;"></i> Microsoft Edge
+                    </p>
+                    <ul>
+                        <li>
+                            Clique em “Mais” e selecione “Configurações”
+                        </li>
+                        <li>
+                            Em “Configurações avançadas”, selecione “Exibir configurações avançadas”
+                        </li>
+                        <li>
+                            Em “Privacidade e serviços – Cookies”, escolha a opção desejada “Bloquear todos os cookies” bloqueia todos os cookies que os sites tentam salvar em seu computador. “Bloquear os cookies de terceiros” bloqueia apenas cookies de terceiros, que são salvos por serviços de Internet externos, como anúncios integrados em páginas da web nas quais você navegou.
+                        </li>
+                        <li>
+                            Observe que há vários níveis de habilitação e desabilitação de cookies no Edge. Para obter mais informações sobre outras configurações de cookies oferecidas no Microsoft
+                        </li>
+                        <li>
+                            Edge, consulte a seguinte página da Microsoft: <a href="https://support.microsoft.com/pt-BR/help/12454/windows-10-microsoft-edge-privacy-faq" target="_blank">Gerenciar cookies no Edge</a>.
+                        </li>
+                    </ul>
+                    <p><b>Se você desabilitar todos os cookies, você pode não ser capaz de aproveitar todos os recursos deste site. Consulte a documentação do seu dispositivo móvel para obter informações sobre como desabilitar cookies.</b></p>
+                    <p>A PH3A poderá utilizar os recursos AdWords e Remarketing Lists do Google Analytics para exibir Anunciantes. A PH3A e o Google, Facebook, e demais portais utilizam cookies primários (tais como o cookie do Google Analytics, Facebook etc) e cookies de terceiros (tais como o cookie do DoubleClick) em conjunto para informar, otimizar e fornecer anúncios com base em suas visitas anteriores ao nosso site. Isto significa que os fornecedores, inclusive o Google, Facebook e demais portais e apps irão exibir os materiais promocionais da PH3A e seus parceiros em outros sites que você visita em toda a internet.</p> 
+                    <p>Você pode optar por não utilizar o Google Analytics, Facebook e demais parceiros / sites para exibir anunciantes, inclusive o AdWords, e optar por não utilizar anúncios personalizados do Google Display Network visitando o Gerenciador de Preferências do Google Ads. Para fornecer aos visitantes do site mais opções sobre como seus dados são coletados pelo Google Analytics, o Google desenvolveu um complemento de opt-out para navegador, que está disponível visitando o Complemento de Opt-Out para Navegador do Google Analytics, para permitir que você recuse os programas do Google.</p> 
+                    <p>
+                        Se você não quer que PH3A e/ou seus prestadores de serviços de marketing e parceiros monitorem o uso que
+                        você faz dos nossos serviços através de cookies, apps e sinalizadores web, e para saber mais sobre esses
+                        prestadores de serviços e suas políticas de privacidade, visite cada um dos seguintes sites:
+                        <a target="_blank" href="http://www.nielsen.com/us/en/nielsen-privacy-policy/website-privacy-policy.html">Nielsen</a>,
+                        <a target="_blank" href="http://www.scorecardresearch.com/privacy.aspx">comScore</a>,
+                        <a target="_blank" href="http://legal.yandex.com/privacy/">Yandex</a> (somente o site da Rússia),
+                        <a target="_blank" href="https://www.optimizely.com/opt_out">Optimizely</a>,
+                        <a target="_blank" href="http://legal.marketo.com/privacy/">Marketo</a>,
+                        <a target="_blank" href="https://siftscience.com/site-privacy">Sift Science</a>,
+                        <a target="_blank" href="https://www.demandbase.com/privacy-policy/">Demandbase</a>,
+                        <a target="_blank" href="http://www.olark.com/tos">Olark</a>,
+                        <a target="_blank" href="http://www.perfectaudience.com/privacy/">Perfect Audience</a>,
+                        <a target="_blank" href="https://www.appsflyer.com/privacy-policy/">Appsflyer,</a>
+                        <a target="_blank" href="https://www.facebook.com/privacy/explanation">Facebook</a>,
+                        <a target="_blank" href="https://twitter.com/privacy">Twitter</a>,
+                        <a target="_blank" href="https://www.google.com/intl/en-US/policies/privacy/">Adometry,</a>
+                        <a target="_blank" href="http://www.sizmek.com/about-us/privacy">Sizmek</a>,
+                        <a target="_blank" href="http://www.mediacom.com/en/privacy-policy/"> MediaCom,</a>
+                        <a target="_blank" href="https://mixpanel.com/privacy/">Mixpanel</a>
+                        e
+                        <a target="_blank" href="https://heapanalytics.com/privacy">Heap Analytics.</a> Optar por não utilizar esses
+                        serviços não significa que você não irá mais receber publicidade online. Significa apenas que o serviço
+                        que você optou por não utilizar deixará de entregar anúncios personalizados segundo suas preferências e
+                        padrões de uso da web.
+                    </p> 
+                    <p>Quando você visita nosso site, você concorda em receber os cookies da PH3A e de seus parceiros , conforme estabelecido nesta política de cookies. A PH3A poderá atualizar essa lista periodicamente para incluir outros prestadores de serviços de marketing, parceiros e ou clientes.</p> 
+                    <p>Em todos os casos de uso de cookies da PH3A e de terceiros para rastrear seu comportamento no site , será necessário consultar o site deste terceiro para saber como remover os cookies desse terceiro especificamente. A remoção de cookies do PH3A do seu navegador não afetará cookies colocados por terceiros.</p> 
+
+            </div>
+
+
+            <div class="pb-4">
+                <h2 class="mb-4"><span class="d-block d-md-inline-block mb-3 mb-md-0">3</span> Como poderão ser utilizadas estas informações</h2>
+                <p>As informações coletadas pela PH3A e seus parceiros serão utilizadas para personalizar o conteúdo e/ou serviços disponibilizados. Isso inclui serviços de personalização, comunicações interativas, envio de sms, e-mail, ação de telemarketing, push notification, cartas promocionais, compras online e outros tipos de serviços. Sabendo mais sobre você, a PH3A e seus parceiros podem fornecer conteúdo e serviços mais relevantes e proporcionar uma melhor experiência.</p>
+                <p>As informações coletadas poderão ser utilizadas para direcionamento de campanhas publicitárias de uma forma geral, como por exemplo no caso em que um anunciante determina como foco de uma determinada campanha homens com mais de 21 anos.</p>  
+                <p>Neste caso, veiculamos a propaganda aos usuários dentro desta faixa etária utilizando banners e/ou e-mails promocionais ou qualquer tipo de comunicação direta a esse usuário. <b>As informações pessoais individuais</b> poderão ser comercializadas ou fornecidas a empresas terceiras, salvo em estrito cumprimento de ordens judiciais ou procedimentos jurídicos similares.</p>  
+            </div>
+
+
+            <div class="pb-4">
+                <h2 class="mb-4"><span class="d-block d-md-inline-block mb-3 mb-md-0">4</span> Quem coleta as informações</h2>
+                <p>Alguns parceiros, patrocinadores, anunciantes e demais que sejam acessados através do portal PH3A, poderão solicitar informações financeiras e/ou pessoais suas como em sites de e-commerce. Num caso como esse, os usuários estarão cientes que essas informações serão usadas dentro dos termos desse contrato. As informações obtidas pela PH3A e seus parceiros, e utilizadas pelos seus parceiros de forma equivocada não terá qualquer responsabilidade da PH3A, pela utilização e manejo dessa informação, não se aplicando a presente política.</p>
+                <p>A PH3A destaca que no portal PH3A.com.br podem existir links e/ou páginas que utilizem publicidade gráfica de outros parceiros e/ou empresas, como por exemplo, o Google Ads, Facebook ads que utiliza relatório de informações demográficas da respectiva plataforma de publicidade. Caso você tenha interesse em desativar tal publicidade gráfica, deverá acessar o link configurações de anúncios (<a target="_blank" href="https://www.google.com/settings/ads">Google</a>) e demais sites) e personalizar sua própria experiência.</p>  
+                <p>Sempre que você acessar anunciantes, apps ou outros Sites da Web através de links presentes no site da Ph3a.com.br, aqueles poderão coletar informações sobre você. Lembramos que as práticas relativas à privacidade desses parceiros e terceiros não são cobertas pela presente política e podem ser bem diferentes dos padrões de privacidade da PH3A.</p>
+                <p>Também podemos obter dados de terceiros. Podemos proteger os dados obtidos de terceiros de acordo com as práticas descritas nesta declaração, além de quaisquer restrições adicionais impostas pela fonte dos dados. Essas fontes de terceiros variam ao longo do tempo, mas têm incluído:</p>
+                <p>Agentes de dados dos quais adquirimos dados demográficos e comportamentais para complementar os dados que coletamos. Redes sociais quando você concede permissão a um produto da Microsoft para acessar os dados em uma ou mais redes. Provedores de serviço que nos ajudam a determinar uma localização com base no endereço IP para personalizar determinados produtos para a sua localização. Os parceiros com os quais oferecemos serviços de colaboração com outras marcas ou nos envolvemos em atividades de marketing conjuntas, e fontes disponíveis publicamente, como dados de domínio público. Você pode escolher quais dados pretende que sejam coletados, quando forem solicitados dados pessoais, você poderá se recusar a fornecê-los. Mas se optar por não disponibilizar os dados necessários ao fornecimento de um produto ou um recurso talvez não consiga usá-los.</p>
+                <p>Os dados que coletamos dependem do contexto de suas interações as opções que você escolhe, incluindo as suas configurações de privacidade e os produtos e recursos que você usa em seu navegador de internet. Os dados que coletamos podem incluir o quanto segue:</p>
+                <ul>
+                    <li> Nome e dados de contato: coletamos seu nome e sobrenome, e-mail, endereço, número de telefone e outros dados de contato semelhantes. </li>
+                    <li> Dados demográficos: coletamos dados sobre você, por exemplo, idade, sexo, país e idioma preferencial. </li>
+                    <li> Dados de diagnóstico e uso: coletamos dados sobre o seu dispositivo e como você e seu dispositivo interagem com a Microsoft e os nossos produtos. Por exemplo, poderemos coletar dados do dispositivo, conectividade e configuração. Também coletamos dados sobre o dispositivo e a rede que você usa para se conectar aos nossos produtos. </li>
+                    <li> Dados de localização: no que se refere aos produtos com recursos de localização avançada, coletamos dados sobre a sua localização, que podem ser precisos ou imprecisos. Dados de localização precisos podem ser originados de dados de GNSS (Global Navigation Satellite System), Sistema de Satélite de Navegação Global, (GPS, por exemplo) bem como dados que identifiquem torres de comunicações móveis e hotspots Wi-Fi, que são coletados quando você ativa produtos ou serviços com base na localização. Dados de localização imprecisos incluem, por exemplo, uma localização derivada de seu endereço IP ou dados que indiquem sua localização com menos precisão, por exemplo, uma cidade ou o CEP. </li>
+                </ul>
+                <p> Nosso Uso dos Serviços de Análise e Web Beacons: <b>Web Beacon. Web Beacons ou Web Bugs</b> são umas séries de técnicas utilizadas para monitorar quem está lendo uma página na <b>web</b>, e-mail e/ou dados do computador. Também pode ser usado para verificar se um determinado e-mail foi lido ou se uma determinada matéria foi copiada indevidamente para outro site.</p>
+                <p>As páginas da Web podem conter imagens eletrônicas conhecidas como web beacons (também designados GIFs de pixel único) que usamos para ajudar a enviar os cookies de nossos sites, contabilizar os usuários que visitaram esses sites e fornecer produtos de marketing conjunto. Também incluímos web beacons em nossas mensagens de e-mail promocionais, push notification ou newsletters para determinar se esses itens são abertos ou utilizados.</p>  
+                <p>Além de colocarmos web beacons em nossos próprios sites, às vezes, colaboramos com outras empresas para que sejam colocados web beacons em seus sites ou em seus anúncios. Isso nos ajuda a desenvolver estatísticas sobre de que forma clicar em um anúncio em um site da PH3A e ou de parceiros, onde pode resultar em uma compra ou em outra ação no site do anunciante.</p>  
+                <p>Finalmente, os produtos da PH3A poderão conter web beacons ou tecnologias semelhantes de fornecedores de análise externos que nos ajudam a compilar estatísticas agregadas sobre a eficácia de nossas campanhas promocionais ou outras operações. Essas tecnologias permitem aos fornecedores de serviços de análise definir ou ler seus próprios cookies ou outros identificadores em seu dispositivo, por meio dos quais podem coletar informações sobre suas atividades online nos aplicativos, sites ou outros produtos. Contudo, proibimos esses fornecedores de serviços de análise de usarem web beacons em nossos sites de forma a coletar ou acessar a informações que o identifiquem diretamente (como seu nome ou endereço de e-mail). O usuário pode cancelar a coleta ou o uso de dados por parte de um e-mail enviado para: <a href="mailto:naoqueroparticipar@ph3a.com.br?Subject=Não%20quero%20participar" target="_top">naoqueroparticipar@ph3a.com.br</a></p>
+            </div>
+
+            <div class="pb-4">
+                <h2 class="mb-4"><span class="d-block d-md-inline-block mb-3 mb-md-0">5</span> Com quem suas informações podem ser compartilhadas</h2>
+                <p>Parceiros de negócios e patrocinadores ou clientes PH3A: A PH3A pode divulgar suas informações a alguns parceiros, patrocinadores, anunciantes e demais. Alguns ou todos os dados coletados durante uma promoção e ou preenchimento de formulário podem ser compartilhados com um patrocinador e ou cliente.</p>
+                <p>Canal de Compras, Apps e ou sites de compras: Se você adquirir um produto ou serviço da PH3A ou cliente ou parceiro, as informações obtidas durante a sua visita às lojas e as informações que você fornecer às mesmas, tais como o número do seu cartão de crédito e dados para contato, são automaticamente repassadas aos lojistas e não a PH3A. A PH3A não armazena dados de cartões de crédito e não se responsabiliza por essas políticas independentes. Para obter mais informações sobre o lojista, sua loja e suas políticas de privacidade, retorne à página inicial dessa loja e localize o link da respectiva política.</p>  
+                <p>A PH3A poderá divulgar informações sobre o usuário quando exigido por lei e com objetivos administrativos ou outros que considerarmos necessários para manter e aprimorar nossos produtos e serviços.</p>  
+            </div>
+
+            <div class="pb-4">
+                <h2 class="mb-4"><span class="d-block d-md-inline-block mb-3 mb-md-0">6</span> Quais são as suas opções a respeito da coleta, uso e distribuição de suas informações</h2>
+                <p>Você também tem opções em relação aos cookies. Modificando suas preferências de navegação, você tem a opção de aceitar todos os cookies, ser notificado quando um cookie for enviado ou rejeitar todos os cookies. Se você optar por rejeitar todos os cookies, não conseguirá usar alguns dos serviços da PH3A e seus parceiros que requerem registro para participação. Também não poderá usufruir de todos benefícios e facilidades de uma experiência personalizada na Internet.</p>
+                <p><b>A PH3A poderá comercializar</b> informações de seus usuários e ou visitantes. Na ocasião da coleta ou transferência dos dados, caso as informações a seu respeito sejam compartilhadas com terceiros e com seu consentimento dentro dessa política de privacidade.</p>  
+                <p>Se não desejar que eles sejam compartilhados, você poderá optar por não usar um determinado serviço ou não participar de certas promoções ou concursos e ou enviar um e-mail para <a href="mailto:naoqueroparticipar@ph3a.com.br?Subject=Não%20quero%20participar" target="_top">naoqueroparticipar@ph3a.com.br</a>, solicitando sua exclusão.
+                </p>
+                <p>Caso hajam outras dúvidas ou solicitações referentes a privacidade de seus dados, você poderá contatar nossa equipe responsável através do e-mail <a href="mailto:privacidade@ph3a.com.br?Subject=DPO%20-%20privacidade" target="_top">privacidade@ph3a.com.br</a>.</p>
+            </div>
+
+            <div class="pb-4">
+                <h2 class="mb-4"><span class="d-block d-md-inline-block mb-3 mb-md-0">7</span> Como a PH3A trata suas informações relativas a finanças pessoais</h2>
+                <p>Observe que poderá existir locais na rede de Sites da PH3A e ou sites de parceiros nos quais você pode transmitir informações sobre cartão de crédito para concluir uma transação de compra de produto ou serviço. Sempre que solicitamos um número de cartão de crédito nós transmitimos esse número no formato criptografado. Utilizamos a criptografia padrão da indústria, SSL (Secure Sockets Layer, camada de soquetes de segurança). A PH3A não armazena essa informação.</p>
+            </div>
+
+            <div class="pb-4">
+                <h2 class="mb-4"><span class="d-block d-md-inline-block mb-3 mb-md-0">8</span> Quais são as suas opções a respeito da coleta, uso e distribuição de suas informações</h2>
+                <p>Em última análise você é o responsável pela manutenção de sua privacidade e pelo sigilo de suas senhas e/ou informações pessoais. Sendo assim, recomendamos:</p>
+                <ul>
+                    <li> Informe-se: ao acessar a Internet sempre busque a política/declaração de privacidade do Site que você está acessando. </li>
+                    <li> Use senhas complexas. Senhas simples são fáceis de serem quebradas. Use senhas complexas de combinações bastante longas de letras e números que necessitam combinações pouco usuais do teclado. </li>
+                    <li> Nunca forneça sua senha a ninguém online. Apenas forneça sua senha ao realizar compras pessoalmente. Se sua senha foi fornecida, mude-a imediatamente. </li>
+                </ul> 
+                <p>Caso decida não concordar com essa política de privacidade, envie um e-mail para <a href="mailto:naoqueroparticipar@ph3a.com.br?Subject=Não%20quero%20participar" target="_top">naoqueroparticipar@ph3a.com.br</a> e solicite sua exclusão.</p>
+                <p>Anúncios pessoais e salas de bate-papo são de domínio público. Qualquer informação que você torne disponível em salas de bate-papo, em fóruns ou em anúncios pessoais estará disponível a qualquer pessoa com acesso a esses locais. Sugerimos que você evite incluir informações que permitam às pessoas encontrá-lo, tais como o número de seu telefone ou seu endereço para correspondência.</p>
+                <p><b>Você pode excluir com facilidade qualquer cookie que tenha sido instalado na pasta de cookies do seu navegador. Veja instruções sobre como ativar e desativar cookies em vários navegadores:</b> <i>lembrando que uma vez que seu navegador, device, computador, celular ou tablet conter cookie(s), fará parte de uma base histórica de cookies identificados ou não, devido a navegação anterior a limpeza ou exclusão dos cookies. Verifique as páginas de suporte de configurações de cookies do seu navegador para ver as instruções mais atualizadas disponíveis.</i></p>
+                <p>Agradecemos sua atenção e sempre verifique novos conteúdos de nosso termo de privacidade, conforme data de atualização.</p>
+            </div>
+
+        </div>
+        
+    </div>
+    </div>
+    </div>
+    </section>
+
+
+
+
+    <!--FOOTER-->
+    <footer class="cv-footer">
+    <div class="p-2 py-5 footer-1">
+
+        <div class="container my-4">
+            <div class="row justify-content-between">
+                <div class="col-md-3 d-flex flex-column align-items-center align-items-md-start justify-content-center pb-3 pb-md-0">
+
+                    <div class="pb-3">
+                        <img src="images/logo-ph3a-white.png" style="max-width:200px;">
+                    </div>
+                    <div class="d-flex justify-content-start align-items-center">
+                        <img src="images/logo-abemd.png" class="me-2" style="max-width:58px;">
+                        <img src="images/logo-bureau.png" class="ms-2" style="max-width:124px;">
+                    </div>
+                    
+
+                </div>
+                <div class="col-md-4 d-flex justify-content-center justify-content-md-between pt-4 pt-md-0 pb-2 pb-md-0">
+
+                        <div class="mx-3 mx-md-2">
+                        <span class="d-block tags mb-3">MENU</span>
+                        <ul class="list-unstyled">
+                            <li>
+                                <a href="#" title="Sobre a PH3">Sobre nós</a>
+                            </li>
+                            <li>
+                                <a href="https://blog.ph3a.com.br/" target="_blank" title="Blog PH3">Blog</a>
+                            </li>
+                            <li>
+                                <a href="https://www.gov.br/defesa/pt-br/acesso-a-informacao/lei-geral-de-protecao-de-dados-pessoais-lgpd" target="_blank" title="LGPD">LGPD</a>
+                            </li>
+                            <li>
+                                <a href="#" title="Ética e conduta">Ética e conduta</a>
+                            </li>
+                            <li>
+                                <a href="#" title="Política de privacidade">Política de privacidade</a>
+                            </li>
+                            <li>
+                                <a href="#" title="Uso de cookies">Uso de cookies</a>
+                            </li>
+                        </ul>
+                        </div>
+                        <div class="mx-3 mx-md-2 me-lg-4">
+                        <span class="d-block tags mb-3">DATAS</span>
+                        <ul class="list-unstyled" style="color:#fff;">
+                            <li>
+                                <a href="#" title="DataTag">DataTag</a>
+                            </li>
+                            <li>
+                                <a href="#" title="DataBusca">DataBusca</a>
+                            </li>
+                            <li>
+                                <a href="#" title="DataMind">DataMind</a>
+                            </li>
+                            <li>
+                                <a href="#" title="DataQuiz">DataQuiz</a>
+                            </li>
+                            <li>
+                                <a href="#" title="DataCRM">DataCRM</a>
+                            </li>
+                            <li>
+                                <a href="#" title="DataCob">DataCob</a>
+                            </li>
+                            </ul>
+                        </div>
+
+
+                </div>
+                <div class="col-md-4 d-flex flex-column align-items-center align-items-md-start justify-content-center">
+
+                    <div class="footer-social pt-4 pt-md-0">
+                        <a href="#" target="_blank"><i class="fab fa-twitter"></i></a>
+                        <a href="#" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" target="_blank"><i class="fab fa-youtube"></i></a>
+                    </div>
+
+                    <div class="footer-info pt-3 text-center text-md-start">
+                    <p>comercial@ph3a.com.br</p>
+                    <p>+55 (11) 3723-4230 +55 <br>(11) 96584-5180 (Somente WhatsApp)</p>
+                    <p class="mb-0">Rua dos Três Irmãos, 201 – 6º andar – Morumbi 05615-190 - São Paulo – SP</p>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <div class="p-3 footer-2 text-center">
+        <p>Copyright © 2022 PH3A. <br class="d-initial d-md-none"> Todos os direitos reservados.</p>
+    </div>
+    </footer>
+
+
+    
+<script type="text/javascript">
+    (function(e,t,o,n,p,r,i){e.visitorGlobalObjectAlias=n;e[e.visitorGlobalObjectAlias]=e[e.visitorGlobalObjectAlias]||function(){(e[e.visitorGlobalObjectAlias].q=e[e.visitorGlobalObjectAlias].q||[]).push(arguments)};e[e.visitorGlobalObjectAlias].l=(new Date).getTime();r=t.createElement("script");r.src=o;r.async=true;i=t.getElementsByTagName("script")[0];i.parentNode.insertBefore(r,i)})(window,document,"https://diffuser-cdn.app-us1.com/diffuser/diffuser.js","vgo");
+    vgo('setAccount', '801284411');
+    vgo('setTrackByDefault', true);
+    vgo('process');
+</script>
+
+           
+</body>
+</html>

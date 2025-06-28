@@ -1,0 +1,743 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PH3 - Site</title>
+
+    <!--GLOBAL INCLUDES-->
+
+            <!--Favicon-->
+            <link rel="shortcut icon" type="image/x-icon" href="images/favicon-ph3a.ico">
+
+            <!-- Bootstrap 5.0 -->
+            <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+            <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
+
+            <!--Bootstrap Icons (using icons on mobile menu)-->
+            <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
+
+            <!-- FontAwesome Icons (using icons on footer) -->
+            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css">
+
+            <!-- Global Font Stack -->
+            <link href="https://fonts.cdnfonts.com/css/volte" rel="stylesheet">
+            <link href="https://fonts.cdnfonts.com/css/general-sans" rel="stylesheet">
+            <link href='https://fonts.googleapis.com/css?family=Montserrat:300,400,500,700|Open+Sans:300,400,500,600,700' rel='stylesheet' type='text/css'>
+
+            <!-- jQuery -->
+            <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+
+            <!-- Carrousel (Manter Depois do Jquery) -->
+            <link type="text/css" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" />
+            <link type="text/css" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css" />
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+
+            <!-- Animate Img Javascript -->
+            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css" type="text/css" />
+            <script src="js/animar-elementos-minify.js"></script>
+
+            <!-- JS Global to PH3 Site -->
+            <script src="js/global.js"></script>
+
+            <!--CSS Global to PH3 Site-->
+            <link rel="stylesheet" href="css/layout.css">
+
+    <!--END GLOBAL-->
+
+
+    <!--INCLUDE JS DO PAULO (SOLICITADO POR E-MAIL)-->
+    <script type="text/javascript">
+        (function (e, t, o, n, p, r, i) { e.visitorGlobalObjectAlias = n; e[e.visitorGlobalObjectAlias] = e[e.visitorGlobalObjectAlias] || function () { (e[e.visitorGlobalObjectAlias].q = e[e.visitorGlobalObjectAlias].q || []).push(arguments) }; e[e.visitorGlobalObjectAlias].l = (new Date).getTime(); r = t.createElement("script"); r.src = o; r.async = true; i = t.getElementsByTagName("script")[0]; i.parentNode.insertBefore(r, i) })(window, document, "https://diffuser-cdn.app-us1.com/diffuser/diffuser.js", "vgo");
+        vgo('setAccount', '801284411');
+        vgo('setTrackByDefault', true);
+        vgo('process');
+    </script>
+
+
+    <!-- HOME INCLUDES -->
+
+            <!-- Custom Carousel for Home (Keep it here to override owl styles)-->
+            <script src="js/home-carousel.js"></script>
+            <link rel="stylesheet" href="css/home-carousel.css">
+
+            <!--Timeline for Home-->
+            <link rel="stylesheet" href="css/home-timeline.css">
+
+            <!--CSS Custom to Home -->
+            <link rel="stylesheet" href="css/home.css">
+
+            <!-- JS Type Effect to Home -->
+            <script src="js/home-typewriter.js"></script>
+
+    <!-- END HOME -->
+    
+
+</head>
+<body>
+
+    <!--Desktop Menu-->
+    <header id="header-wrap">
+    <nav id="desktop-menu" class="navbar">
+
+        <div class="container">
+            <div class="d-flex justify-content-center align-items-center">
+                <!--Toggle-->
+                <button class="navbar-toggler d-flex d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#mobileMenu" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+                <!--Logo-->
+                <a href="./"><img src="images/logo-ph3.webp" class="logo"></a>
+                <!--Links-->
+                <ul class="navbar-nav d-none d-md-flex flex-row">
+                    <li class="active"><a href="./">Início</a></li>
+                    <li><a href="./sobre-nos.html">Sobre nós</a></li>
+                    <li class="nav-item dropdown">
+                        <a class="v2-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        Produtos
+                        </a>
+                        <ul class="dropdown-menu position-absolute" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item" href="./datatag.html">Digital</a></li>
+                            <li><a class="dropdown-item" href="./databusca.html">Localização</a></li>
+                            <li><a class="dropdown-item" href="./datamind.html">Workflow</a></li>
+                            <li><a class="dropdown-item" href="./dataquiz.html">Quiz</a></li>
+                            <li><a class="dropdown-item" href="./datacrm.html">Vendas</a></li>
+                            <li><a class="dropdown-item" href="./datacob.html">Cobrança</a></li>
+                        </ul>
+                    </li>
+                    <li><a class="scroll-contato">Contato</a></li>
+                    <li class="d-none d-lg-flex"><a href="https://blog.ph3a.com.br/" target="_blank">Blog</a></li>
+                    <li><a href="https://suporte.ph3a.com.br/support/login" target="_blank">Helpdesk</a></li>
+                </ul>
+            </div>
+            <div class="d-flex">
+                <a href="https://cliente.ph3a.com.br/" class="btn-menu-secondary d-none d-lg-flex" target="_blank">Área do cliente</a>
+                <a href="https://ph3a.com.br/crm" class="btn-menu-primary" target="_blank">Login</a>
+            </div>   
+        </div>
+    </nav>
+    </header>
+
+
+
+
+    <!--OffCanvas-->
+    <aside id="mobile-menu">
+    <div class="offcanvas offcanvas-start" tabindex="-1" id="mobileMenu" aria-labelledby="mobileMenuLabel">
+    <div class="offcanvas-header">
+     <img src="images/logo-ph3.webp" class="logo">
+    <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+    </div>
+    
+        <div class="d-flex justify-content-center align-items-center div-cta">
+            <a href="https://ph3a.com.br/crm" class="btn-cta" target="_blank">
+            <i class="bi-arrow-right-circle-fill arrow"></i>
+            <div class="space">Acesse sua conta</div>
+            </a>
+        </div>
+        <div class="offcanvas-body offcanvas-scrollbar">
+        <nav id="mobile-navigation">
+            <a href="./"><i class="bi-house icone"></i>Início</a>
+            <a href="./sobre-nos.html"><i class="bi-sticky"></i>Sobre nós</a>
+            <!--Drop-1-->
+            <a href="#drop-1" data-bs-toggle="collapse" aria-expanded="false" onclick="$(this).toggleClass('active');">
+                <i class="bi-layers"></i>Produtos
+                <span class="bi-chevron-expand"></span>
+            </a>
+            <ul class="list-unstyled mb-0 position-relative collapse" id="drop-1">
+                <li><a href="./datatag.html">Digital</a></li>
+                <li><a href="./databusca.html">Localização</a></li>
+                <li><a href="./datamind.html">Workflow</a></li>
+                <li><a href="./dataquiz.html">Quiz</a></li>
+                <li><a href="./datacrm.html">Vendas</a></li>
+                <li><a href="./datacob.html">Cobrança</a></li>
+            </ul>
+            <!--End Drop-1-->
+            <a href="https://blog.ph3a.com.br/" target="_blank"><i class="bi-textarea"></i>Blog</a>
+            <a href="https://www.gov.br/defesa/pt-br/acesso-a-informacao/lei-geral-de-protecao-de-dados-pessoais-lgpd" target="_blank"><i class="bi-file-earmark-text"></i>LGPD</a>
+            <hr class="divider">
+            <a href="https://cliente.ph3a.com.br/" target="_blank"><i class="bi-window"></i>Área do cliente</a>
+            <a href="https://suporte.ph3a.com.br/support/login" target="_blank"><i class="bi-chat-square-dots"></i>Help Desk</a>
+        </nav>
+        </div>
+        <div class="offcanvas-footer d-flex justify-content-center align-items-center">
+            <a class="scroll-contato" data-bs-dismiss="offcanvas"><i class="bi-envelope"></i>Entre em contato</a>
+        </div>
+    </div>
+    </aside>
+
+
+
+
+
+    <!--Cover Hero (Principal Home) -->
+    <section>
+    <div class="container-fluid p-0 cv-hero">
+        <div class="row g-0">
+            <div class="col-12 col-md-6 d-flex justify-content-start justify-content-md-end align-items-center">
+
+                <div class="d-flex align-items-start flex-column cv-hero-box p-4 pb-3 p-md-4 py-md-4 p-xl-0 pb-xl-2 fadeIn" data-animar-scroll="fadeInRight" style="max-width:480px;">
+                    <h1>Tecnologia de dados que otimiza rotinas e</h1>
+                    <h1 class="h1-typewrite"><span class="typewrite" data-period="1000" data-type='[ "multiplica resultados!" , "potencializa campanhas!" , "recupera crédito!" , "muito mais . . ." ]' > <span class="wrap"></span></span></h1>
+                
+                <p class="pt-2 pt-md-4 pb-0 pb-md-1">Alta expertise em soluções práticas para empresas<span class="d-none d-md-inline"> arrojadas</span>!</p>
+                <div class="pt-4 pb-4 pb-md-3 pb-lg-4 ">
+                <a href="#saiba-mais" class="btn-cta">Saiba Mais</a>
+                </div>
+                </div>
+
+            </div>
+            <div class="col-12 col-md-6 d-flex justify-content-end align-items-center">
+                <img id="img-hero-1" src="images/cv-hero-1.jpg" class="img-hero animated fadeInRight">
+                <img id="img-hero-2" src="images/cv-hero-2.jpg" class="img-hero animated fadeInUp slow d-none">
+                <img id="img-hero-3" src="images/cv-hero-3.jpg" class="img-hero animated fadeInDown d-none">
+                <img id="img-hero-4" src="images/cv-hero-4.jpg" class="img-hero animated fadeInRight d-none">
+            </div>
+        </div>
+    </div>
+    </section>
+
+
+
+
+    <!--Cover Carousel-->
+    <section class="cv-carousel">
+    <div class="container">
+    <div class="row">
+        <div class="col-12">
+
+                    <div id="carousel-v2" class="owl-carousel owl-theme my-carousel">
+
+                        <div class="carousel-item-v2 d-flex flex-column align-items-center justify-content-center">
+                            <div class="p-3 pt-2 text-center carousel-box-v2">
+                                <i class="bi-star-fill"></i>
+                                <p class="h1">25 anos de experiencia</p>
+                                <p class="h2">Possuímos bases históricas e consistentes com mais de 25 anos.</p>
+                            </div>
+                        </div>
+                        <div class="carousel-item-v2 d-flex flex-column align-items-center justify-content-center">
+                            <div class="p-3 pt-2 text-center carousel-box-v2">
+                                <i class="bi-headset"></i>
+                                <p class="h1">Suporte <br>24/7</p>
+                                <p class="h2">Nossa equipe está sempre disponível, independente do dia e horário.</p>
+                            </div>
+                        </div>
+                        <div class="carousel-item-v2 d-flex flex-column align-items-center justify-content-center">
+                            <div class="p-3 pt-2 text-center carousel-box-v2">
+                                <i class="bi-people-fill mb-0"></i>
+                                <p class="h1">+ de 600 <br>clientes</p>
+                                <p class="h2">Todos os clientes possuem a mesma importância, independente do porte da empresa.</p>
+                            </div>
+                        </div>
+                        <div class="carousel-item-v2 d-flex flex-column align-items-center justify-content-center">
+                            <div class="p-3 pt-2 text-center carousel-box-v2">
+                                <i class="bi-cloud-haze2-fill" ></i>
+                                <p class="h1">100% na <br>nuvem</p>
+                                <p class="h2">Todos os nossos serviços estão na nuvem, porém oferecemos a opção de uma robusta infraestrutura interna.</p>
+                            </div>
+                        </div>
+                        <div class="carousel-item-v2 d-flex flex-column align-items-center justify-content-center">
+                            <div class="p-3 pt-2 text-center carousel-box-v2">
+                                <i class="bi-layers-fill mb-0" ></i>
+                                <p class="h1">Sistema <br>Flexível</p>
+                                <p class="h2">Resolvemos seus problemas. Se necessário, nossa equipe irá propor soluções individualizadas para atendê-lo.</p>
+                            </div>
+                        </div>
+                        <div class="carousel-item-v2 d-flex flex-column align-items-center justify-content-center">
+                            <div class="p-3 pt-2 text-center carousel-box-v2">
+                                <i class="bi-person-bounding-box" ></i>
+                                <p class="h1">Sistema com <br>Inteligencia</p>
+                                <p class="h2">Entregamos ferramentas para que você possa realizar diversas análises de dados de forma objetiva.</p>
+                            </div>
+                        </div>
+
+                    </div>
+
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+
+    <!--Cover TimeLine-->
+    <section id="saiba-mais" class="cv-home cv-timeline">
+    <div class="container">
+    <div class="row text-center justify-content-center mb-3 mb-md-5">
+        <div class="col-md-10 col-lg-8">
+            <h2>Uma empresa de tecnologia</h2>
+            <div class="my-3 dash-divider timeline"></div>
+            <p class="pt-2">A PH3A projeta e constrói sistemas de informação direcionados a apoiar a gestão de empresas de diversos segmentos, com soluções para as mais variadas situações de negócios.</p>
+        </div>
+    </div>
+    <div class="row d-none d-md-flex">
+        <div class="col-12">
+            <div class="timeline-steps aos-init aos-animate" data-aos="fade-up">
+                <div class="timeline-step">
+                    <div class="timeline-content" data-toggle="popover" data-trigger="hover" data-placement="top" title="" data-content="Nasce a Informaketing!" data-original-title="1995">
+                        <div class="inner-circle"></div>
+                        <p class="h6 mt-3 mb-1 year"><span class='h5'>1995</span></p>
+                        <p class="h6 text-muted mb-0 mb-lg-0 fw-400">Nasce a Informaketing</p>
+                    </div>
+                </div>
+                <div class="timeline-step">
+                    <div class="timeline-content" data-toggle="popover" data-trigger="hover" data-placement="top" title="" data-content="Venda da Informaketing!" data-original-title="2007">
+                        <div class="inner-circle"></div>
+                        <p class="h6 mt-3 mb-1 year"><span class='h5'>2007</span></p>
+                        <p class="h6 text-muted mb-0 mb-lg-0 fw-400">Venda da Informaketing</p>
+                    </div>
+                </div>
+                <div class="timeline-step mb-0">
+                    <div class="timeline-content" data-toggle="popover" data-trigger="hover" data-placement="top" title="" data-content="Deixa Grupo Experian!" data-original-title="2008">
+                        <div class="inner-circle"></div>
+                        <p class="h6 mt-3 mb-1 year"><span class='h5'>2008</span></p>
+                        <p class="h6 text-muted mb-0 mb-lg-0 fw-400">Deixa Grupo Experian</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row d-flex d-md-none">
+
+            <div class="timeline-mobile px-4">
+                <!--first section-->
+                <div class="row align-items-center timeline-wrap-v3 d-flex">
+                <div class="col-2 text-center bottom d-inline-flex justify-content-center align-items-center">
+                    <div class="circle font-weight-bold">1</div>
+                </div>
+                <div class="col-6">
+                    <h5>1995</h5>
+                    <p>Nasce a Informaketing</p>
+                </div>
+                </div>
+                <!--path between 1-2-->
+                <div class="row timeline-v3">
+                <div class="col-2">
+                    <div class="corner top-right"></div>
+                </div>
+                <div class="col-8">
+                    <hr/>
+                </div>
+                <div class="col-2">
+                    <div class="corner left-bottom"></div>
+                </div>
+                </div>
+                <!--second section-->
+                <div class="row align-items-center justify-content-end timeline-wrap-v3 d-flex">
+                <div class="col-6 text-end">
+                    <h5>2007</h5>
+                    <p>Venda da Informaketing</p>
+                </div>
+                <div class="col-2 text-center full d-inline-flex justify-content-center align-items-center">
+                    <div class="circle font-weight-bold">2</div>
+                </div>
+                </div>
+                <!--path between 2-3-->
+                <div class="row timeline-v3">
+                <div class="col-2">
+                    <div class="corner right-bottom"></div>
+                </div>
+                <div class="col-8">
+                    <hr/>
+                </div>
+                <div class="col-2">
+                    <div class="corner top-left"></div>
+                </div>
+                </div>
+                <!--third section-->
+                <div class="row align-items-center timeline-wrap-v3 d-flex">
+                <div class="col-2 text-center top d-inline-flex justify-content-center align-items-center">
+                    <div class="circle font-weight-bold">3</div>
+                </div>
+                <div class="col-6">
+                    <h5>2008</h5>
+                    <p>Deixa o Grupo Experian</p>
+                </div>
+                </div>
+            </div>
+        
+    </div>
+    <div class="row text-center justify-content-center pt-2 pb-3">
+        <div class="col-12 pt-4"><a href="./sobre-nos.html" class="btn-cta">Conheça a PH3A</a></div>
+    </div>
+    </div>
+    </section>
+
+
+
+    <!--Cover DataTag-->
+    <section class="cv-home cv-datatag">
+    <div class="container">
+    <div class="row flex-column-reverse flex-md-row align-items-center justify-content-between">
+        <div class="col-12 col-md-5 col-lg-6">
+
+            <div class="p-2 p-md-0 mt-4 mt-md-0 px-md-4" style="max-width:500px;margin:0 auto;">
+                <h2>Você sabe o perfil de quem visita o seu site?</h2>
+                <div class="my-4 dash-divider"></div>
+                <p>Somente 5% dos internautas brasileiros fazem login ou preenchem formulários nos sites que visitam. <br/>O grupo que não se loga, não preenche ou abandona os formulários corresponde a 95% da sua audiência.</p>
+                <p class="py-2"><span class="fw-700">O DATATAG resolve este problema!</span></p>
+                <p class="d-block d-sm-none d-lg-block">Com o <span class="fw-700">DATATAG</span> você pode reverter essa estatística e identificar muitos dos visitantes anônimos de seu site. Conheça o público que se interessa por sua marca ou seu produto, ajuste o foco de suas campanhas e venda mais!</p>   
+                <div class="pt-4"><a href="./datatag.html" class="btn-cta">Conheça o DATATAG</a></div>
+            </div>
+
+        </div>
+        <div class="col-12 col-md-7 col-lg-6">
+            
+            <div class="p-2 pt-3 p-md-0 mx-auto" style="max-width:550px;">
+                <img id="teste" src="images/cv-home-tag.jpg" style="width:100%;height:100%;" data-animar-scroll="fadeInRight">
+            </div>
+
+        </div>
+    </div>
+    </div>
+    </section>
+
+
+
+    <!--Cover DataMind-->
+    <section class="cv-home cv-datamind">
+    <div class="container">
+    <div class="row align-items-center justify-content-between">
+        <div class="col-12 col-md-6 col-lg-6">
+
+            <div class="p-2 pt-4 p-md-0 mx-auto" style="max-width:520px;">
+                <img src="images/cv-home-mind.jpg" style="width:100%;height:100%;" data-animar-scroll="fadeInLeft">
+            </div>
+
+        </div>
+        <div class="col-12 col-md-6 col-lg-6">
+            
+            <div class="p-2 p-md-0 mt-4 mt-md-0" style="max-width:500px;margin:0 auto;">
+                <h2>Você sofre com fraude e inadimplência?</h2>
+                <div class="my-4 dash-divider"></div>
+                <p>A tecnologia de dados dá segurança à gestão financeira da sua empresa para que você se concentre na sua especialidade.</p>
+                <p class="py-2"><span class="fw-700">O DATAMIND ajuda você a evitar situações vulneráveis a fraudes e à inadimplência!</span></p>
+                <p class="d-block d-sm-none d-lg-block">O <b>DATAMIND</b> é uma tecnologia de análise de dados que tem sido utilizada para otimizar e garantir mais qualidade aos processos, evitando erros e entregando bons insights ao seu usuário.</p>   
+                <div class="pt-4"><a href="./datamind.html" class="btn-cta">Conheça o DATAMIND</a></div>
+            </div>
+
+        </div>
+    </div>
+    </div>
+    </section>
+
+
+    
+
+
+    <!--Cover DataMulti (DataQuiz e DataBusca)-->
+    <section class="cv-home cv-datamulti">
+    <div class="container">
+    <div class="row align-items-stretch">
+        <div class="col-12 col-md-6 d-flex justify-content-center justify-content-md-end">
+
+            <div class="p-2 p-md-0 px-md-4 py-md-5 px-lg-5 text-end d-flex flex-column align-items-end" style="max-width:500px;">
+                <div class="circle-ball" data-animar-scroll="fadeInLeft"></div>
+                <h2>Quer obter mais produtividade da equipe de vendas?</h2>
+                <div class="my-4 dash-divider"></div>
+                <p>Uma análise de dados feita por profissional experiente aumenta o faturamento da empresa em 15%, segundo dados da McKinsey, referência de consultoria americana de negócios.</p>
+                <p>O DATACRM ajuda sua equipe a aumentar o caixa da empresa!</p>
+                <p>A experiência da compra vem depois de toda uma estratégia de análise, abordagem e ofertas específicas aos prospects segundo seus hábitos de consumo.</p>
+                <p>O DATACRM tem essa visão macro do consumidor, e faz análises e segmentações para ações certeiras, que maximizam resultados de vendas.</p>
+                <div class="pt-4 pb-4"><a href="./dataquiz.html" class="btn-cta">Conheça o DATAQUIZ</a></div>
+            </div>
+
+        </div>
+        <div class="col-12 col-md-6 d-flex justify-content-center justify-content-md-start">
+
+            <div class="p-2 p-md-0 px-md-4 py-md-5 px-lg-5 text-left" style="max-width:500px;">
+                <div class="circle-ball right" data-animar-scroll="fadeInRight"></div>
+                <h2>Sua base de contato não está performando?</h2>
+                <div class="my-4 dash-divider"></div>
+                <p>Encontrar pessoas e empresas é uma de nossas especialidades. Somos referência no mercado e nosso principal compromisso é estar sempre atualizado.</p>
+                <p>O DATABUSCA encontra quem você procura, enriquece e atualiza a sua base de contatos!</p>
+                <p>Com mais de 25 anos de atuação e processo permanente de depuração, o DATABUSCA capta e cruza informações de diversas fontes públicas de dados, o que o torna um sistema superpotente de localização de pessoas e empresas.</p>
+                <div class="pt-4 pb-4"><a href="./databusca.html" class="btn-cta">Conheça o DATABUSCA</a></div>
+            </div>
+
+        </div>
+    </div>
+    </div>
+    </section>
+
+
+    <!--Cover DataQuiz-->
+    <section class="cv-home cv-dataquiz">
+    <div class="container">
+    <div class="row align-items-center justify-content-between">
+        <div class="col-12 col-md-6 col-lg-5">
+
+            <div class="p-2 p-md-0 mb-4 mb-md-0 mx-auto d-none d-md-block" style="max-width:400px;">
+                <img src="images/cv-home-quiz.png" style="width:100%;height:100%;" data-animar-scroll="fadeInLeft">
+            </div>
+
+            <div class="p-2 p-md-0 mb-4 mb-md-0 mx-auto d-block d-md-none">
+            <div style="background: url(images/cv-home-quiz.png) no-repeat top -50px center; width: 100%; height: 250px; border-radius: 20px;background-size:cover;"></div>
+            </div>
+
+        </div>
+        <div class="col-12 col-md-6 col-lg-7">
+            
+            <div class="p-2 p-md-0 px-md-2" style="max-width:580px;">
+                <h2>Quer um módulo de reforço em segurança que previne fraude online e offline?</h2>
+                <div class="my-4 dash-divider"></div>
+                <p>Sua empresa precisa ter uma superferramenta antifraude para validar em tempo real, as informações do seu cliente no ato da compra.</p>
+                <p>O <b>DATAQUIZ</b> é essa proteção adicional pra sua segurança!</p>
+                <p class="d-block d-sm-none d-lg-block">O <b>DATAQUIZ</b> trabalha com inteligência de dados e da informação, faz apontamentos-surpresa para captar e cancelar situações fraudulentas.</p>   
+                <div class="pt-4"><a href="./dataquiz.html" class="btn-cta">Conheça o DATAQUIZ</a></div>
+            </div>
+
+        </div>
+    </div>
+    </div>
+    </section>
+
+
+
+    <!--Cover DataCRM-->
+    <section class="cv-home cv-datacrm py-3 pb-5 py-md-5">
+    <div class="container">
+    <div class="row flex-column-reverse flex-md-row align-items-center justify-content-between">
+        <div class="col-12 col-md-6 col-lg-6">
+
+            <div class="p-2 p-md-0 px-md-4" style="max-width:580px;">
+                <h2>Quer organizar e agilizar as ações de vendas de sua empresa?</h2>
+                <div class="my-4 dash-divider"></div>
+                <p>Ajuste sua estrutura, distribua sua carteira, ganhe mais velocidade e praticidade nas suas ações comerciais.</p>
+                <p>O <b>DATACRM</b> te dá essa clareza e organização comercial!</p>
+                <p class="d-block d-sm-none d-lg-block">O <b>DATACRM</b> é a ferramenta que organiza e facilita as análises, dá rapidez aos processos, para maximizar os bons resultados!</p>   
+                <div class="pt-4"><a href="./datacrm.html" class="btn-cta">Conheça o DATACRM</a></div>
+            </div>
+                
+        </div>
+        <div class="col-12 col-md-6 col-lg-6">
+            
+            <div class="p-2 p-md-0 mx-auto d-none d-md-block" style="max-width:420px;">
+                <img src="images/cv-home-crm.png" style="width:100%;height:100%;" data-animar-scroll="fadeInRight">
+            </div>
+
+            <div class="p-2 p-md-0 mt-4 mb-4 mx-auto d-block d-md-none">
+            <div style="background: url(images/cv-home-crm.png) no-repeat center center; width: 100%; height: 250px; border-radius: 20px;background-size:cover;"></div>
+            </div>
+
+        </div>
+    </div>
+    </div>
+    </section>
+
+
+    <!--Cover DataCob-->
+    <section class="cv-home cv-datacob">
+    <div class="container">
+    <div class="row align-items-center justify-content-between">
+        <div class="col-12 col-md-6 col-lg-5">
+
+            <div class="p-2 p-md-0 mx-auto d-none d-md-block" style="max-width:400px;">
+                <img src="images/cv-home-cob.png" style="width:100%;height:100%;" data-animar-scroll="fadeInLeft">
+            </div>
+
+            <div class="p-2 p-md-0 mt-2 mb-4 mt-0 mb-md-0 mx-auto d-block d-md-none">
+            <div style="background: url(images/cv-home-cob.png) no-repeat top -50px center; width: 100%; height: 250px; border-radius: 20px;background-size:cover;"></div>
+            </div>
+
+
+        </div>
+        <div class="col-12 col-md-6 col-lg-7">
+            
+            <div class="p-2 p-md-0 px-md-2" style="max-width:580px;">
+                <h2 class="d-none d-md-inline">Seu setor ou assessoria de cobrança têm resultados apenas médios?</h2>
+                <h2 class="d-inline d-md-none">Seu setor de cobrança têm resultados ruins?</h2>
+                <div class="my-4 dash-divider"></div>
+                <p>A tecnologia de dados com CRM inteligente aumenta a velocidade dos processos e melhora a produtividade.</p>
+                <p>O <b>DATACOB</b> é o CRM que organiza as estratégias de cobrança pra você!</p>
+                <p class="d-block d-sm-none d-lg-block">O <b>DATACOB</b> possui o módulo online de negociação, segmenta os grupos e agiliza os processos. O resultado você vê nos relatórios de produtividade.</p>   
+                <div class="pt-4 pb-4"><a href="./datacob.html" class="btn-cta">Conheça o DATACOB</a></div>
+            </div>
+
+        </div>
+    </div>
+    </div>
+    </section>
+
+
+    <!--Zoho Form-->
+    <section id="contato-ph3a" class="cv-contato">
+    <div class="container">
+        <div class="row">
+        <div class="col-12 d-flex flex-column justify-content-center align-items-center text-center pt-5">
+            <p class="titulo">Ficou alguma dúvida?</p>
+        </div>
+        <div class="my-0 my-md-1 dash-contato"></div>
+        </div>
+    </div>
+    </section>
+    <!-- Zoho Form -->
+    <div id="zorro-xid"></div>
+	<!-- Zoho JS -->
+	<script type="text/javascript">
+		(function (_id, _h) {
+			try {
+				var f = document.createElement('iframe');
+				f.src = 'https://forms.zohopublic.com/ph3a2021/form/TodososProdutosPH3A/formperma/6-g3Ny4KSzd7x9C6Q92ouba-oY6gAFcxffGhqlcnbDc?zf_rszfm=1';
+				f.style.border = 'none';
+				f.style.height = _h;
+				f.style.width = '100vw';
+				f.style.transition = 'all 0.5s ease';
+				var d = document.getElementById(_id);
+				if (!d) return;
+				d.appendChild(f);
+				window.addEventListener('message',function () {
+					var evntData = event.data;
+					if (evntData && evntData.constructor == String) {
+						var zf_ifrm_data = evntData.split('|');
+						if (zf_ifrm_data.length == 2) {
+							var zf_perma = zf_ifrm_data[0];
+							var zf_ifrm_ht_nw =
+								parseInt(zf_ifrm_data[1], 10) + 15 + 'px';
+							var iframe = document.getElementById(_id).getElementsByTagName('iframe')[0];
+							if (iframe.src.indexOf('formperma') > 0 && iframe.src.indexOf(zf_perma) > 0) {
+								var prevIframeHeight = iframe.style.height;
+								if (prevIframeHeight != zf_ifrm_ht_nw) {
+									iframe.style.height = zf_ifrm_ht_nw;
+								}
+							}
+						}
+					}
+				},
+				false);
+			} catch (e) {}
+		})
+		('zorro-xid', '1120px');
+	</script>
+	<!-- Zoho Tracker -->
+	<script>
+		var w = window;
+		var d = document;
+		var cb = function () {
+			try {
+				loadwaprops(
+					'3zb19377283e881435c5b1a76eef97f8f6',
+					'3zc222016103396a0270d452236ed98177',
+					'3z0df49bf72adb4b9b03ea190844c87bcfd541edda061a0351d0f1ff502c92f8f8',
+					'3z71f4266141a53781e5c9c72e01c561c092e8d93a9818c1d7fc3e013a0ad57994',
+					0.0
+					);
+			} catch (e) {}
+		};
+		var p = w.location.protocol, f = d.getElementsByTagName('script')[0], s = d.createElement('script');
+		if (p.indexOf('http') < 0) p = 'http' + ':';
+		s.type = 'text/javascript';
+		s.async = false;
+		if (!s.readyState) s.onload = cb; else {
+			s.onreadystatechange = function () {
+				if (s.readyState == 'loaded' || s.readyState == 'complete') {
+					s.onreadystatechange = null;
+					cb();
+				}
+			};
+		}
+		s.src = p + '//ma.zoho.com/hub/js/WebsiteAutomation.js';
+		f.parentNode.insertBefore(s, f);
+	</script>
+	<!-- Tag PH3A -->
+	<script src="https://www.dataunion.com.br/repository/c6457f17-8962-4874-b74f-9ab907961ff9/ph3a-blog" type="text/javascript" async></script>
+
+
+
+    <!--FOOTER-->
+    <footer class="cv-footer">
+    <div class="p-2 py-5 footer-1">
+
+        <div class="container my-4">
+            <div class="row justify-content-between">
+                <div class="col-md-3 d-flex flex-column align-items-center align-items-md-start justify-content-center pb-3 pb-md-0">
+
+                    <div class="pb-3">
+                        <img src="images/logo-ph3a-white.png" style="max-width:200px;">
+                    </div>
+                    <div class="d-flex justify-content-start align-items-center">
+                        <img src="images/logo-abemd.png" class="me-2" style="max-width:58px;">
+                        <img src="images/logo-bureau.png" class="ms-2" style="max-width:124px;">
+                    </div>
+                    
+
+                </div>
+                <div class="col-md-4 d-flex justify-content-center justify-content-md-between pt-4 pt-md-0 pb-2 pb-md-0">
+
+                        <div class="mx-3 mx-md-2">
+                        <span class="d-block tags mb-3">MENU</span>
+                        <ul class="list-unstyled">
+                            <li>
+                                <a href="./sobre-nos.html" title="Sobre a PH3">Sobre nós</a>
+                            </li>
+                            <li>
+                                <a href="https://blog.ph3a.com.br/" target="_blank" title="Blog PH3">Blog</a>
+                            </li>
+                            <li>
+                                <a href="https://www.gov.br/defesa/pt-br/acesso-a-informacao/lei-geral-de-protecao-de-dados-pessoais-lgpd" target="_blank" title="LGPD">LGPD</a>
+                            </li>
+                            <li>
+                                <a href="./ethic.html" title="Ética e conduta">Ética e conduta</a>
+                            </li>
+                            <li>
+                                <a href="./privacy.html" title="Política de privacidade">Política de privacidade</a>
+                            </li>
+                            <li>
+                                <a href="./privacy.html#cookies" title="Uso de cookies">Uso de cookies</a>
+                            </li>
+                        </ul>
+                        </div>
+                        <div class="mx-3 mx-md-2 me-lg-4">
+                        <span class="d-block tags mb-3">DATAS</span>
+                        <ul class="list-unstyled" style="color:#fff;">
+                            <li>
+                                <a href="./datatag.html" title="DataTag">DataTag</a>
+                            </li>
+                            <li>
+                                <a href="./databusca.html" title="DataBusca">DataBusca</a>
+                            </li>
+                            <li>
+                                <a href="./datamind.html" title="DataMind">DataMind</a>
+                            </li>
+                            <li>
+                                <a href="./dataquiz.html" title="DataQuiz">DataQuiz</a>
+                            </li>
+                            <li>
+                                <a href="./datacrm.html" title="DataCRM">DataCRM</a>
+                            </li>
+                            <li>
+                                <a href="./datacob.html" title="DataCob">DataCob</a>
+                            </li>
+                            </ul>
+                        </div>
+
+
+                </div>
+                <div class="col-md-4 d-flex flex-column align-items-center align-items-md-start justify-content-center">
+
+                    <div class="footer-social pt-4 pt-md-0">
+                        <a href="https://www.facebook.com/ph3atecnologia" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                        <a href="https://twitter.com/ph3a_tecnoliga" target="_blank"><i class="fab fa-twitter"></i></a>
+                        <a href="https://www.linkedin.com/company/ph3a" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="https://wa.me/5511965845180?text=Ol%C3%A1!%20Gostaria%20de%20marcar%20uma%20reuni%C3%A3o%20para%20saber%20mais%20detalhes!" target="_blank"><i class="fab fa-whatsapp"></i></a>
+                    </div>
+
+                    <div class="footer-info pt-3 text-center text-md-start">
+                    <p>comercial@ph3a.com.br</p>
+                    <p>+55 (11) 3723-4230 +55 <br>(11) 96584-5180 (Somente WhatsApp)</p>
+                    <p class="mb-0">Rua dos Três Irmãos, 201 – 6º andar – Morumbi 05615-190 - São Paulo – SP</p>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <div class="p-3 footer-2 text-center">
+        <p>Copyright © 2022 PH3A. <br class="d-initial d-md-none"> Todos os direitos reservados.</p>
+    </div>
+    </footer>
+           
+</body>
+</html>

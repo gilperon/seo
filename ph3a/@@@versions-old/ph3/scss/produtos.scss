@@ -1,0 +1,555 @@
+
+/*
+*
+* Typography Variables to Produtos 
+*
+*/
+    /* Titulos */
+    $produtos-title-ff:'Volte',Arial,sans-serif;
+    $produtos-title-color:#2c2b2b;
+    /* Textos */
+    $produtos-texto-ff:system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue","Noto Sans","Liberation Sans",Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
+    $produtos-texto-color:#6A6F77;
+
+
+/*
+*
+*  CSS Global for Produtos Main Covers 
+*
+*/
+
+.cv-main {
+
+    &.minus{background:#f5f6fa;}
+
+    /*Space for Covers*/
+    margin:30px 0 0;
+    @media (min-width: 768px){ margin:60px 0 0; }
+    @media (min-width: 992px){ margin:75px 0 0; }
+
+    /*Space for Last Cover from Home*/
+    &:last-of-type{
+        margin:30px 0 30px;
+        @media (min-width: 768px){ margin:60px 0 60px; }
+        @media (min-width: 992px){ margin:100px 0 100px; }
+    }
+
+    .dash-divider{width:57px;height:6px;background:linear-gradient(90deg, #EE5929  0%, #ff7a00 100%);}
+
+    h2 {
+        font-size: calc(1.375rem + 2.5vw);
+        font-family: $produtos-title-ff;
+        color: $produtos-title-color;
+        letter-spacing: -1px;
+        font-weight: 600;
+    }
+    p {
+        font-family: $produtos-texto-ff;
+        color: $produtos-texto-color;
+    }
+    @media (min-width: 992px) {
+        h2 {font-size: 2.7rem; }
+        p {font-size: 17px;line-height: 1.6;}
+    }
+    
+    .btn-cta {
+        font: 500 14px/20px 'General Sans', sans-serif;
+        background: #ef5929;
+        border:1px solid #ef5929;
+        border-radius: 2px;
+        color: #fff;
+        padding: 14px 24px 17px;
+        white-space: nowrap;
+        -webkit-transform-style: preserve-3d;
+        transform-style: preserve-3d;
+        &:hover {
+            background: #fff;
+            color:#151515;
+            border: 1px solid #b9b9b9;
+        }
+    }
+
+    .btn-cta-opaco {
+        font: 500 14px/20px 'General Sans', sans-serif;
+        background: #fff;
+        border:1px solid #b9b9b9;
+        border-radius: 2px;
+        color: #151515;
+        padding: 14px 24px 17px;
+        white-space: nowrap;
+        -webkit-transform-style: preserve-3d;
+        transform-style: preserve-3d;
+        &:hover {
+            background: #ef5929;
+            color:#fff;
+            border: 1px solid #ef5929;
+        }
+    }
+
+}
+
+
+
+/*
+*
+*  Produtos Hero Cover
+*
+*/
+    .wrap-produtos{
+
+        &.minus{background:#f5f6fa;}
+
+        /*Hero Background*/
+        .cover-hero{
+
+                .hero-bg{
+                    background-repeat:no-repeat;background-position:center center;background-size:cover;
+                    background-blend-mode: multiply;background-color: #555555;
+                    height:60vh;min-height:450px;max-height:735px;
+                    clip-path: polygon(100% 0, 100% 90%, 50% 100%, 50% 100%, 0 90%, 0 0);
+                }
+                .hero-content{height:50vh;min-height:350px;max-height:635px;}
+
+                h1 {font:600 calc(1.375rem + 7.5vw) 'Volte',Arial,sans-serif;color: #fff;letter-spacing: -1px;}
+                p{font:300 16px/1.4 'MontSerrat',Arial,sans-serif;color: #fff;text-align: center;}
+
+
+                @media (min-width: 768px){ 
+                .hero-bg{
+                        height:85vh;clip-path: polygon(100% 0, 100% 95%, 50% 100%, 50% 100%, 0 95%, 0 0);
+                    }
+                    .hero-content{height:75vh;}
+                    h1 {font:600 calc(1.375rem + 3.5vw) 'Volte',Arial,sans-serif;color: #fff;letter-spacing: -1px;}
+                    p{font:300 20px/1.4 'MontSerrat',Arial,sans-serif;color: #fff;text-align: center;max-width:850px;}
+                }
+
+        }
+
+        /*Hero Box*/
+        .cover-hero-box{
+
+            margin-top: -15vh;position:relative;z-index:1;
+            @media (min-width: 768px){ margin-top: -10vh; }
+
+            .hero-box-inside{background:#ef5929;max-width:800px;margin:0 auto;border-radius:10px;}
+
+            h3 {font:600 calc(1.375rem + 3.8vw) 'Volte',Arial,sans-serif;color: #fff;letter-spacing: -1px;text-align: center;}
+            p{font:300 16px/1.4 'MontSerrat',Arial,sans-serif;color: #fff;text-align: center;max-width: 800px;}
+
+            @media (min-width: 768px){
+                h3 {font:600 calc(1.375rem + 1.5vw) 'Volte',Arial,sans-serif;color: #fff;letter-spacing: -1px;}
+                p{font:300 20px/1.4 'MontSerrat',Arial,sans-serif;color: #fff;text-align: center;max-width: 800px;}
+            }
+
+        }
+
+        
+
+    }
+
+
+
+
+/*
+*
+*  Produtos Flip Cards
+*/
+    .wrap-cards{
+
+        .dash-cards{
+            height:6px;background:linear-gradient(90deg, #EE5929  0%, #ff7a00 100%);
+            width: 6vw;min-width:80px;
+        }
+
+        .flip-cards{
+
+            padding:30px 30px 20px;
+            display:flex;
+            flex-direction: column;
+            justify-content: start;
+            align-items: start;
+            min-height:180px;
+            height:100%;
+            border-radius:3px;
+            cursor:default;
+            background:linear-gradient(to right, #EE5929 98%, #ff7a00 100%);
+
+                p.t1{font:600 20px/22px 'Volte',Arial,sans-serif;color:#fff;}
+                p.t2{font:400 16px/20px 'Volte',Arial,sans-serif;color:#fff;}
+
+                @media (min-width: 768px){
+                    p.t2{font-size:14px;line-height:18px;}
+                }
+
+        }
+
+        .flip-cards.minus{
+            background:#f5f6fa;
+            p.t1,p.t2{color:#6a6f77;}
+        }
+
+
+        /*Fix to Scroll to Flip-Cards*/
+        #flip-cards::before {
+            content: '';
+            display: block;
+            height:      305px;
+            margin-top: -305px;
+            visibility: hidden;
+         }
+
+    }
+
+
+    
+
+
+/*
+*
+*  Produtos Boxes Textos
+*/
+    .wrap-boxes{
+
+
+        h2{max-width:380px;}
+        p{max-width:430px;}
+
+        .row {
+            >div{
+                &:first-child{border-right:2px solid #F3F3F3;}
+                &:last-child{border-left:2px solid #F3F3F3;}
+            }
+        }
+
+        .circle-ball{
+            width:54px;height:54px;border-radius:50%;background:#EE5929;margin-bottom:30px;
+
+            /*Custom Right and Last Ball*/
+            &.r-databusca{margin-top:10px;}
+            &.l-databusca{margin-top:10px;}
+            &.r-datacob{margin-top:10px;}
+            &.l-datacob{margin-top:10px;}
+            &.r-datacrm{margin-top:10px;}
+            &.l-datacrm{margin-top:10px;}
+            &.r-dataquiz{margin-top:10px;}
+            &.l-dataquiz{margin-top:10px;}
+            &.r-datatag{margin-top:10px;}
+            &.l-datatag{margin-top:10px;}
+            &.r-datamind{margin-top:10px;}
+            @media (min-width: 768px){ 
+                &.r-databusca{margin-top:220px;} 
+                &.l-databusca{margin-top:-205px;} 
+                &.r-datacob{margin-top:240px;} 
+                &.l-datacob{margin-top:-240px;} 
+                &.r-datacrm{margin-top:250px;} 
+                &.l-datacrm{margin-top:-260px;} 
+                &.r-dataquiz{margin-top:230px;} 
+                &.l-dataquiz{margin-top:-230px;}
+                &.r-datatag{margin-top:210px;} 
+                &.l-datatag{margin-top:-330px;}
+                &.r-datamind{margin-top:100px;} 
+            } 
+
+            
+        }
+
+
+    }
+
+
+
+/*
+*
+*  Produtos Carousel
+*/
+    .wrap-carousel{
+
+        background:#f5f6fa;
+        border-top:1px solid #e9eaec;
+        border-bottom:1px solid #e9eaec;
+
+        p.titulo{font:600 calc(1.375rem + 2.5vw) 'Volte',Arial,sans-serif;color:#2c2b2b;letter-spacing:-1px;margin-top:-10px;margin-bottom:.8rem}
+        @media (min-width: 768px) {  p.titulo{font-size:2.7rem;margin-top:-5px;margin-bottom:1rem} }
+
+        /*Carousel_ID*/
+        #carousel-produtos{
+
+            /* Carousel Nav Custom */
+            .owl-stage{padding-left:0 !important;display: flex;align-items: center;}
+            /*Para aparecer o border-radius nos items*/
+            .owl-carousel .owl-stage-outer{padding:10px 0;} 
+
+
+            /* Carousel Nav */
+            .owl-arrow-v2{margin:30px 5px 10px !important;stroke:#ef5929;fill:#ef5929;}
+            .owl-arrow-v2.right{transform: none;}
+            .owl-arrow-v2:hover path{stroke:#1F1F1F;fill:#1F1F1F;}
+            @media (min-width: 992px) { 
+                .owl-arrow-v2{margin:0 !important;}
+                .owl-arrow-v2.left{position:absolute;bottom:-30px;right:50px;background:#f5f6fa !important;}
+                .owl-arrow-v2.right{transform: none;position:absolute;bottom:-30px;right:10px;background:#f5f6fa !important;}
+            }
+            
+
+             /* Seleciona todas menos a first-active */
+            .carousel-item-v2{
+                min-height:310px;font-size:14px;margin:0 7px;background:#fff;border-radius:10px;
+                box-shadow: rgba(0, 0, 0, 0.05) 1.95px 1.95px 2.6px;
+                cursor:pointer;
+            }
+
+            /*Define Textos e Icones*/
+            .carousel-box-v2 {
+                >p.h1 {
+                    font:600 20px/22px 'Volte',Arial,sans-serif;color:#2c2b2b;
+                    opacity:1;
+                }
+                > p.h2 {
+                    font:400 14px/18px 'Volte',Arial,sans-serif;color:#989898;
+                } 
+                >i {
+                    font-size:38px;display:block; 
+                    background: #EF5929;
+                    display: inline-flex;
+                    padding: 10px;
+                    border-radius: 10px;
+                    width: 80px;
+                    height: 80px;
+                    justify-content: center;
+                    align-items: center;
+                    color: #fff;
+                    margin-bottom: 10px;
+                }
+            } 
+
+            .owl-nav{
+                margin-top:-15px;
+                .owl-next{
+                    >owl-next{
+                        background:none !important;
+                        &:hover{background:none !important;}
+                    }
+                }
+            }
+
+            /*Reset Nav*/
+            .owl-theme {
+                .owl-nav {
+                    [class*=owl-] {
+                        background: none !important;
+                        outline: none !important;
+                        opacity: 1 !important;
+                        &:hover {
+                            background: none !important;
+                            outline: none !important;
+                            opacity: 1 !important;
+                        }
+                    }
+                    .disabled {
+                        opacity: 1 !important;
+                    }
+                }
+            }
+
+
+        }
+        /*END Carousel_ID*/
+
+
+        /*Fix to Scroll to Carousel*/
+        #carousel-produtos::before {
+            content: '';
+            display: block;
+            height:      190px;
+            margin-top: -190px;
+            visibility: hidden;
+         }
+
+    }
+    /* Carousel Nav Reset - Keep Here to Fix Hover */
+    .owl-carousel .owl-nav button.owl-next, .owl-carousel .owl-nav button.owl-prev, .owl-carousel button.owl-dot, .owl-nav svg {
+        color: inherit;border: none;padding: 0!important;font: inherit;background:none !important;
+    } .owl-theme .owl-nav [class*=owl-]:hover { background:none !important; }
+
+
+
+/*
+*
+*  CSS Specific for Pages Covers 
+*
+*/
+
+    /*DataBusca Covers*/
+    .css-databusca{
+
+        /*DataBusca Cover-1*/
+        &.cv-1{
+            margin:0 !important;
+            background:#f5f6fa;
+
+            &.py-custom { padding-top: 3rem!important; padding-bottom: 3.6rem!important;}
+            @media (min-width: 768px){ 
+                &.py-custom {
+                    padding-top: 4.5rem!important;
+                    padding-bottom: 4.7rem!important;
+                }
+            }
+        }
+
+    }
+
+
+
+
+    /*DataTag Covers*/
+    .css-datatag{
+
+        /*DataTag Cover-1*/
+        &.cv-1{
+            margin:0 !important;
+            background:#fff;
+
+            &.py-custom { padding-top: 3rem!important; padding-bottom: 3.6rem!important;}
+            @media (min-width: 768px){ 
+                &.py-custom {
+                    padding-top: 4.5rem!important;
+                    padding-bottom: 4.7rem!important;
+                }
+            }
+        }
+
+
+
+    }
+
+
+
+
+     /*DataQuiz Covers*/
+    .css-dataquiz{
+
+        &.py-custom { padding-top: 3.2rem!important; padding-bottom: 2rem!important;}
+        @media (min-width: 768px){ 
+            &.py-custom {
+                padding-top: 4.4rem!important;
+                padding-bottom: 3rem!important;
+            }
+        }
+
+        /*DataQuiz Biro Cover*/
+        &.cv-biro{
+            background:#f5f6fa;
+            @media (min-width: 992px){ margin:90px 0 0; }
+
+            .dash-biro {
+                height: 6px;
+                background: linear-gradient(90deg, #EE5929 0%, #ff7a00 100%);
+                width: 6vw;
+                min-width: 80px;
+            }
+
+
+                    /*
+                    *
+                    *  CSS Timeline for Biro
+                    *
+                    */
+                        .time-about {
+                            max-width: 700px;
+                            margin: auto;
+                            p {
+                                font-size: 1em;
+                                line-height: 1.75em;
+                                border-top: 3px solid;
+                                -o-border-image: linear-gradient(to right, #ffaf32 0%, #ff8008 100%);
+                                border-image: linear-gradient(to right, #ffaf32 0%, #ff8008 100%);
+                                border-image-slice: 1;
+                                border-width: 3px;
+                                margin: 0;
+                                padding: 40px;
+                                counter-increment: section;
+                                position: relative;
+                                color: #34435e;
+                                &:before {
+                                    content: '1';
+                                    position: absolute;
+                                    border-radius: 50%;
+                                    padding: 8px 14px 8px;
+                                    background: linear-gradient(90deg, #EE5929 0%, #ff7a00 100%);
+                                    text-align: center;
+                                    line-height: 1.25em;
+                                    color: #ffffff;
+                                    font-size: 1em;
+                                    z-index: 10;
+                                }
+                                &:nth-child(2) {
+                                    &::before {
+                                        content: '2';
+                                    }
+                                }
+                                &:nth-child(odd) {
+                                    border-right: 3px solid;
+                                    padding-left: 0;
+                                    &:before {
+                                        left: 100%;
+                                        margin-left: -18px;
+                                    }
+                                }
+                                &:nth-child(even) {
+                                    border-left: 3px solid;
+                                    padding-right: 0;
+                                    &:before {
+                                        right: 100%;
+                                        margin-right: -18px;
+                                    }
+                                }
+                                &:first-child {
+                                    border-top: 0;
+                                    border-top-right-radius: 0;
+                                    border-top-left-radius: 0;
+                                }
+                                &:last-child {
+                                    border-bottom-right-radius: 0;
+                                    border-bottom-left-radius: 0;
+                                }
+                            }
+                            span {
+                                color: #ef5929;
+                                font-size: 1.10rem;
+                                font-weight: 500;
+                            }
+                        }
+                        @media (min-width: 576px) {
+                            .time-about {
+                                p {
+                                    &:nth-child(odd) {
+                                        &:before {
+                                            left: 100%;
+                                            margin-left: -18px;
+                                        }
+                                    }
+                                    &:nth-child(even) {
+                                        &:before {
+                                            right: 100%;
+                                            margin-right: -18px;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+
+
+
+        }
+        /*END DataQuiz Biro Cover*/
+
+
+
+    }
+
+
+
+
+
+
+        

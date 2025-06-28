@@ -1,0 +1,498 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PH3 - Site</title>
+
+    <!--GLOBAL INCLUDES-->
+
+            <!--Favicon-->
+            <link rel="shortcut icon" type="image/x-icon" href="images/favicon-ph3a.ico">
+
+            <!-- Bootstrap 5.0 -->
+            <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+            <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
+
+            <!--Bootstrap Icons (using icons on mobile menu)-->
+            <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
+
+            <!-- FontAwesome Icons (using icons on footer) -->
+            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css">
+
+            <!-- Global Font Stack -->
+            <link href="https://fonts.cdnfonts.com/css/volte" rel="stylesheet">
+            <link href="https://fonts.cdnfonts.com/css/general-sans" rel="stylesheet">
+            <link href='https://fonts.googleapis.com/css?family=Montserrat:300,400,500,700|Open+Sans:300,400,500,600,700' rel='stylesheet' type='text/css'>
+
+            <!-- jQuery -->
+            <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+
+            <!-- Carrousel (Manter Depois do Jquery) -->
+            <link type="text/css" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" />
+            <link type="text/css" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css" />
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+
+            <!-- Animate Img Javascript -->
+            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css" type="text/css" />
+            <script src="js/animar-elementos-minify.js"></script>
+
+            <!-- JS Global to PH3 Site -->
+            <script src="js/global.js"></script>
+
+            <!--CSS Global to PH3 Site-->
+            <link rel="stylesheet" href="css/layout.css">
+
+    <!--END GLOBAL-->
+
+
+    <!--INCLUDE JS DO PAULO (SOLICITADO POR E-MAIL)-->
+    <script type="text/javascript">
+        (function (e, t, o, n, p, r, i) { e.visitorGlobalObjectAlias = n; e[e.visitorGlobalObjectAlias] = e[e.visitorGlobalObjectAlias] || function () { (e[e.visitorGlobalObjectAlias].q = e[e.visitorGlobalObjectAlias].q || []).push(arguments) }; e[e.visitorGlobalObjectAlias].l = (new Date).getTime(); r = t.createElement("script"); r.src = o; r.async = true; i = t.getElementsByTagName("script")[0]; i.parentNode.insertBefore(r, i) })(window, document, "https://diffuser-cdn.app-us1.com/diffuser/diffuser.js", "vgo");
+        vgo('setAccount', '801284411');
+        vgo('setTrackByDefault', true);
+        vgo('process');
+    </script>
+
+
+</head>
+<body>
+
+    <!--Desktop Menu-->
+    <header id="header-wrap">
+    <nav id="desktop-menu" class="navbar">
+
+        <div class="container">
+            <div class="d-flex justify-content-center align-items-center">
+                <!--Toggle-->
+                <button class="navbar-toggler d-flex d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#mobileMenu" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+                <!--Logo-->
+                <a href="./"><img src="images/logo-ph3.webp" class="logo"></a>
+                <!--Links-->
+                <ul class="navbar-nav d-none d-md-flex flex-row">
+                    <li class="active"><a href="./">Início</a></li>
+                    <li><a href="./sobre-nos.html">Sobre nós</a></li>
+                    <li class="nav-item dropdown">
+                        <a class="v2-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        Produtos
+                        </a>
+                        <ul class="dropdown-menu position-absolute" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item" href="./datatag.html">Digital</a></li>
+                            <li><a class="dropdown-item" href="./databusca.html">Localização</a></li>
+                            <li><a class="dropdown-item" href="./datamind.html">Workflow</a></li>
+                            <li><a class="dropdown-item" href="./dataquiz.html">Quiz</a></li>
+                            <li><a class="dropdown-item" href="./datacrm.html">Vendas</a></li>
+                            <li><a class="dropdown-item" href="./datacob.html">Cobrança</a></li>
+                        </ul>
+                    </li>
+                    <li><a class="scroll-contato">Contato</a></li>
+                    <li class="d-none d-lg-flex"><a href="https://blog.ph3a.com.br/" target="_blank">Blog</a></li>
+                    <li><a href="https://suporte.ph3a.com.br/support/login" target="_blank">Helpdesk</a></li>
+                </ul>
+            </div>
+            <div class="d-flex">
+                <a href="https://cliente.ph3a.com.br/" class="btn-menu-secondary d-none d-lg-flex" target="_blank">Área do cliente</a>
+                <a href="https://ph3a.com.br/crm" class="btn-menu-primary" target="_blank">Login</a>
+            </div>   
+        </div>
+    </nav>
+    </header>
+
+
+
+
+    <!--OffCanvas-->
+    <aside id="mobile-menu">
+    <div class="offcanvas offcanvas-start" tabindex="-1" id="mobileMenu" aria-labelledby="mobileMenuLabel">
+    <div class="offcanvas-header">
+        <img src="images/logo-ph3.webp" class="logo">
+    <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+    </div>
+    
+        <div class="d-flex justify-content-center align-items-center div-cta">
+            <a href="https://ph3a.com.br/crm" class="btn-cta" target="_blank">
+            <i class="bi-arrow-right-circle-fill arrow"></i>
+            <div class="space">Acesse sua conta</div>
+            </a>
+        </div>
+        <div class="offcanvas-body offcanvas-scrollbar">
+        <nav id="mobile-navigation">
+            <a href="./"><i class="bi-house icone"></i>Início</a>
+            <a href="./sobre-nos.html"><i class="bi-sticky"></i>Sobre nós</a>
+            <!--Drop-1-->
+            <a href="#drop-1" data-bs-toggle="collapse" aria-expanded="false" onclick="$(this).toggleClass('active');">
+                <i class="bi-layers"></i>Produtos
+                <span class="bi-chevron-expand"></span>
+            </a>
+            <ul class="list-unstyled mb-0 position-relative collapse" id="drop-1">
+                <li><a href="./datatag.html">Digital</a></li>
+                <li><a href="./databusca.html">Localização</a></li>
+                <li><a href="./datamind.html">Workflow</a></li>
+                <li><a href="./dataquiz.html">Quiz</a></li>
+                <li><a href="./datacrm.html">Vendas</a></li>
+                <li><a href="./datacob.html">Cobrança</a></li>
+            </ul>
+            <!--End Drop-1-->
+            <a href="https://blog.ph3a.com.br/" target="_blank"><i class="bi-textarea"></i>Blog</a>
+            <a href="https://www.gov.br/defesa/pt-br/acesso-a-informacao/lei-geral-de-protecao-de-dados-pessoais-lgpd" target="_blank"><i class="bi-file-earmark-text"></i>LGPD</a>
+            <hr class="divider">
+            <a href="https://cliente.ph3a.com.br/" target="_blank"><i class="bi-window"></i>Área do cliente</a>
+            <a href="https://suporte.ph3a.com.br/support/login" target="_blank"><i class="bi-chat-square-dots"></i>Help Desk</a>
+        </nav>
+        </div>
+        <div class="offcanvas-footer d-flex justify-content-center align-items-center">
+            <a class="scroll-contato" data-bs-dismiss="offcanvas"><i class="bi-envelope"></i>Entre em contato</a>
+        </div>
+    </div>
+    </aside>
+
+
+
+    <!--Wrap-->
+    <section class="d-flex justify-content-center" style="background:#f5f6fa;">
+    <div class="container cv-tos" style="background:#fff;border-left:1px solid #eee;border-right:1px solid #eee;">
+    <div class="row">
+    <div class="col-12">
+
+        <div class="py-3 p-md-5" style="max-width:95%;margin:10px auto;">
+
+            <div class="pb-4">
+            <h1>Código de Ética PH3A
+            </h1>
+            <p>Data de atualização: 02/09/2019</p>
+            <div class="my-3 mb-3 dash-divider"></div>
+            
+                <ol class="tos-nav">
+                    <li>
+                    <a href="#item-1"> Definição <i class="bi-file-earmark-text d-none"></i></a> 
+                    </li>
+                    <li>
+                    <a href="#item-2"> Público Alvo</a> 
+                    </li>
+                    <li>
+                    <a href="#item-3"> Diretrizes </a>
+                    </li>
+                    <li>
+                    <a href="#item-4"> Integridade profissional e pessoal </a>
+                    </li>
+                    <li>
+                    <a href="#item-5"> Relação com clientes e parceiros </a>
+                    </li>
+                    <li>
+                    <a href="#item-6"> Relações no ambiente de trabalho </a>
+                    </li>
+                    <li>
+                    <a href="#item-7"> Relações com o setor público</a>
+                    </li>
+                    <li>
+                    <a href="#item-8"> Relações com fornecedores</a>
+                    </li>
+                    <li>
+                    <a href="#item-9"> Relações com concorrentes</a>
+                    </li>
+                    <li>
+                    <a href="#item-10"> Segurança da informação</a>
+                    </li>
+                    <li>
+                    <a href="#item-10"> Penalidades</a>
+                    </li>
+                </ol>
+
+
+            </div>
+
+
+            <div id="item-1" class="pb-4 scroll-item">
+                <h2 class="mb-4"><span class="d-block d-md-inline-block mb-3 mb-md-0">1</span> Definição</h2>
+                <p> A PH3A tem a convicção de que, para atingir os seus objetivos de negócios, deve levar em conta princípios éticos que sejam compartilhados por todos os administradores, funcionários e colaboradores da empresa. </p>
+                <p> Este Código de Ética e Conduta (“Código”) reúne os conceitos e diretrizes que devem ser observados em nossa ação profissional para atingirmos objetivos cada vez mais elevados no exercício de nossas atividades, refletindo nossa identidade cultural, responsabilidades e compromissos no segmento profissional em que atuamos e em relação às pessoas e empresas com quem interagimos. </p>
+                <p> Nossa ação deve ser sempre marcada pela integridade, reciprocidade, lealdade e transparência, bem como pelo respeito e valorização do ser humano, sua privacidade, individualidade e principalmente sua dignidade. </p>
+                <p> Não aceitamos quaisquer atitudes guiadas por preconceitos relacionados à origem, religião, classe social, sexo, cor, idade, necessidades especiais, preferência sexual, nacionalidade e quaisquer outras formas de discriminação que tenha o objetivo de ferir a dignidade de um indivíduo ou grupo de indivíduos. </p>
+                <p> Acreditamos na importância da responsabilidade social e empresarial, como Empresa comprometida com as comunidades em que atua. Esta é a atitude que permite a sustentabilidade de nosso negócio a longo prazo. </p>
+                <p> Gestores, funcionários e colaboradores devem ter o compromisso de zelar pelos valores da empresa, de manter atitudes compatíveis com esses valores e de atuar em defesa dos interesses dos diversos dos stakeholders da PH3A. A busca pela sustentabilidade da nossa Empresa deve se dar com base nesses princípios. As nossas ações devem ser guiadas pelos nossos padrões éticos e estrito respeito à legalidade. </p>
+                <p> As linhas gerais deste Código permitem avaliar grande parte das situações, mas não detalham, necessariamente, todas as questões que podem surgir em seu dia-a-dia. Assim, eventualmente, poderão surgir dúvidas sobre qual a conduta mais correta a adotar. Estas devem ser endereçadas ao seu superior ou ao sócio responsável. </p>
+            </div>
+
+
+            <div id="item-2" class="pb-4 scroll-item">
+                <h2 class="mb-4"><span class="d-block d-md-inline-block mb-3 mb-md-0">2</span> Público Alvo</h2>
+                <p> Esta norma se aplica aos funcionários, prestadores de serviços, brokers, consultores, auditores, fiscais, temporários e demais colaboradores que estejam a serviço da PH3A, incluindo toda a mão-de-obra terceirizada ou disponibilizada mediante convênios, parcerias ou quaisquer outras formas de atuação conjunta com outras empresas;</p>
+            </div>
+
+
+
+            <div id="item-3" class="pb-4 scroll-item">
+                <h2 class="mb-4"><span class="d-block d-md-inline-block mb-3 mb-md-0">3</span> Diretrizes</h2>
+                <p>Para estar em conformidade com este Código, todos devem zelar por sua integridade, respeitando os itens a seguir.</p>
+            </div>
+
+
+            <div id="item-4" class="pb-4 scroll-item">
+                <h2 class="mb-4"><span class="d-block d-md-inline-block mb-3 mb-md-0">4 </span> Integridade profissional e pessoal</h2>
+                 <ul>
+                    <li>Empregar, no exercício das suas funções, a mesma atitude que qualquer pessoa de caráter íntegro o faz na administração dos seus próprios negócios. </li>
+                    <li>Avaliar cuidadosamente situações que possam caracterizar conflito entre os seus interesses e os da PH3A, mesmo que não causem prejuízos óbvios à empresa. Comunicar ao seu superior ou aos sócios, de forma transparente, a existência de conflito de interesses relevante com a empresa, declarando-se impedido de tomar decisão nestes casos. </li>
+                    <li>Reconhecer honestamente os erros cometidos e comunicá-los ao seu superior, ou ao sócio responsável. </li>
+                    <li>Respeitar e garantir o cumprimento das leis, regulações e Políticas, Normas e Procedimentos internos existentes, bem como fazer com que seus subordinados também os respeitem, criando condições para que todas as pessoas com quem interagem nas organizações também o façam. </li>
+                    <li>Comunicar ao sócio diretor qualquer relacionamento profissional com clientes, parceiros ou prestadores de serviços da PH3A, incluídos, mas não limitados a corretores, advogados, empresas de TI, etc.</li>
+                  </ul>
+                  <p> Questionar as orientações contrárias aos princípios e valores da PH3A. </p>
+                  <p> Não são aceitáveis as seguintes condutas: </p>
+                  <ul>
+                    <li>Manter relações comerciais particulares com clientes, parceiros, prestadores de serviços ou fornecedores sem comunicar ao sócio responsável da PH3A.</li>
+                    <li>Usar seu cargo, função ou informações sobre negócios e assuntos da PH3A, de seus clientes ou parceiros, para influenciar decisões que venham a favorecer interesses contraditórios aos interesses da PH3A, de seus clientes ou parceiros.</li>
+                    <li>Usar para fins particulares ou repassar a terceiros: tecnologias, metodologias, “know how” e outras informações de propriedade da PH3A, ou por ela desenvolvidas ou obtidas, ou advindas de seus clientes.</li>
+                    <li>Manifestar-se em nome da empresa quando não autorizado ou habilitado para tal.</li>
+                    <li>Prestar informações relevantes imprecisas a seu respeito ou a respeito de terceiros.</li>
+                    <li>Ingressar no ambiente de trabalho da PH3A, de seus clientes ou parceiros, sob efeito de bebidas alcoólicas ou drogas ilegais.</li>
+                    <li>Assediar sexual ou moralmente qualquer indivíduo dentro ou fora do ambiente de trabalho.</li>
+                    <li>Desconhecer ou descumprir as Políticas internas, Normas, Procedimentos e Leis referentes a sua atividade profissional ou de clientes e parceiros com quem a PH3A possua relacionamentos.</li>
+                  </ul>
+            </div>
+
+            <div id="item-5" class="pb-4 scroll-item">
+                <h2 class="mb-4"><span class="d-block d-md-inline-block mb-3 mb-md-0">5</span> Relação com clientes e parceiros</h2>
+                <p> O compromisso com a satisfação de nossos Clientes e Parceiros deve refletir-se no respeito aos seus direitos e na busca por soluções que atendam aos seus interesses, sempre em consonância com os objetivos de desenvolvimento, rentabilidade e profissionalismo da PH3A. </p>
+                <p> Os Clientes e Parceiros devem ser atendidos com cortesia e eficiência, devendo ser oferecidas informações claras, precisas e transparentes. O cliente e parceiro deve obter respostas, mesmo que negativas, às suas solicitações, de forma adequada e no prazo por ele esperado. </p>
+                <p> Portar-se e vestir-se adequadamente ao ambiente de nossos clientes e parceiros, de forma a não causar constrangimento ao cliente ou denigrir a imagem da PH3A. </p>
+            </div>
+
+            <div id="item-6" class="pb-4 scroll-item">
+                <h2 class="mb-4"><span class="d-block d-md-inline-block mb-3 mb-md-0">6</span> Relações no ambiente de trabalho</h2>
+                <p> As relações no ambiente de trabalho da PH3A, de clientes ou parceiros, devem se pautar pela cortesia e respeito. Deve-se colaborar para que predomine o espírito de equipe, a lealdade, a confiança, a conduta compatível com os valores da PH3A e a busca por resultados e satisfação do cliente. </p>
+                <p> A apresentação de críticas construtivas e sugestões visando ao aprimoramento dos procedimentos existentes devem ser sistematicamente valorizadas. </p>
+                <p> Quando no papel de gestor de pessoas e líderes de projetos, deve-se ter em mente que seus funcionários o tomarão como exemplo. Suas ações, portanto, devem constituir modelo de conduta para sua equipe. </p>
+                <p> Não se admite o uso do cargo ou posição para solicitar favores ou serviços pessoais aos subordinados, assim como se utilizar da sua posição hierárquica para distorcer os objetivos das normas e governança da PH3A. </p>
+                <p> É fundamental reconhecer o mérito de cada um e propiciar igualdade de acesso às oportunidades de desenvolvimento profissional existentes, segundo as características, competências e contribuições de cada funcionário e colaborador. Não se admite nenhuma decisão que afete a carreira profissional de subordinados baseada apenas em relacionamento pessoal. </p>
+            </div>
+
+            <div id="item-7" class="pb-4 scroll-item">
+                <h2 class="mb-4"><span class="d-block d-md-inline-block mb-3 mb-md-0">7</span> Relações com o setor público</h2>
+                <p> Devem ser observados os mais elevados padrões de honestidade e integridade em todos os contatos com administradores e funcionários do setor público, evitando sempre que sua conduta possa parecer imprópria. Devemos nos abster de manifestar opinião sobre atos ou atitudes de funcionários públicos, que seja baseada em opiniões políticas. </p>
+            </div>
+
+            <div id="item-8" class="pb-4 scroll-item">
+                <h2 class="mb-4"><span class="d-block d-md-inline-block mb-3 mb-md-0">8</span> Relações com fornecedores</h2>
+                <p> A escolha e contratação de fornecedores devem sempre ser baseadas em critérios técnicos, profissionais, éticos e nas necessidades da PH3A, devendo ser conduzidas por meio de processos pré-determinados, tais como concorrência ou cotação de preços, que garantam a melhor relação custo x benefício. </p>
+                <p> Todos os nossos fornecedores devem ser submetidos à análise e aprovação dos sócios e que deverão zelar pelos mesmos critérios éticos aplicados aos gestores, funcionários e colaboradores. </p>
+            </div>
+
+            <div id="item-9" class="pb-4 scroll-item">
+                <h2 class="mb-4"><span class="d-block d-md-inline-block mb-3 mb-md-0">9</span> Relações com concorrentes</h2>
+                <p> A concorrência leal, sujeita à reciprocidade, deve ser o elemento básico em todas as nossas operações e relações com outras empresas. Nossa competitividade deve ser exercida com base neste princípio. </p>
+                <p> A análise da concorrência e sua divulgação deve se basear em dados objetivos. </p>
+                <p> É proibido fornecer informações de propriedade da PH3A, de clientes ou de parceiros aos concorrentes. </p>
+            </div>
+
+            <div id="item-10" class="pb-4 scroll-item">
+                <h2 class="mb-4"><span class="d-block d-md-inline-block mb-3 mb-md-0">10</span> Segurança da informação</h2>
+                <p> A proteção e privacidade das informações tornou-se um princípio fundamental em nosso negócio e de nossos clientes e parceiros. Isto posto, é necessário: </p>
+                <ul>
+                    <li> Atuar sempre em defesa dos melhores interesses da PH3A, dos clientes e parceiros, mantendo sigilo sobre negócios e projetos da PH3A e informações de clientes e parceiros que nos sejam confiadas. </li>
+                    <li> Preservar as informações confidenciais que lhe tenham sido confiadas para o exercício da sua função, excetuando-se situações em que a informação for relativa à atividade ilegal ou sua divulgação seja exigida por lei ou tenha sido expressamente autorizada e, em caso de tais solicitações envolverem informações de clientes, a solicitação deverá ser levada ao socio responsável. </li>
+                    <li> Executar boas práticas para a proteção das informações, tais como: <ul>
+                        <li>Salvaguardar as senhas de acesso a sistemas corporativos;</li>
+                        <li>Bloquear os microcomputadores quando se ausentar da estação de trabalho, independente do intervalo de tempo; e</li>
+                        <li>Arquivar adequadamente as informações físicas em locais suficientemente seguros.</li>
+                    </ul>
+                    </li>
+                </ul>
+                <p> Quanto à divulgação de informações à mídia em nome da PH3A mediante entrevistas ou quaisquer outras declarações, cabe ressaltar que esse tipo de divulgação somente é realizado através dos sócios ou por profissional devidamente autorizado. Qualquer contato com a mídia deve ser reportado ao sócio responsável. </p>
+                <p> Ressaltamos ainda que é fundamental a observância da Política de Segurança da Informação, das Normas e dos Procedimentos disponíveis no sistema Teams e das normas de segurança e privacidade de nossos clientes e parceiros. </p>
+            </div>
+
+            <div id="item-11" class="pb-4 scroll-item">
+                <h2 class="mb-4"><span class="d-block d-md-inline-block mb-3 mb-md-0">11</span> Penalidades</h2>
+                <p> A PH3A monitora a aderência por parte dos funcionários com relação aos procedimentos descritos no Código de Ética e Conduta. O não cumprimento dos procedimentos descritos pode constituir razões para advertências ou punições cabíveis nas formas legais, podem culminar com desligamentos e até mesmo processos legais. </p>
+            </div>
+
+        </div>
+        
+    </div>
+    </div>
+    </div>
+    </section>
+
+
+
+    <!--Zoho Form-->
+    <section id="contato-ph3a" class="cv-contato">
+        <div class="container">
+            <div class="row">
+            <div class="col-12 d-flex flex-column justify-content-center align-items-center text-center pt-5">
+                <p class="titulo">Ficou alguma dúvida?</p>
+            </div>
+            <div class="my-0 my-md-1 dash-contato"></div>
+            </div>
+        </div>
+        </section>
+        <!-- Zoho Form -->
+        <div id="zorro-xid"></div>
+        <!-- Zoho JS -->
+        <script type="text/javascript">
+            (function (_id, _h) {
+                try {
+                    var f = document.createElement('iframe');
+                    f.src = 'https://forms.zohopublic.com/ph3a2021/form/TodososProdutosPH3A/formperma/6-g3Ny4KSzd7x9C6Q92ouba-oY6gAFcxffGhqlcnbDc?zf_rszfm=1';
+                    f.style.border = 'none';
+                    f.style.height = _h;
+                    f.style.width = '100vw';
+                    f.style.transition = 'all 0.5s ease';
+                    var d = document.getElementById(_id);
+                    if (!d) return;
+                    d.appendChild(f);
+                    window.addEventListener('message',function () {
+                        var evntData = event.data;
+                        if (evntData && evntData.constructor == String) {
+                            var zf_ifrm_data = evntData.split('|');
+                            if (zf_ifrm_data.length == 2) {
+                                var zf_perma = zf_ifrm_data[0];
+                                var zf_ifrm_ht_nw =
+                                    parseInt(zf_ifrm_data[1], 10) + 15 + 'px';
+                                var iframe = document.getElementById(_id).getElementsByTagName('iframe')[0];
+                                if (iframe.src.indexOf('formperma') > 0 && iframe.src.indexOf(zf_perma) > 0) {
+                                    var prevIframeHeight = iframe.style.height;
+                                    if (prevIframeHeight != zf_ifrm_ht_nw) {
+                                        iframe.style.height = zf_ifrm_ht_nw;
+                                    }
+                                }
+                            }
+                        }
+                    },
+                    false);
+                } catch (e) {}
+            })
+            ('zorro-xid', '1120px');
+        </script>
+        <!-- Zoho Tracker -->
+        <script>
+            var w = window;
+            var d = document;
+            var cb = function () {
+                try {
+                    loadwaprops(
+                        '3zb19377283e881435c5b1a76eef97f8f6',
+                        '3zc222016103396a0270d452236ed98177',
+                        '3z0df49bf72adb4b9b03ea190844c87bcfd541edda061a0351d0f1ff502c92f8f8',
+                        '3z71f4266141a53781e5c9c72e01c561c092e8d93a9818c1d7fc3e013a0ad57994',
+                        0.0
+                        );
+                } catch (e) {}
+            };
+            var p = w.location.protocol, f = d.getElementsByTagName('script')[0], s = d.createElement('script');
+            if (p.indexOf('http') < 0) p = 'http' + ':';
+            s.type = 'text/javascript';
+            s.async = false;
+            if (!s.readyState) s.onload = cb; else {
+                s.onreadystatechange = function () {
+                    if (s.readyState == 'loaded' || s.readyState == 'complete') {
+                        s.onreadystatechange = null;
+                        cb();
+                    }
+                };
+            }
+            s.src = p + '//ma.zoho.com/hub/js/WebsiteAutomation.js';
+            f.parentNode.insertBefore(s, f);
+        </script>
+        <!-- Tag PH3A -->
+        <script src="https://www.dataunion.com.br/repository/c6457f17-8962-4874-b74f-9ab907961ff9/ph3a-blog" type="text/javascript" async></script>
+    
+    
+    
+        <!--FOOTER-->
+        <footer class="cv-footer">
+        <div class="p-2 py-5 footer-1">
+    
+            <div class="container my-4">
+                <div class="row justify-content-between">
+                    <div class="col-md-3 d-flex flex-column align-items-center align-items-md-start justify-content-center pb-3 pb-md-0">
+    
+                        <div class="pb-3">
+                            <img src="images/logo-ph3a-white.png" style="max-width:200px;">
+                        </div>
+                        <div class="d-flex justify-content-start align-items-center">
+                            <img src="images/logo-abemd.png" class="me-2" style="max-width:58px;">
+                            <img src="images/logo-bureau.png" class="ms-2" style="max-width:124px;">
+                        </div>
+                        
+    
+                    </div>
+                    <div class="col-md-4 d-flex justify-content-center justify-content-md-between pt-4 pt-md-0 pb-2 pb-md-0">
+    
+                            <div class="mx-3 mx-md-2">
+                            <span class="d-block tags mb-3">MENU</span>
+                            <ul class="list-unstyled">
+                                <li>
+                                    <a href="./sobre-nos.html" title="Sobre a PH3">Sobre nós</a>
+                                </li>
+                                <li>
+                                    <a href="https://blog.ph3a.com.br/" target="_blank" title="Blog PH3">Blog</a>
+                                </li>
+                                <li>
+                                    <a href="https://www.gov.br/defesa/pt-br/acesso-a-informacao/lei-geral-de-protecao-de-dados-pessoais-lgpd" target="_blank" title="LGPD">LGPD</a>
+                                </li>
+                                <li>
+                                    <a href="./ethic.html" title="Ética e conduta">Ética e conduta</a>
+                                </li>
+                                <li>
+                                    <a href="./privacy.html" title="Política de privacidade">Política de privacidade</a>
+                                </li>
+                                <li>
+                                    <a href="./privacy.html#cookies" title="Uso de cookies">Uso de cookies</a>
+                                </li>
+                            </ul>
+                            </div>
+                            <div class="mx-3 mx-md-2 me-lg-4">
+                            <span class="d-block tags mb-3">DATAS</span>
+                            <ul class="list-unstyled" style="color:#fff;">
+                                <li>
+                                    <a href="./datatag.html" title="DataTag">DataTag</a>
+                                </li>
+                                <li>
+                                    <a href="./databusca.html" title="DataBusca">DataBusca</a>
+                                </li>
+                                <li>
+                                    <a href="./datamind.html" title="DataMind">DataMind</a>
+                                </li>
+                                <li>
+                                    <a href="./dataquiz.html" title="DataQuiz">DataQuiz</a>
+                                </li>
+                                <li>
+                                    <a href="./datacrm.html" title="DataCRM">DataCRM</a>
+                                </li>
+                                <li>
+                                    <a href="./datacob.html" title="DataCob">DataCob</a>
+                                </li>
+                                </ul>
+                            </div>
+    
+    
+                    </div>
+                    <div class="col-md-4 d-flex flex-column align-items-center align-items-md-start justify-content-center">
+    
+                        <div class="footer-social pt-4 pt-md-0">
+                            <a href="https://www.facebook.com/ph3atecnologia" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                            <a href="https://twitter.com/ph3a_tecnoliga" target="_blank"><i class="fab fa-twitter"></i></a>
+                            <a href="https://www.linkedin.com/company/ph3a" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+                            <a href="https://wa.me/5511965845180?text=Ol%C3%A1!%20Gostaria%20de%20marcar%20uma%20reuni%C3%A3o%20para%20saber%20mais%20detalhes!" target="_blank"><i class="fab fa-whatsapp"></i></a>
+                        </div>
+    
+                        <div class="footer-info pt-3 text-center text-md-start">
+                        <p>comercial@ph3a.com.br</p>
+                        <p>+55 (11) 3723-4230 +55 <br>(11) 96584-5180 (Somente WhatsApp)</p>
+                        <p class="mb-0">Rua dos Três Irmãos, 201 – 6º andar – Morumbi 05615-190 - São Paulo – SP</p>
+                        </div>
+    
+                    </div>
+                </div>
+            </div>
+    
+        </div>
+        <div class="p-3 footer-2 text-center">
+            <p>Copyright © 2022 PH3A. <br class="d-initial d-md-none"> Todos os direitos reservados.</p>
+        </div>
+        </footer>
+               
+    </body>
+    </html>

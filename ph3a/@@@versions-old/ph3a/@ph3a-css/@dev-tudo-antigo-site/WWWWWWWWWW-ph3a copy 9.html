@@ -1,0 +1,1427 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>PH3A - Tecnologia</title>
+
+<!-- Bootstrap 5.0 -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
+
+
+<!--Bootstrap Icons-->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
+
+<!-- FontAwesome Icons -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css">
+
+
+<!--Animations-->
+<link rel="stylesheet" href="css/animation.css">
+
+<!--Timeline for Home-->
+<link rel="stylesheet" href="css/home-timeline.css">
+
+<!-- Custom Carousel for PH3 (Keep it here to override owl styles)-->
+<link rel="stylesheet" href="css/home-carousel.css">
+
+
+
+
+
+<script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+<script   script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+<!--Ionicons
+<link href="http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css" rel="stylesheet" >
+-->
+
+
+<!-- jQuery -->
+<script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+
+
+<!-- FontStack -->
+<link href='https://fonts.googleapis.com/css?family=Roboto|Ubuntu|Lato|Open+Sans|Montserrat:300,400,500,600,700' rel='stylesheet'>
+
+<link href="https://fonts.googleapis.com/css2?family=Raleway:wght@600;700&display=swap" rel="stylesheet">
+
+
+
+<!--Volte Font-->
+<link href="https://fonts.cdnfonts.com/css/volte" rel="stylesheet">
+
+
+
+
+<!-- Carrousel (Manter Depois do Jquery) -->
+<link type="text/css" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" />
+<link type="text/css" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css" />
+<script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+
+
+<!-- Animate Brother -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css" type="text/css" />
+<script src="js/animar-elementos-minify.js"></script>
+
+</head>
+<body>
+
+
+    <style>
+
+
+        :root{
+            --global-font-title: 'Volte',Arial,sans-serif;
+            --global-font-texts: 'Volte',Arial,sans-serif;
+        }
+
+       
+        .container {
+            max-width: 1140px;
+        }
+        
+        /*CSS Global for Link*/
+        a{
+            cursor:pointer;
+            text-decoration:none;
+            transition:color .15s ease-in-out,
+            background-color .15s ease-in-out,
+            border-color .15s ease-in-out;
+            color:inherit;
+        }
+
+        /*CSS Global for Font-Weight*/
+        .fw-400{font-weight:400;}
+        .fw-500{font-weight:500;}
+        .fw-600{font-weight:600;}
+        .fw-700{font-weight:700;}
+
+
+    /*
+    *
+    * Css Global Variables
+    *
+    */
+        :root{
+            /*Home Cover Titulos*/
+            --home-title:'Volte',Arial,sans-serif;
+            --home-title-color:#2c2b2b;
+
+            /*Home Cover Textos*/
+            --home-texto:system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue","Noto Sans","Liberation Sans",Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
+            --home-texto-color:#6A6F77;
+
+            /*Home Cover Botoes*/
+            --home-btn-bg:#ef5929;
+            --home-btn-bg-hover:#1A1A1A;
+            --home-btn-color:#fff;
+            --home-btn-font:'MontSerrat',Arial,sans-serif;
+            --home-btn-radius:30px;
+
+            /*Footer Cover Titulos*/
+            --footer-texto:'Volte',Arial,sans-serif;
+            --footer-texto-color:#fff;
+            --footer-link:'Volte',Arial,sans-serif;
+            --footer-link-color:#fff;
+            --footer-link-hover:#ef5929;
+            --footer-2-texto:system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue","Noto Sans","Liberation Sans",Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
+        }
+    
+
+
+    /*
+    *
+    * Css Global to Home
+    *
+    */
+        .cv-home-divider{width:57px;height:6px;background:linear-gradient(90deg, #EE5929  0%, #ff7a00 100%);}
+
+
+
+    /*
+    *
+    * Typography to Home
+    *
+    */
+        .cv-home h2 {font-size: calc(1.375rem + 2.5vw);}
+        @media (min-width: 992px){ 
+        .cv-home h2 {font-size: 2.7rem;}
+        .cv-home p{ font-size:17px;line-height:1.6;  }
+        }
+        .cv-home h2{ 
+            font-family: var(--home-title);
+            color: var(--home-title-color);
+            letter-spacing:-1px;
+            font-weight:600;
+        }
+        .cv-home p{ 
+            font-family:var(--home-texto);
+            color:var(--home-texto-color);
+        }
+        .cv-home .btn-cta{
+            font:500 15px/20px var(--home-btn-font);
+            background: var(--home-btn-bg);
+            border-radius: var(--home-btn-radius);
+            color: var(--home-btn-color);
+            padding: 12px 24px;
+            white-space: nowrap;
+        }
+        .cv-home .btn-cta:hover{background:var(--home-btn-bg-hover);}
+
+
+        /*Covers - Estrutura*/
+        .cv-footer{margin:30px 0 0;}
+        .cv-timeline{margin:30px 0;}
+        .cv-timeline .cv-home-divider.timeline{width:7vw;min-width:80px;margin:0 auto;}
+        .cv-timeline p.year{color:#2c2b2b;}
+        .cv-datatag{margin:30px 0;}
+        .cv-datamind{margin:30px 0;}
+        .cv-dataquiz{margin:30px 0;}
+        .cv-datacrm{margin:30px 0;background:#f5f6fa;}
+        .cv-datacob{margin:30px 0;}
+        .cv-datamulti{margin:30px 0;}
+
+        /*Custom Paragraph <p> */
+        .cv-datatag p{max-width:410px;}
+        .cv-datamind p{max-width:410px;}
+        .cv-dataquiz p{max-width:450px;}
+        .cv-datacrm p{max-width:430px;}
+        .cv-datacob p{max-width:410px;}
+
+        /*Custom to Datamulti <h2><p> */
+        .cv-datamulti h2{max-width:380px;}
+        .cv-datamulti p{max-width:430px;}
+        .cv-datamulti .row > div:first-child{border-right:2px solid #F3F3F3;}
+        .cv-datamulti .row > div:last-child{border-left:2px solid #F3F3F3;}
+        .cv-datamulti-ball{width:54px;height:54px;border-radius:50%;background:#EE5929;margin-bottom:30px;}
+        .cv-datamulti-ball.right{margin-top:10px;}
+
+        /*Covers - Estrutura*/
+        @media (min-width: 768px){
+            .cv-footer{margin:60px 0 0;}
+            .cv-timeline{margin:60px 0;}
+            .cv-datatag{margin:60px 0;}
+            .cv-datamind{margin:60px 0;}
+            .cv-dataquiz{margin:60px 0;}
+            .cv-datacrm{margin:60px 0;}
+            .cv-datacob{margin:60px 0;}
+            .cv-datamulti{margin:60px 0;}
+            .cv-datamulti-ball.right{margin-top:100px;}
+        }
+        @media (min-width: 992px){ 
+            .cv-footer{margin:100px 0 0;}
+            .cv-timeline{margin:100px 0;}
+            .cv-datatag{margin:100px 0;}
+            .cv-datamind{margin:100px 0;}
+            .cv-dataquiz{margin:100px 0;}
+            .cv-datacrm{margin:100px 0;}
+            .cv-datacob{margin:100px 0;}
+            .cv-datamulti{margin:100px 0;}
+        }
+
+    
+
+
+
+
+    /*
+    *
+    * Menu Navigation
+    *
+    */
+
+        /*Menu Wrap Sticky*/
+        #header-wrap{ background-color:transparent;width:100%;min-height:70px;}
+
+        /*Menu Principal Navigation Relative & Fixed*/
+        #desktop-menu{
+            position:relative;
+            width:100%;
+            top:0;
+            left:0;
+            background:#fff;
+            min-height:70px;
+            box-shadow:0 2px 4px rgb(3 27 78 / 10%);
+        }
+        #desktop-menu.fixed{
+            position:fixed;
+            -webkit-box-shadow: 0 2px 4px rgb(3 27 78 / 10%);
+            box-shadow: 0 2px 4px rgb(3 27 78 / 10%);
+            -webkit-animation: navbarFixed 0.8s;
+            animation: navbarFixed 0.8s;
+            z-index:100;
+        }
+
+        /* Desktop Menu Logo e Toggle Icon*/
+        #desktop-menu .logo{width:95px;height:29px;margin-right:20px;}
+        @media (min-width: 768px){ #desktop-menu .logo{width:105px;height:32px;margin-right:20px;} } 
+        #desktop-menu .navbar-toggler{border:0;padding:0;margin-right:12px;}
+        #desktop-menu .navbar-toggler {border-color:transparent;} 
+        #desktop-menu .navbar-toggler:focus{box-shadow:none;} 
+        .navbar-toggler-icon { background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(0,0,0, 1)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");width:30px;height:30px; }
+
+
+        /*Menu Principal Botões*/
+        .btn-menu-primary, .btn-menu-secondary{   
+            font-family: Montserrat, sans-serif;
+            font-size: 13px;
+            background: #ef5929;
+            border:1px solid #ef5929;
+            border-radius: 30px;
+            padding: 7px 18px 7px;
+            font-weight: 500;
+            color: #fff;
+        }
+        .btn-menu-primary{padding:7px 20px 7px;}
+        .btn-menu-primary:hover,.btn-menu-primary:active,.btn-menu-primary:focus{color: #fff;background:#ff4408;border-color:#ff4408;}
+        .btn-menu-secondary{color:#ef5929;background:none;margin-right:15px;}
+        .btn-menu-secondary:hover,.btn-menu-secondary:active,.btn-menu-secondary:focus{color: #fff;background:#ff4408;border-color:#ff4408;}
+
+        /*Menu Principal Links and Effects*/
+        #desktop-menu ul.navbar-nav > li > a {
+            font-family: Volte, sans-serif;
+            font-size: 16px;
+            font-weight: 500;
+            line-height: 20px;
+            color: #1f1845;
+            padding: 1px 0 0;
+            position: relative;
+            display: block;
+            -webkit-transition: 0.3s ease-in-out;
+            -o-transition: 0.3s ease-in-out;
+            transition: 0.3s ease-in-out;
+        }
+        #desktop-menu ul.navbar-nav > li {margin-left:35px;}
+        #desktop-menu ul.navbar-nav > li:last-child {margin-left:25px;}
+        #desktop-menu ul.navbar-nav > li.active > a:before,
+        #desktop-menu ul.navbar-nav > li > a:before,
+        #desktop-menu ul.navbar-nav > li > a:focus:before,
+        #desktop-menu ul.navbar-nav > li > a:hover:before {
+            width: 60%;
+        }
+        #desktop-menu ul.navbar-nav > li > a::before {
+            position: absolute;
+            left: 0;
+            bottom: -5px;
+            content: "";
+            height: 3px;
+            width: 0;
+            background-color: #ef5929;
+            -webkit-transition: width 300ms ease-in-out;
+            -o-transition: width 300ms ease-in-out;
+            transition: width 300ms ease-in-out;
+        }
+
+        /*Menu Animation*/
+        @-webkit-keyframes navbarFixed {
+            0% {
+                opacity: 0;
+                -webkit-transform: translateY(-100%);
+                transform: translateY(-100%);
+            }
+
+            100% {
+                opacity: 1;
+                -webkit-transform: translateY(0);
+                transform: translateY(0);
+            }
+            }
+
+            @keyframes navbarFixed {
+            0% {
+                opacity: 0;
+                -webkit-transform: translateY(-100%);
+                transform: translateY(-100%);
+            }
+
+            100% {
+                opacity: 1;
+                -webkit-transform: translateY(0);
+                transform: translateY(0);
+            }
+        }
+
+
+
+
+    /*
+    *
+    * OffCanvas Menu
+    *
+    */
+        /*Offcanvas BS Style*/
+        #mobile-menu .offcanvas.offcanvas-start{width:270px;}
+        #mobile-menu .offcanvas-header{height:70px;min-height:70px;}
+        #mobile-menu .offcanvas-body{padding:1rem 0.5rem;}
+        #mobile-menu .btn-close { border-color: transparent;background-size:14px;} 
+        #mobile-menu .btn-close:focus{box-shadow:none;} 
+        #mobile-menu .offcanvas-footer{background:#f5f6fa;padding:18px;border-top:1px solid #f2f2f2;}
+        #mobile-menu .offcanvas-footer a{font:15px "Open Sans",sans-serif;color:#1f1845;}
+        #mobile-menu .offcanvas-footer a:hover{text-decoration:underline;}
+        #mobile-menu .offcanvas-footer a > i {font-size:14px;margin-right:6px;margin-left:-15px;}
+
+
+        /*Mobile OffCanvas Menu*/
+        #mobile-menu .logo{width:95px;height:29px;}
+        #mobile-menu .div-cta{
+            background:#f5f7f9;border-top:1px solid #e9eaec;border-bottom:1px solid #e9eaec;padding:0.6rem;
+        }
+        #mobile-menu .btn-cta{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 8px 20px 9px 8px;
+            padding-left: 10px;
+            width: 95%;
+            max-width: 236px;
+            text-align: center;
+            font: 500 14px/18px 'MontSerrat',Arial,sans-serif;
+            color: #fff !important;
+            text-decoration: none;
+            border-radius: 30px;
+            box-shadow: inset 0 -3px 0 0 rgb(0 0 0 / 5%);
+            background: #ef5929;
+            white-space: nowrap;
+        }
+        #mobile-menu .btn-cta:hover{ background:#1a1a1a; } 
+        #mobile-menu .btn-cta .arrow{font-size:26px;}
+        #mobile-menu .btn-cta .space{margin-right:32px;}
+
+
+        /*Mobile OffCanvas Links*/
+        #mobile-navigation > a {
+            font-family: Volte, sans-serif;
+            font-size: 17px;
+            font-weight: 500;
+            line-height: 20px;
+            color: #1f1845;
+            padding: 12px 15px;
+            position: relative;
+            display: block;
+            -webkit-transition: 0.3s ease-in-out;
+            -o-transition: 0.3s ease-in-out;
+            transition: 0.3s ease-in-out;
+            border-radius:10px;
+            margin-bottom:2px;
+        }
+        #mobile-navigation > a:hover {background:#f5f6fa;}
+        #mobile-navigation > a.active {background:#f5f6fa;}
+        #mobile-navigation > a > i {font-size:15px;margin-right:6px;}
+        #mobile-navigation > a > span {font-size:17px;float:right;}
+        #mobile-navigation hr.divider{border-color:#e9eaec;opacity:1;}
+
+
+        /*Mobile OffCanvas DropDrown*/
+        #mobile-navigation ul li {padding-left: 35px;position:relative;}
+        #mobile-navigation ul li a {display:block;font:500 16px Volte, sans-serif;color:#1f1845;padding:16px 6px 8px;}
+        #mobile-navigation ul li a:hover { color:#ef5929; }
+        /*Expand Show Dots-Sub-Links*/
+        #mobile-navigation ul li::before { 
+            background: #ef5929;
+            bottom: auto;
+            content: "";
+            height: 8px;
+            left: 24px;
+            margin-top: 20px;
+            position: absolute;
+            right: auto;
+            width: 8px;
+            z-index: 1;
+            border-radius: 50%;
+        }
+        #mobile-navigation li::after { 
+            border-left: 1px solid #ef5929;
+            bottom: 0;
+            content: "";
+            left: 27px;
+            position: absolute;
+            top: 0;
+        }
+        #mobile-navigation li:last-child{margin-bottom:10px;}
+        #mobile-navigation li:last-child::after { bottom: 50%; }
+
+
+        /* Offcanvas Custom ScrollBar to Mobile Menu (Navigation) */
+        .offcanvas-scrollbar {
+            overflow-y: auto;overflow-y: overlay !important; /* It's hack to bar not take space, if want cna keep just auto*/
+            scrollbar-width: none; /* Firefox */ -ms-overflow-style: none;  /* Internet Explorer 10+ */
+        }
+        .offcanvas-scrollbar::-webkit-scrollbar { width: 0; height: 0; }
+        /* width */
+        .offcanvas-scrollbar::-webkit-scrollbar { width: 7px; }
+        /* Track */
+        .offcanvas-scrollbar::-webkit-scrollbar-track { /*box-shadow: inset 0 0 5px grey;*/ border-radius: 10px; }
+        /* Handle */
+        .offcanvas-scrollbar::-webkit-scrollbar-thumb { box-shadow: inset 0 0 5px grey;background: #909090; border-radius: 10px;}
+        /* Handle on hover */
+        .offcanvas-scrollbar::-webkit-scrollbar-thumb:hover { background: #1F2937;  }
+
+
+
+
+    /*
+    *
+    * Footer
+    *
+    */
+        /*Footer Wrap*/
+        .cv-footer .footer-1{background:#2C2C2C;border:1px solid #2C2C2C; }
+        .cv-footer .footer-2{background:#22242a;border:1px solid #22242a;}
+        .cv-footer .footer-2 > p{font-family:var(--footer-2-texto);font-size:13px;color:#fff;opacity:.6;margin:-2px auto 0;}
+        
+        .cv-footer p{
+            font-family:var(--footer-texto);
+            color:var(--footer-texto-color);
+            font-size:15px;
+        }
+
+        .cv-footer span.tags{
+            font-family:var(--footer-link);
+            color:#fff;
+            font-size:16px;
+            font-weight:500;
+            opacity:.3;
+        }
+
+        .cv-footer ul > li { 
+            margin-bottom:10px;
+        }
+
+        .cv-footer ul li > a{
+            font-family:var(--footer-link);
+            color:var(--footer-link-color);
+            font-size:15px;
+
+        }
+        .cv-footer ul li > a:hover{ color:var(--footer-link-hover); }
+
+        .footer-info{max-width:350px;}
+        .footer-social{display:flex;flex-direction:row;}
+        .footer-social > a > i.fab {
+            display: inline-flex;
+            justify-content: center;
+            align-items: center;
+            width:34px;
+            height:34px;
+            border-radius:50%;
+            font-size:16px;
+            color:#fff;
+            padding:5px;
+            background:#ef5929;
+            margin-right:12px;
+            margin-bottom:10px;
+            cursor: pointer;
+        }
+        .footer-social > a > i.fab:hover {
+            transition: all .2s ease;
+            transform: translate(0,-2px);
+            background:#fff;
+            color:#2C2C2C;
+        }
+
+
+</style>
+
+
+<script>
+    $(document).ready(function() {
+        /* Menu Flutuante */
+        $(window).bind('scroll', function () {
+            if ($(window).scrollTop() > 100) {
+                $('#desktop-menu').addClass('fixed');
+            } else {
+                $('#desktop-menu').removeClass('fixed');
+            }
+
+            /*
+            if ($(window).scrollTop() > 560) {
+                $('#teste').addClass('fadeIn');
+            }
+            */
+        });
+
+
+        iniciar_animacao(100,"animated");
+
+    });
+</script>
+
+
+
+
+    <!--Desktop Menu-->
+    <header id="header-wrap">
+    <nav id="desktop-menu" class="navbar">
+
+        <div class="container">
+            <div class="d-flex justify-content-center align-items-center">
+                <!--Toggle-->
+                <button class="navbar-toggler d-flex d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#mobileMenu" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+                <!--Logo-->
+                <a href="#"><img src="images/logo-ph3.webp" class="logo"></a>
+                <!--Links-->
+                <ul class="navbar-nav d-none d-md-flex flex-row">
+                    <li class="active"><a href="#">Início</a></li>
+                    <li><a href="#">Sobre nós</a></li>
+                    <li class="nav-item dropdown">
+                        <a class="v2-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        Produtos
+                        </a>
+                        <ul class="dropdown-menu position-absolute" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item" href="#">Digital</a></li>
+                            <li><a class="dropdown-item" href="#">Localização</a></li>
+                            <li><a class="dropdown-item" href="#">Workflow</a></li>
+                            <li><a class="dropdown-item" href="#">Quiz</a></li>
+                            <li><a class="dropdown-item" href="#">Vendas</a></li>
+                            <li><a class="dropdown-item" href="#">Cobrança</a></li>
+                            <!-- <li><hr class="dropdown-divider"></li>
+                            <li><a class="dropdown-item" href="#">Something else here</a></li> -->
+                        </ul>
+                    </li>
+                    <li><a href="#">Contato</a></li>
+                    <li class="d-none d-lg-flex"><a href="#">Blog</a></li>
+                    <li><a href="#">Helpdesk</a></li>
+                </ul>
+            </div>
+            <div class="d-flex">
+                <a class="btn-menu-secondary d-none d-lg-flex">Área do cliente</a>
+                <a class="btn-menu-primary">Login</a>
+            </div>   
+        </div>
+    </nav>
+    </header>
+
+
+
+
+    <!--OffCanvas-->
+    <aside id="mobile-menu">
+    <div class="offcanvas offcanvas-start" tabindex="-1" id="mobileMenu" aria-labelledby="mobileMenuLabel">
+    <div class="offcanvas-header">
+    <img src="images/logo-ph3.webp" class="logo">
+    <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+    </div>
+    
+        <div class="d-flex justify-content-center align-items-center div-cta">
+            <a href="#" class="btn-cta">
+            <i class="bi-arrow-right-circle-fill arrow"></i>
+            <div class="space">Acesse sua conta</div>
+            </a>
+        </div>
+        <div class="offcanvas-body offcanvas-scrollbar">
+        <nav id="mobile-navigation">
+            <a href="#"><i class="bi-house icone"></i>Início</a>
+            <a href="#"><i class="bi-sticky"></i>Sobre nós</a>
+            <!--Drop-1-->
+            <a href="#drop-1" data-bs-toggle="collapse" aria-expanded="false" onclick=" $(this).toggleClass('active');">
+                <i class="bi-layers"></i>Produtos
+                <span class="bi-chevron-expand"></span>
+            </a>
+            <ul class="list-unstyled mb-0 position-relative collapse" id="drop-1">
+                <li><a href="#">Digital</a></li>
+                <li><a href="#">Localização</a></li>
+                <li><a href="#">Workflow</a></li>
+                <li><a href="#">Quiz</a></li>
+                <li><a href="#">Vendas</a></li>
+                <li><a href="#">Cobrança</a></li>
+            </ul>
+            <!--End Drop-1-->
+            <a href="#"><i class="bi-textarea"></i>Blog</a>
+            <a href="#"><i class="bi-file-earmark-text"></i>LGPD</a>
+            <hr class="divider">
+            <a href="#"><i class="bi-window"></i>Área do cliente</a>
+            <a href="#"><i class="bi-chat-square-dots"></i>Help Desk</a>
+        </nav>
+        </div>
+        <div class="offcanvas-footer d-flex justify-content-center align-items-center">
+            <a href="#"><i class="bi-envelope"></i>Entre em contato</a>
+        </div>
+    </div>
+    </aside>
+
+
+
+
+
+
+
+
+
+
+
+
+    <style>
+        .cover-0-bg{background: url(images/banner-1.png) bottom 0 right -20px no-repeat #f5f6fa;
+                    background-size: 94%;
+                    min-height:700px;
+                }
+    
+        
+        @media (min-width: 768px){
+            .cover-0-bg{background: url(images/banner-1.png) top 0 right 0px no-repeat #f5f6fa;background-size: 48% auto;
+                min-height:600px;
+            }
+        }
+
+        .cv-1 .title{
+        font:600 2.7rem/50px 'Volte' !important;letter-spacing: -1px;}
+
+
+
+
+
+        .cover-1-size{height:750px;}
+        .typo.title{ font:600 38px/46px 'Volte' !important;letter-spacing: -1px;color:#A8A8A8;margin-top:35px;}
+        .typo.p{font:400 22px 'Volte' !important;letter-spacing: -1px;color:#6A6F77;}
+        @media (min-width: 768px){  
+            .typo.title{ font:600 2.9rem/54px 'Volte' !important;letter-spacing: -1px;color:#A8A8A8;margin-top:0;}
+            .typo.p{font:500 24px 'Volte' !important;letter-spacing: -1px;color:#6A6F77;}
+            .cover-1-size{height:600px;}
+        }
+
+        
+
+        .typo.title span{color:#EF5929;}
+
+
+        .cv-x .btn-cta{
+                    font-family: Montserrat, sans-serif;
+                    font-size: 16px;
+                    background: #ef5929;
+                    border: 1px solid #ef5929;
+                    border-radius: 30px;
+                    padding: 13px 30px;
+                    font-weight: 500;
+                    color: #fff;
+                    font:500 15px/24px 'MontSerrat',Arial,sans-serif;
+        }
+
+
+
+
+
+
+
+
+
+    /*
+    *
+    * Background to Cover Hero
+    *
+    */
+        
+
+        .cv-hero-box{max-width:500px;padding:10px;margin:0 auto;}
+
+
+        @media (min-width: 768px){
+            .cv-hero{
+            background-image: url(images/banner-1.png);
+            background-color: #f5f6fa;
+            background-repeat:no-repeat;
+            background-position:top 0 right 0px;
+            }
+        }
+
+        @media (min-width: 992px){
+            .cv-hero{ 
+                background-size: 48% auto;
+                min-height:550px; }
+            /* .cv-hero .container > .row { height:550px;}  */
+            /* .cv-hero-box{margin-top:4vw;} */
+        }
+
+
+        @media (min-width: 1100px){
+            .cv-hero{
+                background-size: 48% auto;
+                min-height:560px;
+                
+            }
+            .cv-hero .container > .row { height:560px;}
+            /* .cv-hero-box{margin-top:5vw;} */
+           
+        }
+        @media (min-width: 1200px){
+            .cv-hero{
+                background-size:48% auto;
+                min-height:590px;
+            }
+            .cv-hero .container > .row { height:590px;}
+            /* .cv-hero-box{margin-top:60px;} */
+
+        }
+        
+
+        
+
+
+
+    /*
+    *
+    * Typography to Cover Hero
+    *
+    */
+        .cv-hero h1 {font-size: calc(1.375rem + 2.5vw);}
+        .cv-hero p{ font-size:22px;line-height:1.4;  }
+        @media (min-width: 992px){ 
+            .cv-hero h1 {font-size: 2.4rem;} 
+            .cv-hero p{ font-size:22px;line-height:1.6;  }
+        }
+        @media (min-width: 1200px){ 
+            .cv-hero h1 {font-size: 2.9rem;}
+            .cv-hero p{ font-size:24px;line-height:1.6;  }
+        }
+        .cv-hero h1{ 
+            font-family: 'Volte',Arial,sans-serif;
+            color: #A8A8A8;
+            letter-spacing:-1px;
+            font-weight:600;
+        }
+        .cv-hero p{ 
+            font-family:'Volte',Arial,sans-serif;
+            color:#6A6F77;
+            letter-spacing:-1px;
+            font-weight:500;
+        }
+        .cv-hero .btn-cta{
+            font:500 15px/20px 'MontSerrat',Arial,sans-serif;
+            background: #ef5929;
+            border-radius: 30px;
+            color: #fff;
+            padding: 12px 28px;
+            white-space: nowrap;
+        }
+        .cv-hero .btn-cta:hover{background:#1A1A1A;}
+        
+
+        
+    </style>
+
+    <!--Cover Hero (Principal Home) -->
+    <section class="cv-hero">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 col-md-6 d-flex justify-content-center align-items-center">
+
+                        <div class="d-flex align-items-start flex-column cv-hero-box">
+                        <h1>Tecnologia de dados que otimiza rotinas e multiplica resultados para empresas.</h1>
+                        <p style="margin-top:22px;">Alta expertise em soluções práticas!</p>
+                        <div style="padding-bottom:50px;padding-top:36px;">
+                        <a href="#" class="btn-cta">Saiba Mais</a>
+                        </div>
+                        </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+    <section>
+        <div class="container-fluid p-0" style="background:#f5f6fa;">
+            <div class="row g-0">
+                <div class="col-12 col-md-6 d-flex justify-content-center align-items-center">
+
+                    <div class="d-flex align-items-start flex-column cv-hero-box">
+                    <h1>Tecnologia de dados que otimiza rotinas e multiplica resultados para empresas.</h1>
+                    <p style="margin-top:22px;">Alta expertise em soluções práticas!</p>
+                    <div style="padding-bottom:50px;padding-top:36px;">
+                    <a href="#" class="btn-cta">Saiba Mais</a>
+                    </div>
+                    </div>
+
+                </div>
+                <div class="col-12 col-md-6 d-flex justify-content-center align-items-center">
+                    <img src="images/banner-1.png" style="width:100%;height:100%;">
+                </div>
+                <!--
+                <div class="col-12 col-md-6 d-flex justify-content-center align-items-center" style="background:url(images/banner-1.png) no-repeat right center;background-size:contain;">
+
+                    <div class="p-2 pt-3 p-md-0 mx-auto" style="max-width:550px;">
+                        <img src="images/bg-home-cv-3.png" style="width:100%;height:100%;" data-animar-scroll="fadeInRight">
+                    </div>
+
+                </div>
+                -->
+            </div>
+        </div>
+    </section>
+
+
+
+
+
+    <!--Cover Principal-->
+    <div class="cover-0-bg mb-5 mb-md-0 d-none">
+    <div class="container">
+        <div class="row cover-1-size">
+            <div class="col-12 col-md-6 d-flex justify-content-start justify-content-md-center align-items-start align-items-md-center">
+
+                    <div style="max-width:500px;padding:10px;margin:0 auto;" class="d-flex align-items-start flex-column">
+                    <h1 class="typo title">
+                        Tecnologia de dados que otimiza rotinas e multiplica resultados para empresas.
+                    </h1>
+                    <p class="typo p" style="margin-top:22px;">Alta expertise em soluções práticas!</p>
+
+
+                    <div class="cv-x" style="padding-bottom:50px;padding-top:36px;">
+                    <a href="#" class="btn-cta">SAIBA MAIS</a>
+                    </div>
+
+                    </div>
+                    
+            </div>
+            <div class="col-12 col-md-6"></div>
+        </div>
+    </div>
+    
+    </div>
+
+
+
+
+    
+    <!--Cover Carousel-->
+    <section class="cv-carousel" style="margin:20px auto -10px;">
+    <div class="container">
+    <div class="row">
+        <div class="col-12">
+
+                    <div id="carousel-v2" class="owl-carousel owl-theme my-carousel">
+
+                        <div class="carousel-item-v2 d-flex flex-column align-items-center justify-content-center">
+                            <div class="p-3 pt-2 text-center carousel-box-v2">
+                                <i class="bi-star-fill"></i>
+                                <p class="h1">25 anos de experiencia</p>
+                                <p class="h2">Possuímos bases históricas e consistentes com mais de 25 anos.</p>
+                            </div>
+                        </div>
+                        <div class="carousel-item-v2 d-flex flex-column align-items-center justify-content-center">
+                            <div class="p-3 pt-2 text-center carousel-box-v2">
+                                <i class="bi-headset"></i>
+                                <p class="h1">Suporte <br>24/7</p>
+                                <p class="h2">Nossa equipe está sempre disponível, independente do dia e horário.</p>
+                            </div>
+                        </div>
+                        <div class="carousel-item-v2 d-flex flex-column align-items-center justify-content-center">
+                            <div class="p-3 pt-2 text-center carousel-box-v2">
+                                <i class="bi-people-fill mb-0"></i>
+                                <p class="h1">+ de 600 <br>clientes</p>
+                                <p class="h2">Todos os clientes possuem a mesma importância, independente do porte da empresa.</p>
+                            </div>
+                        </div>
+                        <div class="carousel-item-v2 d-flex flex-column align-items-center justify-content-center">
+                            <div class="p-3 pt-2 text-center carousel-box-v2">
+                                <i class="bi-cloud-haze2-fill" ></i>
+                                <p class="h1">100% na <br>nuvem</p>
+                                <p class="h2">Todos os nossos serviços estão na nuvem, porém oferecemos a opção de uma robusta infraestrutura interna.</p>
+                            </div>
+                        </div>
+                        <div class="carousel-item-v2 d-flex flex-column align-items-center justify-content-center">
+                            <div class="p-3 pt-2 text-center carousel-box-v2">
+                                <i class="bi-layers-fill mb-0" ></i>
+                                <p class="h1">Sistema <br>Flexível</p>
+                                <p class="h2">Resolvemos seus problemas. Se necessário, nossa equipe irá propor soluções individualizadas para atendê-lo.</p>
+                            </div>
+                        </div>
+                        <div class="carousel-item-v2 d-flex flex-column align-items-center justify-content-center">
+                            <div class="p-3 pt-2 text-center carousel-box-v2">
+                                <i class="bi-person-bounding-box" ></i>
+                                <p class="h1">Sistema com <br>Inteligencia</p>
+                                <p class="h2">Entregamos ferramentas para que você possa realizar diversas análises de dados de forma objetiva.</p>
+                            </div>
+                        </div>
+
+                    </div>
+
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    
+
+
+
+
+
+    <!--Cover TimeLine-->
+    <section class="cv-home cv-timeline">
+    <div class="container">
+    <div class="row text-center justify-content-center mb-3 mb-md-5">
+        <div class="col-md-10 col-lg-8">
+            <h2>Uma empresa de tecnologia</h2>
+            <div class="my-3 cv-home-divider timeline"></div>
+            <p class="pt-2">A PH3A projeta e constrói sistemas de informação direcionados a apoiar a gestão de empresas de diversos segmentos, com soluções para as mais variadas situações de negócios.</p>
+        </div>
+    </div>
+    <div class="row d-none d-md-flex">
+        <div class="col-12">
+            <div class="timeline-steps aos-init aos-animate" data-aos="fade-up">
+                <div class="timeline-step">
+                    <div class="timeline-content" data-toggle="popover" data-trigger="hover" data-placement="top" title="" data-content="Nasce a Informaketing!" data-original-title="1995">
+                        <div class="inner-circle"></div>
+                        <p class="h6 mt-3 mb-1 year"><span class='h5'>1995</span></p>
+                        <p class="h6 text-muted mb-0 mb-lg-0 fw-400">Nasce a Informaketing</p>
+                    </div>
+                </div>
+                <div class="timeline-step">
+                    <div class="timeline-content" data-toggle="popover" data-trigger="hover" data-placement="top" title="" data-content="Venda da Informaketing!" data-original-title="2007">
+                        <div class="inner-circle"></div>
+                        <p class="h6 mt-3 mb-1 year"><span class='h5'>2007</span></p>
+                        <p class="h6 text-muted mb-0 mb-lg-0 fw-400">Venda da Informaketing</p>
+                    </div>
+                </div>
+                <div class="timeline-step mb-0">
+                    <div class="timeline-content" data-toggle="popover" data-trigger="hover" data-placement="top" title="" data-content="Deixa Grupo Experian!" data-original-title="2008">
+                        <div class="inner-circle"></div>
+                        <p class="h6 mt-3 mb-1 year"><span class='h5'>2008</span></p>
+                        <p class="h6 text-muted mb-0 mb-lg-0 fw-400">Deixa Grupo Experian</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row d-flex d-md-none">
+
+            <div class="timeline-mobile px-4">
+              <!--first section-->
+              <div class="row align-items-center timeline-wrap-v3 d-flex">
+                <div class="col-2 text-center bottom d-inline-flex justify-content-center align-items-center">
+                  <div class="circle font-weight-bold">1</div>
+                </div>
+                <div class="col-6">
+                  <h5>1995</h5>
+                  <p>Nasce a Informaketing</p>
+                </div>
+              </div>
+              <!--path between 1-2-->
+              <div class="row timeline-v3">
+                <div class="col-2">
+                  <div class="corner top-right"></div>
+                </div>
+                <div class="col-8">
+                  <hr/>
+                </div>
+                <div class="col-2">
+                  <div class="corner left-bottom"></div>
+                </div>
+              </div>
+              <!--second section-->
+              <div class="row align-items-center justify-content-end timeline-wrap-v3 d-flex">
+                <div class="col-6 text-end">
+                  <h5>2007</h5>
+                  <p>Venda da Informaketing</p>
+                </div>
+                <div class="col-2 text-center full d-inline-flex justify-content-center align-items-center">
+                  <div class="circle font-weight-bold">2</div>
+                </div>
+              </div>
+              <!--path between 2-3-->
+              <div class="row timeline-v3">
+                <div class="col-2">
+                  <div class="corner right-bottom"></div>
+                </div>
+                <div class="col-8">
+                  <hr/>
+                </div>
+                <div class="col-2">
+                  <div class="corner top-left"></div>
+                </div>
+              </div>
+              <!--third section-->
+              <div class="row align-items-center timeline-wrap-v3 d-flex">
+                <div class="col-2 text-center top d-inline-flex justify-content-center align-items-center">
+                  <div class="circle font-weight-bold">3</div>
+                </div>
+                <div class="col-6">
+                  <h5>2008</h5>
+                  <p>Deixa o Grupo Experian</p>
+                </div>
+              </div>
+          </div>
+        
+    </div>
+    <div class="row text-center justify-content-center pt-2 pb-3">
+        <div class="col-12 pt-4"><a href="#" class="btn-cta">Conheça a PH3A</a></div>
+    </div>
+    </div>
+    </section>
+
+
+
+    <!--Cover DataTag-->
+    <section class="cv-home cv-datatag">
+    <div class="container">
+    <div class="row flex-column-reverse flex-md-row align-items-center justify-content-between">
+        <div class="col-12 col-md-5 col-lg-6">
+
+            <div class="p-2 p-md-0 mt-4 mt-md-0 px-md-4" style="max-width:500px;margin:0 auto;">
+                <h2>Você sabe o perfil de quem visita o seu site?</h2>
+                <div class="my-4 cv-home-divider"></div>
+                <p>Somente 5% dos internautas brasileiros fazem login ou preenchem formulários nos sites que visitam. <br/>O grupo que não se loga, não preenche ou abandona os formulários corresponde a 95% da sua audiência.</p>
+                <p class="py-2"><span class="fw-700">O DATATAG resolve este problema!</span></p>
+                <p class="d-block d-sm-none d-lg-block">Com o <span class="fw-700">DATATAG</span> você pode reverter essa estatística e identificar muitos dos visitantes anônimos de seu site. Conheça o público que se interessa por sua marca ou seu produto, ajuste o foco de suas campanhas e venda mais!</p>   
+                <div class="pt-4"><a href="#" class="btn-cta">Conheça o DATATAG</a></div>
+            </div>
+
+        </div>
+        <div class="col-12 col-md-7 col-lg-6">
+            
+            <div class="p-2 pt-3 p-md-0 mx-auto" style="max-width:550px;">
+                <img id="teste" src="images/bg-home-cv-3.png" style="width:100%;height:100%;" data-animar-scroll="fadeInRight">
+            </div>
+
+        </div>
+    </div>
+    </div>
+    </section>
+
+
+
+    <!--Cover DataMind-->
+    <section class="cv-home cv-datamind">
+    <div class="container">
+    <div class="row align-items-center justify-content-between">
+        <div class="col-12 col-md-6 col-lg-6">
+
+            <div class="p-2 pt-4 p-md-0 mx-auto" style="max-width:520px;">
+                <img src="images/xxx.png" style="width:100%;height:100%;" data-animar-scroll="fadeInLeft">
+            </div>
+
+        </div>
+        <div class="col-12 col-md-6 col-lg-6">
+            
+            <div class="p-2 p-md-0 mt-4 mt-md-0" style="max-width:500px;margin:0 auto;">
+                <h2>Você sofre com fraude e inadimplência?</h2>
+                <div class="my-4 cv-home-divider"></div>
+                <p>A tecnologia de dados dá segurança à gestão financeira da sua empresa para que você se concentre na sua especialidade.</p>
+                <p class="py-2"><span class="fw-700">O DATAMIND ajuda você a evitar situações vulneráveis a fraudes e à inadimplência!</span></p>
+                <p class="d-block d-sm-none d-lg-block">O <b>DATAMIND</b> é uma tecnologia de análise de dados que tem sido utilizada para otimizar e garantir mais qualidade aos processos, evitando erros e entregando bons insights ao seu usuário.</p>   
+                <div class="pt-4"><a href="#" class="btn-cta">Conheça o DATAMIND</a></div>
+            </div>
+
+        </div>
+    </div>
+    </div>
+    </section>
+
+
+
+
+    <!--Cover DataMulti (DataQuiz e DataBusca)-->
+    <section class="cv-home cv-datamulti">
+    <div class="container">
+    <div class="row align-items-stretch">
+        <div class="col-12 col-md-6 d-flex justify-content-center justify-content-md-end">
+
+            <div class="p-2 p-md-0 px-md-4 py-md-5 px-lg-5 text-end d-flex flex-column align-items-end" style="max-width:500px;">
+                <div class="cv-datamulti-ball floating-v2"></div>
+                <h2>Quer obter mais produtividade da equipe de vendas?</h2>
+                <div class="my-4 cv-home-divider"></div>
+                <p>Uma análise de dados feita por profissional experiente aumenta o faturamento da empresa em 15%, segundo dados da McKinsey, referência de consultoria americana de negócios.</p>
+                <p>O DATACRM ajuda sua equipe a aumentar o caixa da empresa!</p>
+                <p>A experiência da compra vem depois de toda uma estratégia de análise, abordagem e ofertas específicas aos prospects segundo seus hábitos de consumo.</p>
+                <p>O DATACRM tem essa visão macro do consumidor, e faz análises e segmentações para ações certeiras, que maximizam resultados de vendas.</p>
+                <div class="pt-4 pb-4"><a href="#" class="btn-cta">Conheça o DATAQUIZ</a></div>
+            </div>
+
+        </div>
+        <div class="col-12 col-md-6 d-flex justify-content-center justify-content-md-start">
+
+            <div class="p-2 p-md-0 px-md-4 py-md-5 px-lg-5 text-left" style="max-width:500px;">
+                <div class="cv-datamulti-ball right floating-v3"></div>
+                <h2>Sua base de contato não está performando?</h2>
+                <div class="my-4 cv-home-divider"></div>
+                <p>Encontrar pessoas e empresas é uma de nossas especialidades. Somos referência no mercado e nosso principal compromisso é estar sempre atualizado.</p>
+                <p>O DATABUSCA encontra quem você procura, enriquece e atualiza a sua base de contatos!</p>
+                <p>Com mais de 25 anos de atuação e processo permanente de depuração, o DATABUSCA capta e cruza informações de diversas fontes públicas de dados, o que o torna um sistema superpotente de localização de pessoas e empresas.</p>
+                <div class="pt-4 pb-4"><a href="#" class="btn-cta">Conheça o DATABUSCA</a></div>
+            </div>
+
+        </div>
+    </div>
+    </div>
+    </section>
+
+
+
+    <!--Cover DataQuiz-->
+    <section class="cv-home cv-dataquiz">
+    <div class="container">
+    <div class="row align-items-center justify-content-between">
+        <div class="col-12 col-md-6 col-lg-5">
+
+            <div class="p-2 p-md-0 mb-4 mb-md-0 mx-auto d-none d-md-block" style="max-width:400px;">
+                <img src="images/yyy.png" style="width:100%;height:100%;">
+            </div>
+
+            <div class="p-2 p-md-0 mb-4 mb-md-0 mx-auto d-block d-md-none">
+            <div style="background: url(images/yyy.png) no-repeat top -50px center; width: 100%; height: 250px; border-radius: 20px;background-size:cover;"></div>
+            </div>
+
+        </div>
+        <div class="col-12 col-md-6 col-lg-7">
+            
+            <div class="p-2 p-md-0 px-md-2" style="max-width:580px;">
+                <h2>Quer um módulo de reforço em segurança que previne fraude online e offline?</h2>
+                <div class="my-4 cv-home-divider"></div>
+                <p>Sua empresa precisa ter uma superferramenta antifraude para validar em tempo real, as informações do seu cliente no ato da compra.</p>
+                <p>O <b>DATAQUIZ</b> é essa proteção adicional pra sua segurança!</p>
+                <p class="d-block d-sm-none d-lg-block">O <b>DATAQUIZ</b> trabalha com inteligência de dados e da informação, faz apontamentos-surpresa para captar e cancelar situações fraudulentas.</p>   
+                <div class="pt-4"><a href="#" class="btn-cta">Conheça o DATAQUIZ</a></div>
+            </div>
+
+        </div>
+    </div>
+    </div>
+    </section>
+
+
+
+    <!--Cover DataCRM-->
+    <section class="cv-home cv-datacrm py-3 pb-5 py-md-5">
+    <div class="container">
+    <div class="row flex-column-reverse flex-md-row align-items-center justify-content-between">
+        <div class="col-12 col-md-6 col-lg-6">
+
+            <div class="p-2 p-md-0 px-md-4" style="max-width:580px;">
+                <h2>Quer organizar e agilizar as ações de vendas de sua empresa?</h2>
+                <div class="my-4 cv-home-divider"></div>
+                <p>Ajuste sua estrutura, distribua sua carteira, ganhe mais velocidade e praticidade nas suas ações comerciais.</p>
+                <p>O <b>DATACRM</b> te dá essa clareza e organização comercial!</p>
+                <p class="d-block d-sm-none d-lg-block">O <b>DATACRM</b> é a ferramenta que organiza e facilita as análises, dá rapidez aos processos, para maximizar os bons resultados!</p>   
+                <div class="pt-4"><a href="#" class="btn-cta">Conheça o DATACRM</a></div>
+            </div>
+              
+        </div>
+        <div class="col-12 col-md-6 col-lg-6">
+            
+            <div class="p-2 p-md-0 mx-auto d-none d-md-block" style="max-width:420px;">
+                <img src="images/www.png" style="width:100%;height:100%;">
+            </div>
+
+            <div class="p-2 p-md-0 mt-4 mb-4 mx-auto d-block d-md-none">
+            <div style="background: url(images/www.png) no-repeat center center; width: 100%; height: 250px; border-radius: 20px;background-size:cover;"></div>
+            </div>
+
+        </div>
+    </div>
+    </div>
+    </section>
+
+
+
+    <!--Cover DataCob-->
+    <section class="cv-home cv-datacob">
+    <div class="container">
+    <div class="row align-items-center justify-content-between">
+        <div class="col-12 col-md-6 col-lg-5">
+
+            <div class="p-2 p-md-0 mx-auto d-none d-md-block" style="max-width:400px;">
+                <img src="images/vvv.png" style="width:100%;height:100%;">
+            </div>
+
+            <div class="p-2 p-md-0 mt-4 mb-4 mt-0 mb-md-0 mx-auto d-block d-md-none">
+            <div style="background: url(images/vvv.png) no-repeat top -50px center; width: 100%; height: 250px; border-radius: 20px;background-size:cover;"></div>
+            </div>
+
+
+        </div>
+        <div class="col-12 col-md-6 col-lg-7">
+            
+            <div class="p-2 p-md-0 px-md-2" style="max-width:580px;">
+                <h2 class="d-none d-md-inline">Seu setor ou assessoria de cobrança têm resultados apenas médios?</h2>
+                <h2 class="d-inline d-md-none">Seu setor de cobrança têm resultados ruins?</h2>
+                <div class="my-4 cv-home-divider"></div>
+                <p>A tecnologia de dados com CRM inteligente aumenta a velocidade dos processos e melhora a produtividade.</p>
+                <p>O <b>DATACOB</b> é o CRM que organiza as estratégias de cobrança pra você!</p>
+                <p class="d-block d-sm-none d-lg-block">O <b>DATACOB</b> possui o módulo online de negociação, segmenta os grupos e agiliza os processos. O resultado você vê nos relatórios de produtividade.</p>   
+                <div class="pt-4 pb-4"><a href="#" class="btn-cta">Conheça o DATACOB</a></div>
+            </div>
+
+        </div>
+    </div>
+    </div>
+    </section>
+
+
+
+
+    <!--FOOTER-->
+    <footer class="cv-footer">
+    <div class="p-2 py-5 footer-1">
+
+        <div class="container my-4">
+            <div class="row justify-content-between">
+                <div class="col-md-3 d-flex flex-column align-items-center align-items-md-start justify-content-center pb-3 pb-md-0">
+
+                    <div class="pb-3">
+                        <img src="images/logo-ph3a-white.png" style="max-width:200px;">
+                    </div>
+                    <div class="d-flex justify-content-start align-items-center">
+                        <img src="images/logo-abemd.png" class="me-2" style="max-width:58px;">
+                        <img src="images/iso27001.png" class="ms-2" style="max-width:124px;">
+                    </div>
+                    
+
+                </div>
+                <div class="col-md-4 d-flex justify-content-center justify-content-md-between pt-4 pt-md-0 pb-2 pb-md-0">
+
+                        <div class="mx-3 mx-md-2">
+                        <span class="d-block tags mb-3">MENU</span>
+                        <ul class="list-unstyled">
+                            <li>
+                                <a href="#" title="Sobre a PH3">Sobre nós</a>
+                            </li>
+                            <li>
+                                <a href="https://blog.ph3a.com.br/" target="_blank" title="Blog PH3">Blog</a>
+                            </li>
+                            <li>
+                                <a href="https://www.gov.br/defesa/pt-br/acesso-a-informacao/lei-geral-de-protecao-de-dados-pessoais-lgpd" target="_blank" title="LGPD">LGPD</a>
+                            </li>
+                            <li>
+                                <a href="#" title="Ética e conduta">Ética e conduta</a>
+                            </li>
+                            <li>
+                                <a href="#" title="Política de privacidade">Política de privacidade</a>
+                            </li>
+                            <li>
+                                <a href="#" title="Uso de cookies">Uso de cookies</a>
+                            </li>
+                        </ul>
+                        </div>
+                        <div class="mx-3 mx-md-2 me-lg-4">
+                        <span class="d-block tags mb-3">DATAS</span>
+                        <ul class="list-unstyled" style="color:#fff;">
+                            <li>
+                                <a href="#" title="DataTag">DataTag</a>
+                            </li>
+                            <li>
+                                <a href="#" title="DataBusca">DataBusca</a>
+                            </li>
+                            <li>
+                                <a href="#" title="DataMind">DataMind</a>
+                            </li>
+                            <li>
+                                <a href="#" title="DataQuiz">DataQuiz</a>
+                            </li>
+                            <li>
+                                <a href="#" title="DataCRM">DataCRM</a>
+                            </li>
+                            <li>
+                                <a href="#" title="DataCob">DataCob</a>
+                            </li>
+                            </ul>
+                        </div>
+
+
+                </div>
+                <div class="col-md-4 d-flex flex-column align-items-center align-items-md-start justify-content-center">
+
+                    <div class="footer-social pt-4 pt-md-0">
+                        <a href="#" target="_blank"><i class="fab fa-twitter"></i></a>
+                        <a href="#" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" target="_blank"><i class="fab fa-youtube"></i></a>
+                    </div>
+
+                    <div class="footer-info pt-3 text-center text-md-start">
+                    <p>comercial@ph3a.com.br</p>
+                    <p>+55 (11) 3723-4230 +55 <br>(11) 96584-5180 (Somente WhatsApp)</p>
+                    <p class="mb-0">Rua dos Três Irmãos, 201 – 6º andar – Morumbi 05615-190 - São Paulo – SP</p>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <div class="p-3 footer-2 text-center">
+        <p>Copyright © 2022 PH3A. <br class="d-initial d-md-none"> Todos os direitos reservados.</p>
+    </div>
+    </footer>
+
+
+
+
+<script>
+$(document).ready(function() {
+
+var brandSlider = $('#carousel-v2');
+
+    /*Carrosel*/
+    brandSlider.owlCarousel({
+        stagePadding:30,
+        items:1,
+        autoplay:false,
+        autoplayTimeout:4000,
+        autoplayHoverPause:true,
+        nav:true,
+        loop:true,
+        dots:false,
+        autoHeight:false,
+        navSpeed:500,
+        /*navText:['<span style="position:absolute;top:-20px;right:140px;color:#fff;">ANTERIOR</span>','<span style="position:absolute;top:-20px;right:20px;#fff;">PRÓXIMO</span>'],*/
+        navText:['<svg class="owl-arrow-v2 left" width="21" height="32" viewBox="0 0 21 32" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M19.69 10.753H7.505l3.833-3.606c.52-.49.52-1.298 0-1.787a1.351 1.351 0 00-1.836 0L3.39 11.11c-.52.49-.52 1.29 0 1.78l6.112 5.75c.51.48 1.326.48 1.836 0 .52-.49.52-1.289 0-1.778l-3.833-3.607H19.69c.703 0 1.31-.545 1.31-1.25 0-.707-.607-1.252-1.31-1.252zm-13.142.379H19.69 6.548zm0 1.745l4.526 4.259-4.526-4.259zm-3.118-.602a.833.833 0 01.224-.89l6.112-5.751a.965.965 0 000 0l-6.112 5.75a.833.833 0 00-.224.891z" clip-rule="evenodd"></path></svg>','<svg class="owl-arrow-v2 right" width="21" height="32" viewBox="0 0 21 32" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M4.31 10.753h12.185l-3.833-3.606a1.219 1.219 0 010-1.787c.51-.48 1.326-.48 1.836 0l6.112 5.75c.52.49.52 1.29 0 1.78l-6.112 5.75c-.51.48-1.326.48-1.836 0a1.209 1.209 0 010-1.778l3.833-3.607H4.31c-.703 0-1.31-.545-1.31-1.25 0-.707.607-1.252 1.31-1.252zm13.142.379H4.31h13.142zm-4.526-5.498a.965.965 0 011.308 0l6.112 5.75-6.112-5.75a.965.965 0 00-1.308 0z" clip-rule="evenodd"></path></svg>'],
+        responsive : {
+        // breakpoint from 480 up
+        480 : {
+        items:2,
+        stagePadding:25,
+        loop:true,
+        dots:false,
+        autoHeight:false
+        },
+        780 : {
+        items:4,
+        stagePadding:0,
+        loop:true,
+        dots:false,
+        autoHeight:false
+        },
+        980 : {
+        items:5,
+        stagePadding:0,
+        loop:true,
+        dots:false,
+        autoHeight:false
+    }}
+    });
+    brandSlider.trigger('to.owl.carousel', 0);
+
+    function brandSliderClasses() {
+        brandSlider.each(function() {
+            var total = $(this).find('.owl-item.active').length;
+            $(this).find('.owl-item').removeClass('first-active');
+            $(this).find('.owl-item').removeClass('last-active');
+            $(this).find('.owl-item.active').each(function(index) {
+                if (index === 0) {
+                    $(this).addClass('first-active')
+                }
+                if (index === total - 1 && total > 1) {
+                    $(this).addClass('last-active')
+                }
+            })
+        })
+    }
+    brandSliderClasses();
+    brandSlider.on('translated.owl.carousel', function(event) {
+        brandSliderClasses()
+    }); 
+
+    /* Click on Carousel Goes to Current Position */
+    $(document).on('click','.owl-item',function() {
+    let carousel_v2 = $('#carousel-v2').data('owl.carousel').relative($(this).index());
+    $('#carousel-v2').trigger('to.owl.carousel',[carousel_v2,300]);
+    });
+
+});
+</script>
+    
+</body>
+</html>

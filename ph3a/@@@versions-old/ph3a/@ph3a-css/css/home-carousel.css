@@ -1,0 +1,97 @@
+/* Carousel Nav Custom */
+.owl-stage{padding-left:0 !important;display: flex;align-items: center;}
+
+/* Carousel Nav */
+#carousel-v2 .owl-arrow-v2{margin:30px 5px 10px !important;stroke:#ef5929;fill:#ef5929;}
+#carousel-v2 .owl-arrow-v2.right{transform: none;}
+#carousel-v2 .owl-arrow-v2:hover path{stroke:#1F1F1F;fill:#1F1F1F;}
+
+@media (min-width: 992px) { 
+#carousel-v2 .owl-arrow-v2{margin:0 !important;}
+#carousel-v2 .owl-arrow-v2.left{position:absolute;bottom:-30px;right:50px;background:#fff !important;}
+#carousel-v2 .owl-arrow-v2.right{transform: none;position:absolute;bottom:-30px;right:10px;background:#fff !important;}
+}
+/* Carousel Nav Reset */
+.owl-carousel .owl-nav button.owl-next, .owl-carousel .owl-nav button.owl-prev, .owl-carousel button.owl-dot, .owl-nav svg {
+    color: inherit;
+    border: none;
+    padding: 0!important;
+    font: inherit;
+    background:none;
+}
+
+
+
+/* Seleciona todas menos a first-active */
+.owl-item:not(.first-active) .carousel-item-v2{
+    min-height:220px;font-size:14px;margin:0 7px;background:#f5f6fa;border-radius:10px;
+}
+/*.owl-item .carousel-item-v2 svg{filter: invert(100%);opacity:0.5;margin-left:5px;}*/
+/*
+.owl-item .carousel-item-v2 img{filter: invert(100%);opacity:0.5;}
+
+.owl-item .carousel-item-v2 svg{margin-left:5px;}
+.owl-item .carousel-item-v2 svg path{fill:#fff;background:#fff;}
+.owl-item .carousel-item-v2 a{filter: invert(100%);opacity:0.5;color:#fff;text-decoration:none;pointer-events: none;}
+.owl-item .carousel-item-v2 a:hover{text-decoration:none;}
+*/
+
+.owl-item i{color:#ef5929;}
+.owl-item .h1{opacity:0.5;}
+.owl-item .h2{display:none;}
+
+/*Carousel Item Active*/
+.first-active .carousel-item-v2{min-height:250px;font-size:16px;opacity:1;color:#fff;border-radius:10px;margin:0 7px;background:#ef5929;}
+/*
+.first-active .carousel-item-v2 img{filter:none;opacity:1;}
+.first-active .carousel-item-v2 svg{filter:none;opacity:1;margin-left:5px;}
+.first-active .carousel-item-v2 svg path{fill:#fff;}
+.first-active .carousel-item-v2 a{filter: none;opacity:1;color:#fff;text-decoration:none;pointer-events:initial;}
+.first-active .carousel-item-v2 a:hover{text-decoration:none;}
+*/
+.first-active .h1{opacity:1;}
+.first-active .h2{display:inline-flex;}
+.first-active i{color:#fff;margin-bottom:7px;}
+
+
+/*Carousel Global*/
+#carousel-v2 .carousel-box-v2 > i {font-size:38px;display:block;} 
+#carousel-v2 .carousel-box-v2 > p.h1 {font:600 20px/22px Volte;} 
+#carousel-v2 .carousel-box-v2 > p.h2 {font:400 14px/18px Volte;} 
+#carousel-v2 .owl-nav{margin-top:-15px;}
+
+
+
+
+
+
+
+/* Fix to mobile arrow background not gray
+.owl-theme .owl-nav [class*=owl-]{background:#fff;}
+
+
+.owl-nav .owl-prev:hover, .owl-nav .owl-next:hover,.owl-nav .owl-prev:focus, .owl-nav .owl-next:focus,.owl-nav .owl-prev:active, .owl-nav .owl-next:active{
+    background:none !important;
+}
+
+.owl-nav .owl-prev, .owl-nav .owl-next{
+    background:none !important;
+}
+*/
+
+
+/*Reset Nav*/
+
+.owl-theme .owl-nav [class*=owl-]{
+    background:none !important;
+    outline:none !important;
+    opacity:1 !important;
+}
+.owl-theme .owl-nav [class*=owl-]:hover{
+    background:none !important;
+    outline:none !important;
+    opacity:1 !important;
+}
+.owl-theme .owl-nav .disabled{
+    opacity:1 !important;
+}

@@ -1,0 +1,506 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PH3 - Site</title>
+
+    <!--GLOBAL INCLUDES-->
+
+            <!--Favicon-->
+            <link rel="shortcut icon" type="image/x-icon" href="images/favicon-ph3a.ico">
+
+            <!-- Bootstrap 5.0 -->
+            <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+            <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
+
+            <!--Bootstrap Icons (using icons on mobile menu)-->
+            <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
+
+            <!-- FontAwesome Icons (using icons on footer) -->
+            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css">
+
+            <!-- Global Font Stack -->
+            <link href="https://fonts.cdnfonts.com/css/volte" rel="stylesheet">
+            <link href="https://fonts.cdnfonts.com/css/general-sans" rel="stylesheet">
+            <link href='https://fonts.googleapis.com/css?family=Montserrat:300,400,500,700|Open+Sans:300,400,500,600,700' rel='stylesheet' type='text/css'>
+
+            <!-- jQuery -->
+            <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+
+            <!-- Carrousel (Manter Depois do Jquery) -->
+            <link type="text/css" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" />
+            <link type="text/css" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css" />
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+
+            <!-- Animate Img Javascript -->
+            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css" type="text/css" />
+            <script src="js/animar-elementos-minify.js"></script>
+
+            <!-- JS Global to PH3 Site -->
+            <script src="js/global.js"></script>
+
+            <!--CSS Global to PH3 Site-->
+            <link rel="stylesheet" href="css/layout.css">
+
+    <!--END GLOBAL-->
+
+
+    <!--INCLUDE JS DO PAULO (SOLICITADO POR E-MAIL)-->
+    <script type="text/javascript">
+        (function (e, t, o, n, p, r, i) { e.visitorGlobalObjectAlias = n; e[e.visitorGlobalObjectAlias] = e[e.visitorGlobalObjectAlias] || function () { (e[e.visitorGlobalObjectAlias].q = e[e.visitorGlobalObjectAlias].q || []).push(arguments) }; e[e.visitorGlobalObjectAlias].l = (new Date).getTime(); r = t.createElement("script"); r.src = o; r.async = true; i = t.getElementsByTagName("script")[0]; i.parentNode.insertBefore(r, i) })(window, document, "https://diffuser-cdn.app-us1.com/diffuser/diffuser.js", "vgo");
+        vgo('setAccount', '801284411');
+        vgo('setTrackByDefault', true);
+        vgo('process');
+    </script>
+
+
+    <!-- SOBRE-NÓS INCLUDES -->
+        <link rel="stylesheet" href="css/about.css">
+    <!-- END SOBRE-NÓS -->
+
+
+</head>
+<body>
+
+
+    <!--Desktop Menu-->
+    <header id="header-wrap">
+        <nav id="desktop-menu" class="navbar">
+    
+            <div class="container">
+                <div class="d-flex justify-content-center align-items-center">
+                    <!--Toggle-->
+                    <button class="navbar-toggler d-flex d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#mobileMenu" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+                    <!--Logo-->
+                    <a href="./"><img src="images/logo-ph3.webp" class="logo"></a>
+                    <!--Links-->
+                    <ul class="navbar-nav d-none d-md-flex flex-row">
+                        <li class="active"><a href="./">Início</a></li>
+                        <li><a href="./sobre-nos.html">Sobre nós</a></li>
+                        <li class="nav-item dropdown">
+                            <a class="v2-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Produtos
+                            </a>
+                            <ul class="dropdown-menu position-absolute" aria-labelledby="navbarDropdown">
+                                <li><a class="dropdown-item" href="./datatag.html">Digital</a></li>
+                                <li><a class="dropdown-item" href="./databusca.html">Localização</a></li>
+                                <li><a class="dropdown-item" href="./datamind.html">Workflow</a></li>
+                                <li><a class="dropdown-item" href="./dataquiz.html">Quiz</a></li>
+                                <li><a class="dropdown-item" href="./datacrm.html">Vendas</a></li>
+                                <li><a class="dropdown-item" href="./datacob.html">Cobrança</a></li>
+                            </ul>
+                        </li>
+                        <li><a class="scroll-contato">Contato</a></li>
+                        <li class="d-none d-lg-flex"><a href="https://blog.ph3a.com.br/" target="_blank">Blog</a></li>
+                        <li><a href="https://suporte.ph3a.com.br/support/login" target="_blank">Helpdesk</a></li>
+                    </ul>
+                </div>
+                <div class="d-flex">
+                    <a href="https://cliente.ph3a.com.br/" class="btn-menu-secondary d-none d-lg-flex" target="_blank">Área do cliente</a>
+                    <a href="https://ph3a.com.br/crm" class="btn-menu-primary" target="_blank">Login</a>
+                </div>   
+            </div>
+        </nav>
+        </header>
+    
+    
+    
+    
+        <!--OffCanvas-->
+        <aside id="mobile-menu">
+        <div class="offcanvas offcanvas-start" tabindex="-1" id="mobileMenu" aria-labelledby="mobileMenuLabel">
+        <div class="offcanvas-header">
+         <img src="images/logo-ph3.webp" class="logo">
+        <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        
+            <div class="d-flex justify-content-center align-items-center div-cta">
+                <a href="https://ph3a.com.br/crm" class="btn-cta" target="_blank">
+                <i class="bi-arrow-right-circle-fill arrow"></i>
+                <div class="space">Acesse sua conta</div>
+                </a>
+            </div>
+            <div class="offcanvas-body offcanvas-scrollbar">
+            <nav id="mobile-navigation">
+                <a href="./"><i class="bi-house icone"></i>Início</a>
+                <a href="./sobre-nos.html"><i class="bi-sticky"></i>Sobre nós</a>
+                <!--Drop-1-->
+                <a href="#drop-1" data-bs-toggle="collapse" aria-expanded="false" onclick="$(this).toggleClass('active');">
+                    <i class="bi-layers"></i>Produtos
+                    <span class="bi-chevron-expand"></span>
+                </a>
+                <ul class="list-unstyled mb-0 position-relative collapse" id="drop-1">
+                    <li><a href="./datatag.html">Digital</a></li>
+                    <li><a href="./databusca.html">Localização</a></li>
+                    <li><a href="./datamind.html">Workflow</a></li>
+                    <li><a href="./dataquiz.html">Quiz</a></li>
+                    <li><a href="./datacrm.html">Vendas</a></li>
+                    <li><a href="./datacob.html">Cobrança</a></li>
+                </ul>
+                <!--End Drop-1-->
+                <a href="https://blog.ph3a.com.br/" target="_blank"><i class="bi-textarea"></i>Blog</a>
+                <a href="https://www.gov.br/defesa/pt-br/acesso-a-informacao/lei-geral-de-protecao-de-dados-pessoais-lgpd" target="_blank"><i class="bi-file-earmark-text"></i>LGPD</a>
+                <hr class="divider">
+                <a href="https://cliente.ph3a.com.br/" target="_blank"><i class="bi-window"></i>Área do cliente</a>
+                <a href="https://suporte.ph3a.com.br/support/login" target="_blank"><i class="bi-chat-square-dots"></i>Help Desk</a>
+            </nav>
+            </div>
+            <div class="offcanvas-footer d-flex justify-content-center align-items-center">
+                <a class="scroll-contato" data-bs-dismiss="offcanvas"><i class="bi-envelope"></i>Entre em contato</a>
+            </div>
+        </div>
+        </aside>
+
+
+
+
+
+    <!--Hero Cover-->
+    <section class="wrap-about">
+    <!--Hero Background-->
+    <div class="cover-hero">
+        <div class="hero-bg" style="background-image:url(images/hero-sobrenos.jpg)">
+            
+                <div class="container">
+                    <div class="row">
+                        <div class="col-12 d-flex flex-column justify-content-center align-items-center hero-content">
+                            <img src="images/logo-ph3-white.png" class="cover-logo mt-2 mb-4 mt-md-0 animated fadeInDown">
+                            <p class="px-3 p-md-0">Somos uma empresa apaixonada por tecnologia e negócios online.<br class="d-none d-md-block"/> Oferecemos soluções para atender todas as necessidades de sua empresa.
+                            </p>
+                        </div>
+                    </div>
+                    
+                </div>
+
+        </div>
+    </div>
+    <!--Hero Box-->
+    <div class="cover-hero-box animated fadeInUp">
+        <div class="container">
+        <div class="row">
+            <div class="col-12 p-3 pt-0 p-md-0">
+                <div class="p-4 py-5 p-md-5 d-flex flex-column justify-content-center align-items-center hero-box-inside">
+                    <h3 class="mb-3">Tecnologia e Experiência</h3>
+                    <p>Soluções para operações de venda, cobrança, localização, workflow, quiz, análise de crédito, gateway de pagamento, análise de fraude e plataforma de e-commerce.
+                    </p>
+                </div>
+            </div>
+        </div>
+        </div>
+    </div>
+    </section>
+
+
+
+
+
+    <!--Cover History-->
+    <section class="cv-about cv-history">
+    <div class="container">
+    <div class="row text-center justify-content-center mb-3 mb-md-4">
+        <div class="col-md-10 col-lg-8">
+            <h2>Nossa História</h2>
+            <div class="my-3 dash-divider history"></div>
+            <p class="p-2 pb-0 pt-2">A PH3A tem uma longa trajetória de sucesso ao longo dos anos.<br class="d-none d-md-inline"/>  Nossa história se inicia em 1995, e continua em franca expansão desenvolvendo produtos inovadores para empresas, sendo referência no mercado de Tecnologia da Informação.
+            </p>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-12">
+
+            <!--TimeLine About-Us-->
+            <div class="p-4 py-0" style="max-width:700px;width:99%;margin:0 auto 50px;overflow:hidden;" >
+                <div class="time-about">
+                <p data-animar-scroll="fadeInDown">
+                    <span>Nasce a Informarketing</span><br/>
+                    Criada pelo matemático Paulo Cesar Costa, a Informarketing teve atuação destacada nas operações de Marketing Direto de grandes empresas e ajudou a desenvolver o mercado de cartão de crédito para os principais bancos e financeiras.
+                </p>
+                <p data-animar-scroll="fadeInDown">
+                    <span>Venda da Informaketing</span><br/>
+                    O grupo irlandês Experian chega ao Brasil, adquire a Informarketing e alguns meses depois também o grupo Serasa. Durante um ano e meio, o executivo Paulo Cesar esteve à frente da presidência da nova empresa Serasa Experian, na unidade de Marketing Services.
+                </p>
+                <p data-animar-scroll="fadeInDown">
+                    <span>Paulo Cesar Costa deixa o Grupo Experian</span><br/>
+                    No final de 2008, Paulo Cesar conclui a sua missão e deixa a presidência de Marketing Services do grupo Serasa Experian, partindo para novos desafios profissionais. Produtos importantes criados por ele, como o InfoBusca, são mantidos até hoje nas operações do grupo.
+                </p>
+                <p data-animar-scroll="fadeInDown">
+                    <span>Nasce a PH3A, empresa de tecnologia de dados</span><br/>
+                    Em outubro, surge o novo empreendimento de Paulo Cesar. A PH3A Tecnologia de Dados marca o seu retorno ao mercado com soluções inovadoras para operações de Recuperação de Crédito, Análise de Fraude, Database, CRM, Gateway de Pagamento e Plataforma de e-commerce. Em pouco tempo, a empresa já assumiria uma posição de destaque neste mercado.
+                </p>
+                </div>
+            </div>
+
+
+        </div>
+    </div>
+    </div>
+    </section>
+
+
+
+
+
+    <!--Cover Leadership-->
+    <section class="cv-about cv-leadership">
+    <div class="container">
+    <div class="row text-center justify-content-center mb-4 mb-md-4">
+        <div class="col-md-10 col-lg-8">
+            <div class="w-100" style="height:12.5vw;min-height:115px;"></div>
+            <h2>Liderança Experiente</h2>
+            <div class="my-3 dash-divider leadership"></div>
+            <p class="pt-2 pb-1">Atualmente, a PH3A é referência no mercado de Tecnologia da Informação e Paulo Cesar Costa é o CEO à frente de suas operações. O crescimento e destaque da PH3A no mercado de tecnologia devem-se à criação e manutenção de produtos inovadores e de grande utilidade para empresas de todos os tamanhos e diversas atividades.</p>
+        </div>
+    </div>
+    <div class="row text-center justify-content-center pt-0 pb-3">
+        <div class="col-12 pt-0"><a href="#lideranca" class="btn-cta">Conheça a Liderança</a></div>
+    </div>
+    </div>
+    </section>
+
+
+
+    <!--Cover CEO-->
+    <section id="lideranca" class="cv-about cv-ceo">
+    <div class="container">
+    <div class="row align-items-center justify-content-between">
+        <div class="col-12 col-md-5 col-lg-6">
+
+            <div class="p-2 p-md-0 mt-4 mt-md-0 px-md-4" style="max-width:500px;margin:0 auto 50px;">
+                <!-- <h2>Paulo Cesar Costa</h2>
+                <div class="my-4 dash-divider"></div> -->
+                <p><span style="color:#ef5929;font-weight:500;">Paulo Cesar Costa</span> é <b>matemático, cientista da computação</b> e referência no mercado brasileiro de DBM e CRM. Criou sua primeira empresa em 1995, a Informarketing, e seus algoritmos (matchcode, modelos de crédito e fraude) foram de grande valia para as operações de grandes empresas e responsáveis pela prospecção de cartões de crédito dos principais bancos no Brasil.</p>
+                <p class="d-block d-sm-none d-lg-block">Seu sucesso não passou despercebido pelas multinacionais e em 2007 sua empresa foi adquirida pelo Grupo Experian, que meses depois veio a adquirir também a Serasa. Durante um ano e meio a presidência da unidade de Marketing Services do grupo esteve sob seu comando, até que em 2008 ele optou por deixá-la para seguir com novos projetos e empreendimentos.</p>   
+                <div class="pt-4 d-none"><a href="#" class="btn-cta-opaco">Trajetória de sucesso</a> </div>
+            </div>
+
+        </div>
+        <div class="col-12 col-md-7 col-lg-6">
+            
+            <div class="p-0 pt-0 p-md-0 mx-auto" style="max-width:550px;">
+                <img id="teste" src="images/ceo-paulo.png" style="width:100%;height:100%; opacity: 1;margin-top:-35px;" data-animar-scroll="fadeInRight">
+            </div>
+
+        </div>
+    </div>
+    </div>
+    </section>
+
+
+
+   
+    <!--Cover Trajetory-->
+    <section class="cv-about cv-trajetory">
+    <div class="container">
+    <div class="row">
+        <div class="w-100" style="height:10vw;min-height:80px;"></div>
+    </div>
+    <div class="row flex-column-reverse flex-md-row align-items-center justify-content-between">
+        <div class="col-12 col-md-6 col-lg-6">
+
+            <div class="p-2 pb-0 pt-2 p-md-0 mx-auto text-center" style="max-width:480px;">
+                <img src="images/ceo-paulo-cesar.png" style="width:90%;height:100%;" data-animar-scroll="fadeInLeft">
+            </div>
+
+        </div>
+        <div class="col-12 col-md-6 col-lg-6">
+            
+            <div class="p-2 pb-0 p-md-0" style="max-width:500px;margin:0 auto;">
+                <h2>Trajetória</h2>
+                <div class="my-4 dash-divider"></div>
+                <p>Em 2013 ele cria a PH3A Tecnologia de Dados e retorna ao mercado com soluções inovadoras para operações de Recuperação de Crédito, Análise de Fraude, Database, CRM, Gateway de Pagamento e Plataforma de e-commerce.</p>
+                <p class="py-1">Atualmente, a PH3A é referência no mercado de Tecnologia da Informação.</p>
+                <p class="d-block d-sm-none d-lg-block">Passados alguns anos de sua fundação, a PH3A conquistou uma carteira de clientes diversificados, mas todos com algo em comum: o arrojo e o desejo de crescerem em seus mercados competitivos. Esse é o caminho.</p>   
+            </div>
+
+        </div>
+    </div>
+    </div>
+    </section>
+
+
+    
+
+
+    <!--Zoho Form-->
+    <section id="contato-ph3a" class="cv-contato">
+    <div class="container">
+        <div class="row">
+        <div class="col-12 d-flex flex-column justify-content-center align-items-center text-center pt-5">
+            <p class="titulo">Ficou alguma dúvida?</p>
+        </div>
+        <div class="my-0 my-md-1 dash-contato"></div>
+        </div>
+    </div>
+    </section>
+    <!-- Zoho Form -->
+    <div id="zorro-xid"></div>
+	<!-- Zoho JS -->
+	<script type="text/javascript">
+		(function (_id, _h) {
+			try {
+				var f = document.createElement('iframe');
+				f.src = 'https://forms.zohopublic.com/ph3a2021/form/TodososProdutosPH3A/formperma/6-g3Ny4KSzd7x9C6Q92ouba-oY6gAFcxffGhqlcnbDc?zf_rszfm=1';
+				f.style.border = 'none';
+				f.style.height = _h;
+				f.style.width = '100vw';
+				f.style.transition = 'all 0.5s ease';
+				var d = document.getElementById(_id);
+				if (!d) return;
+				d.appendChild(f);
+				window.addEventListener('message',function () {
+					var evntData = event.data;
+					if (evntData && evntData.constructor == String) {
+						var zf_ifrm_data = evntData.split('|');
+						if (zf_ifrm_data.length == 2) {
+							var zf_perma = zf_ifrm_data[0];
+							var zf_ifrm_ht_nw =
+								parseInt(zf_ifrm_data[1], 10) + 15 + 'px';
+							var iframe = document.getElementById(_id).getElementsByTagName('iframe')[0];
+							if (iframe.src.indexOf('formperma') > 0 && iframe.src.indexOf(zf_perma) > 0) {
+								var prevIframeHeight = iframe.style.height;
+								if (prevIframeHeight != zf_ifrm_ht_nw) {
+									iframe.style.height = zf_ifrm_ht_nw;
+								}
+							}
+						}
+					}
+				},
+				false);
+			} catch (e) {}
+		})
+		('zorro-xid', '1120px');
+	</script>
+	<!-- Zoho Tracker -->
+	<script>
+		var w = window;
+		var d = document;
+		var cb = function () {
+			try {
+				loadwaprops(
+					'3zb19377283e881435c5b1a76eef97f8f6',
+					'3zc222016103396a0270d452236ed98177',
+					'3z0df49bf72adb4b9b03ea190844c87bcfd541edda061a0351d0f1ff502c92f8f8',
+					'3z71f4266141a53781e5c9c72e01c561c092e8d93a9818c1d7fc3e013a0ad57994',
+					0.0
+					);
+			} catch (e) {}
+		};
+		var p = w.location.protocol, f = d.getElementsByTagName('script')[0], s = d.createElement('script');
+		if (p.indexOf('http') < 0) p = 'http' + ':';
+		s.type = 'text/javascript';
+		s.async = false;
+		if (!s.readyState) s.onload = cb; else {
+			s.onreadystatechange = function () {
+				if (s.readyState == 'loaded' || s.readyState == 'complete') {
+					s.onreadystatechange = null;
+					cb();
+				}
+			};
+		}
+		s.src = p + '//ma.zoho.com/hub/js/WebsiteAutomation.js';
+		f.parentNode.insertBefore(s, f);
+	</script>
+	<!-- Tag PH3A -->
+	<script src="https://www.dataunion.com.br/repository/c6457f17-8962-4874-b74f-9ab907961ff9/ph3a-blog" type="text/javascript" async></script>
+
+
+
+    <!--FOOTER-->
+    <footer class="cv-footer">
+    <div class="p-2 py-5 footer-1">
+
+        <div class="container my-4">
+            <div class="row justify-content-between">
+                <div class="col-md-3 d-flex flex-column align-items-center align-items-md-start justify-content-center pb-3 pb-md-0">
+
+                    <div class="pb-3">
+                        <img src="images/logo-ph3a-white.png" style="max-width:200px;">
+                    </div>
+                    <div class="d-flex justify-content-start align-items-center">
+                        <img src="images/logo-abemd.png" class="me-2" style="max-width:58px;">
+                        <img src="images/logo-bureau.png" class="ms-2" style="max-width:124px;">
+                    </div>
+                    
+
+                </div>
+                <div class="col-md-4 d-flex justify-content-center justify-content-md-between pt-4 pt-md-0 pb-2 pb-md-0">
+
+                        <div class="mx-3 mx-md-2">
+                        <span class="d-block tags mb-3">MENU</span>
+                        <ul class="list-unstyled">
+                            <li>
+                                <a href="./sobre-nos.html" title="Sobre a PH3">Sobre nós</a>
+                            </li>
+                            <li>
+                                <a href="https://blog.ph3a.com.br/" target="_blank" title="Blog PH3">Blog</a>
+                            </li>
+                            <li>
+                                <a href="https://www.gov.br/defesa/pt-br/acesso-a-informacao/lei-geral-de-protecao-de-dados-pessoais-lgpd" target="_blank" title="LGPD">LGPD</a>
+                            </li>
+                            <li>
+                                <a href="./ethic.html" title="Ética e conduta">Ética e conduta</a>
+                            </li>
+                            <li>
+                                <a href="./privacy.html" title="Política de privacidade">Política de privacidade</a>
+                            </li>
+                            <li>
+                                <a href="./privacy.html#cookies" title="Uso de cookies">Uso de cookies</a>
+                            </li>
+                        </ul>
+                        </div>
+                        <div class="mx-3 mx-md-2 me-lg-4">
+                        <span class="d-block tags mb-3">DATAS</span>
+                        <ul class="list-unstyled" style="color:#fff;">
+                            <li>
+                                <a href="./datatag.html" title="DataTag">DataTag</a>
+                            </li>
+                            <li>
+                                <a href="./databusca.html" title="DataBusca">DataBusca</a>
+                            </li>
+                            <li>
+                                <a href="./datamind.html" title="DataMind">DataMind</a>
+                            </li>
+                            <li>
+                                <a href="./dataquiz.html" title="DataQuiz">DataQuiz</a>
+                            </li>
+                            <li>
+                                <a href="./datacrm.html" title="DataCRM">DataCRM</a>
+                            </li>
+                            <li>
+                                <a href="./datacob.html" title="DataCob">DataCob</a>
+                            </li>
+                            </ul>
+                        </div>
+
+
+                </div>
+                <div class="col-md-4 d-flex flex-column align-items-center align-items-md-start justify-content-center">
+
+                    <div class="footer-social pt-4 pt-md-0">
+                        <a href="https://www.facebook.com/ph3atecnologia" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                        <a href="https://twitter.com/ph3a_tecnoliga" target="_blank"><i class="fab fa-twitter"></i></a>
+                        <a href="https://www.linkedin.com/company/ph3a" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="https://wa.me/5511965845180?text=Ol%C3%A1!%20Gostaria%20de%20marcar%20uma%20reuni%C3%A3o%20para%20saber%20mais%20detalhes!" target="_blank"><i class="fab fa-whatsapp"></i></a>
+                    </div>
+
+                    <div class="footer-info pt-3 text-center text-md-start">
+                    <p>comercial@ph3a.com.br</p>
+                    <p>+55 (11) 3723-4230 +55 <br>(11) 96584-5180 (Somente WhatsApp)</p>
+                    <p class="mb-0">Rua dos Três Irmãos, 201 – 6º andar – Morumbi 05615-190 - São Paulo – SP</p>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <div class="p-3 footer-2 text-center">
+        <p>Copyright © 2022 PH3A. <br class="d-initial d-md-none"> Todos os direitos reservados.</p>
+    </div>
+    </footer>
+
+           
+</body>
+</html>

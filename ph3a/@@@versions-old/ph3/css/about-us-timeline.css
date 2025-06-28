@@ -1,0 +1,82 @@
+.time-about {
+/* min-width: 250px; */
+max-width: 700px;
+margin: auto;
+}
+
+.time-about p {
+font-size: 1em;
+line-height: 1.75em;
+border-top: 3px solid;
+-o-border-image: linear-gradient(to right, #ffaf32 0%, #ff8008 100%);
+border-image: linear-gradient(to right, #ffaf32 0%, #ff8008 100%);
+border-image-slice: 1;
+border-width: 3px;
+margin: 0;
+padding: 40px;
+counter-increment: section;
+position: relative;
+color: #34435e;
+}
+.time-about p:before {
+content: '1995';
+position: absolute;
+border-radius: 4px;
+padding: 6px 8px 8px;
+background:linear-gradient(90deg, #EE5929 0%, #ff7a00 100%);
+text-align: center;
+line-height: 1.25em;
+color: #ffffff;
+font-size: 1em;
+z-index:10;
+}
+.time-about p:nth-child(2)::before { content: '2007'; }
+.time-about p:nth-child(3)::before { content: '2008'; }
+.time-about p:nth-child(4)::before { content: '2013'; }
+
+.time-about p:nth-child(odd) {
+border-right: 3px solid;
+padding-left: 0;
+}
+.time-about p:nth-child(odd):before {
+left: 100%;
+margin-left: -30px;
+}
+
+.time-about p:nth-child(even) {
+border-left: 3px solid;
+padding-right: 0;
+}
+.time-about p:nth-child(even):before {
+right: 100%;
+margin-right: -30px;
+}
+
+/* Desktop */
+@media (min-width: 576px){ 
+    .time-about p:nth-child(odd):before {
+        left: 100%;
+        margin-left: -25px;
+    }
+    .time-about p:nth-child(even):before {
+        right: 100%;
+        margin-right: -25px;
+    }
+ }
+
+.time-about p:first-child {
+border-top: 0;
+border-top-right-radius: 0;
+border-top-left-radius: 0;
+}
+
+.time-about p:last-child {
+border-bottom-right-radius: 0;
+border-bottom-left-radius: 0;
+}
+
+.time-about span{
+    color: #ef5929;
+    font-size: 1.10rem;
+    font-weight: 500;
+}

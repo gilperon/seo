@@ -1,0 +1,885 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PH3A - Tecnologia</title>
+
+    <!-- Bootstrap 5.0 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
+
+
+    <!--Bootstrap Icons-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
+
+
+
+
+    
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script   script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    <!--Ionicons
+    <link href="http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css" rel="stylesheet" >
+    -->
+
+
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+
+
+        <!-- FontStack -->
+        <link href='https://fonts.googleapis.com/css?family=Roboto|Ubuntu|Lato|Open+Sans|Montserrat:300,400,500,600,700' rel='stylesheet'>
+
+        <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@600;700&display=swap" rel="stylesheet">
+
+
+
+        <!--Volte Font-->
+        <link href="https://fonts.cdnfonts.com/css/volte" rel="stylesheet">
+
+</head>
+<body>
+
+
+    <style>
+
+        :root{
+            --primary-bg-color:orange;
+            --primary-link-color:blue;
+        }
+
+        /**/
+        :root{
+            font-family: Montserrat, sans-serif;
+        }
+
+
+        :root{
+            --global-font-title: 'Volte',Arial,sans-serif;
+            --global-font-texts: 'Volte',Arial,sans-serif;
+        }
+
+       
+        .container {
+            max-width: 1140px;
+        }
+        
+
+
+
+        /*CSS Global for Link*/
+        a{
+            cursor:pointer;
+            text-decoration:none;
+            transition:color .15s ease-in-out,
+            background-color .15s ease-in-out,
+            border-color .15s ease-in-out;
+            color:inherit;
+        }
+
+        /*CSS Global for Font-Weight*/
+        .f-500{font-weight:500;}
+        .f-600{font-weight:600;}
+
+
+    
+
+
+
+
+
+
+    /*
+    *
+    * Menu Navigation
+    *
+    */
+
+        /*Menu Wrap Sticky*/
+        #header-wrap{ background-color:transparent;width:100%;min-height:70px;}
+
+        /*Menu Principal Navigation Relative & Fixed*/
+        #desktop-menu{
+            position:relative;
+            width:100%;
+            top:0;
+            left:0;
+            background:#fff;
+            min-height:70px;
+            box-shadow:0 2px 4px rgb(3 27 78 / 10%);
+        }
+        #desktop-menu.fixed{
+            position:fixed;
+            -webkit-box-shadow: 0 2px 4px rgb(3 27 78 / 10%);
+            box-shadow: 0 2px 4px rgb(3 27 78 / 10%);
+            -webkit-animation: navbarFixed 0.8s;
+            animation: navbarFixed 0.8s;
+        }
+
+        /* Desktop Menu Logo e Toggle Icon*/
+        #desktop-menu .logo{width:90px;height:28px;margin-right:20px;}
+        @media (min-width: 768px){ #desktop-menu .logo{width:105px;height:32px;margin-right:20px;} } 
+        #desktop-menu .navbar-toggler{border:0;padding:0;margin-right:12px;}
+        #desktop-menu .navbar-toggler {border-color:transparent;} 
+        #desktop-menu .navbar-toggler:focus{box-shadow:none;} 
+        .navbar-toggler-icon { background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(0,0,0, 1)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");width:30px;height:30px; }
+
+
+        /*Menu Principal Botões*/
+        .btn-menu-primary, .btn-menu-secondary{   
+            font-family: Montserrat, sans-serif;
+            font-size: 13px;
+            background: #ef5929;
+            border:1px solid #ef5929;
+            border-radius: 30px;
+            padding: 7px 18px 7px;
+            font-weight: 500;
+            color: #fff;
+        }
+        .btn-menu-primary{padding:7px 20px 7px;}
+        .btn-menu-primary:hover,.btn-menu-primary:active,.btn-menu-primary:focus{color: #fff;background:#ff4408;border-color:#ff4408;}
+        .btn-menu-secondary{color:#ef5929;background:none;margin-right:15px;}
+        .btn-menu-secondary:hover,.btn-menu-secondary:active,.btn-menu-secondary:focus{color: #fff;background:#ff4408;border-color:#ff4408;}
+
+        /*Menu Principal Links and Effects*/
+        #desktop-menu ul.navbar-nav > li > a {
+            font-family: Volte, sans-serif;
+            font-size: 16px;
+            font-weight: 500;
+            line-height: 20px;
+            color: #1f1845;
+            padding: 1px 0 0;
+            position: relative;
+            display: block;
+            -webkit-transition: 0.3s ease-in-out;
+            -o-transition: 0.3s ease-in-out;
+            transition: 0.3s ease-in-out;
+        }
+        #desktop-menu ul.navbar-nav > li {margin-left:35px;}
+        #desktop-menu ul.navbar-nav > li:last-child {margin-left:25px;}
+        #desktop-menu ul.navbar-nav > li.active > a:before,
+        #desktop-menu ul.navbar-nav > li > a:before,
+        #desktop-menu ul.navbar-nav > li > a:focus:before,
+        #desktop-menu ul.navbar-nav > li > a:hover:before {
+            width: 60%;
+        }
+        #desktop-menu ul.navbar-nav > li > a::before {
+            position: absolute;
+            left: 0;
+            bottom: -5px;
+            content: "";
+            height: 3px;
+            width: 0;
+            background-color: #ef5929;
+            -webkit-transition: width 300ms ease-in-out;
+            -o-transition: width 300ms ease-in-out;
+            transition: width 300ms ease-in-out;
+        }
+
+        /*Menu Animation*/
+        @-webkit-keyframes navbarFixed {
+            0% {
+                opacity: 0;
+                -webkit-transform: translateY(-100%);
+                transform: translateY(-100%);
+            }
+
+            100% {
+                opacity: 1;
+                -webkit-transform: translateY(0);
+                transform: translateY(0);
+            }
+            }
+
+            @keyframes navbarFixed {
+            0% {
+                opacity: 0;
+                -webkit-transform: translateY(-100%);
+                transform: translateY(-100%);
+            }
+
+            100% {
+                opacity: 1;
+                -webkit-transform: translateY(0);
+                transform: translateY(0);
+            }
+        }
+
+
+
+
+
+
+     /*
+    *
+    * OffCanvas Menu
+    *
+    */
+        /*Offcanvas BS Style*/
+        #mobile-menu .offcanvas.offcanvas-start{width:270px;}
+        #mobile-menu .offcanvas-header{height:70px;min-height:70px;}
+        #mobile-menu .offcanvas-body{padding:1rem 0.5rem;}
+        #mobile-menu .btn-close { border-color: transparent;background-size:14px;} 
+        #mobile-menu .btn-close:focus{box-shadow:none;} 
+        #mobile-menu .offcanvas-footer{background:#f5f6fa;padding:18px;border-top:1px solid #f2f2f2;}
+        #mobile-menu .offcanvas-footer a{font:14px "Open Sans",sans-serif;color:#1f1845;}
+        #mobile-menu .offcanvas-footer a:hover{text-decoration:underline;}
+        #mobile-menu .offcanvas-footer a > i {font-size:14px;margin-right:6px;margin-left:-15px;}
+
+
+        /*Mobile OffCanvas Menu*/
+        #mobile-menu .logo{width:90px;height:28px;}
+        #mobile-menu .div-cta{
+            background:#f5f7f9;border-top:1px solid #e9eaec;border-bottom:1px solid #e9eaec;padding:0.6rem;
+        }
+        #mobile-menu .btn-cta{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 8px 20px 9px 8px;
+            padding-left: 10px;
+            width: 95%;
+            max-width: 236px;
+            text-align: center;
+            font: 500 14px/18px 'MontSerrat',Arial,sans-serif;
+            color: #fff !important;
+            text-decoration: none;
+            border-radius: 30px;
+            box-shadow: inset 0 -3px 0 0 rgb(0 0 0 / 5%);
+            background: #ef5929;
+            white-space: nowrap;
+        }
+        #mobile-menu .btn-cta:hover{ background:#1a1a1a; } 
+        #mobile-menu .btn-cta .arrow{font-size:26px;}
+        #mobile-menu .btn-cta .space{margin-right:32px;}
+
+
+        /*Mobile OffCanvas Links*/
+        #mobile-navigation > a {
+            font-family: Volte, sans-serif;
+            font-size: 16px;
+            font-weight: 500;
+            line-height: 20px;
+            color: #1f1845;
+            padding: 12px 15px;
+            position: relative;
+            display: block;
+            -webkit-transition: 0.3s ease-in-out;
+            -o-transition: 0.3s ease-in-out;
+            transition: 0.3s ease-in-out;
+            border-radius:10px;
+            margin-bottom:2px;
+        }
+        #mobile-navigation > a:hover {background:#f5f6fa;}
+        #mobile-navigation > a.active {background:#f5f6fa;}
+        #mobile-navigation > a > i {font-size:15px;margin-right:6px;}
+        #mobile-navigation > a > span {font-size:17px;float:right;}
+        #mobile-navigation hr.divider{border-color:#e9eaec;opacity:1;}
+
+
+        /*Mobile OffCanvas DropDrown*/
+        #mobile-navigation ul li {padding-left: 35px;position:relative;}
+        #mobile-navigation ul li a {display:block;font:500 15px Volte, sans-serif;color:#1f1845;padding:16px 6px 8px;}
+        #mobile-navigation ul li a:hover { color:#ef5929; }
+        /*Expand Show Dots-Sub-Links*/
+        #mobile-navigation ul li::before { 
+            background: #ef5929;
+            bottom: auto;
+            content: "";
+            height: 8px;
+            left: 24px;
+            margin-top: 20px;
+            position: absolute;
+            right: auto;
+            width: 8px;
+            z-index: 1;
+            border-radius: 50%;
+        }
+        #mobile-navigation li::after { 
+            border-left: 1px solid #ef5929;
+            bottom: 0;
+            content: "";
+            left: 27px;
+            position: absolute;
+            top: 0;
+        }
+        #mobile-navigation li:last-child{margin-bottom:10px;}
+        #mobile-navigation li:last-child::after { bottom: 50%; }
+
+
+        /* Offcanvas Custom ScrollBar to Mobile Menu (Navigation) */
+        .offcanvas-scrollbar {
+            overflow-y: auto;overflow-y: overlay !important; /* It's hack to bar not take space, if want cna keep just auto*/
+            scrollbar-width: none; /* Firefox */ -ms-overflow-style: none;  /* Internet Explorer 10+ */
+        }
+        .offcanvas-scrollbar::-webkit-scrollbar { width: 0; height: 0; }
+        /* width */
+        .offcanvas-scrollbar::-webkit-scrollbar { width: 7px; }
+        /* Track */
+        .offcanvas-scrollbar::-webkit-scrollbar-track { /*box-shadow: inset 0 0 5px grey;*/ border-radius: 10px; }
+        /* Handle */
+        .offcanvas-scrollbar::-webkit-scrollbar-thumb { box-shadow: inset 0 0 5px grey;background: #909090; border-radius: 10px;}
+        /* Handle on hover */
+        .offcanvas-scrollbar::-webkit-scrollbar-thumb:hover { background: #1F2937;  }
+
+
+</style>
+
+
+<script>
+    $(document).ready(function() {
+        /* Menu Flutuante */
+        $(window).bind('scroll', function () {
+            if ($(window).scrollTop() > 100) {
+                $('#desktop-menu').addClass('fixed');
+            } else {
+                $('#desktop-menu').removeClass('fixed');
+            }
+        });
+    });
+</script>
+
+
+
+    <!--Desktop Menu-->
+    <header id="header-wrap">
+    <nav id="desktop-menu" class="navbar">
+
+        <div class="container">
+            <div class="d-flex justify-content-center align-items-center">
+                <!--Toggle-->
+                <button class="navbar-toggler d-flex d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#mobileMenu" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+                <!--Logo-->
+                <a href="#"><img src="images/logo-ph3.webp" class="logo"></a>
+                <!--Links-->
+                <ul class="navbar-nav d-none d-md-flex flex-row">
+                    <li class="active"><a href="#">Início</a></li>
+                    <li><a href="#">Sobre nós</a></li>
+                    <li class="nav-item dropdown">
+                        <a class="v2-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        Produtos
+                        </a>
+                        <ul class="dropdown-menu position-absolute" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item" href="#">Action</a></li>
+                            <li><a class="dropdown-item" href="#">Another action</a></li>
+                            <li><hr class="dropdown-divider"></li>
+                            <li><a class="dropdown-item" href="#">Something else here</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">Contato</a></li>
+                    <li class="d-none d-lg-flex"><a href="#">Blog</a></li>
+                    <li><a href="#">Helpdesk</a></li>
+                </ul>
+            </div>
+            <div class="d-flex">
+                <a class="btn-menu-secondary d-none d-lg-flex">Área do cliente</a>
+                <a class="btn-menu-primary">Login</a>
+            </div>   
+        </div>
+    </nav>
+    </header>
+
+
+
+
+
+
+    <!--OffCanvas-->
+    <aside id="mobile-menu">
+    <div class="offcanvas offcanvas-start" tabindex="-1" id="mobileMenu" aria-labelledby="mobileMenuLabel">
+    <div class="offcanvas-header">
+    <img src="images/logo-ph3.webp" class="logo">
+    <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+    </div>
+    
+        <div class="d-flex justify-content-center align-items-center div-cta">
+            <a href="#" class="btn-cta">
+            <i class="bi-arrow-right-circle-fill arrow"></i>
+            <div class="space">Acesse sua conta</div>
+            </a>
+        </div>
+        <div class="offcanvas-body offcanvas-scrollbar">
+        <nav id="mobile-navigation">
+            <a href="#"><i class="bi-house icone"></i>Início</a>
+            <a href="#"><i class="bi-sticky"></i>Sobre nós</a>
+            <!--Drop-1-->
+            <a href="#drop-1" data-bs-toggle="collapse" aria-expanded="false" onclick=" $(this).toggleClass('active');">
+                <i class="bi-layers"></i>Produtos
+                <span class="bi-chevron-expand"></span>
+            </a>
+            <ul class="list-unstyled mb-0 position-relative collapse" id="drop-1">
+                <li><a href="#">Digital</a></li>
+                <li><a href="#">Localização</a></li>
+                <li><a href="#">Workflow</a></li>
+                <li><a href="#">Quiz</a></li>
+                <li><a href="#">Vendas</a></li>
+                <li><a href="#">Cobrança</a></li>
+            </ul>
+            <!--End Drop-1-->
+            <a href="#"><i class="bi-textarea"></i>Blog</a>
+            <a href="#"><i class="bi-file-earmark-text"></i>LGPD</a>
+            <hr class="divider"></hr>
+            <a href="#"><i class="bi-window"></i>Área do cliente</a>
+            <a href="#"><i class="bi-chat-square-dots"></i>Help Desk</a>
+        </nav>
+        </div>
+        <div class="offcanvas-footer d-flex justify-content-center align-items-center">
+            <a href="#"><i class="bi-envelope"></i>Entre em contato</a>
+        </div>
+    </div>
+    </aside>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <style>
+        .cover-0-bg{background: url(images/banner-1.png) bottom 0 right -20px no-repeat #f5f6fa;
+                    background-size: 94%;
+                    min-height:700px;
+                }
+    
+        
+        @media (min-width: 768px){
+            .cover-0-bg{background: url(images/banner-1.png) top 0 right 0px no-repeat #f5f6fa;background-size: 48% auto;
+                min-height:600px;
+            }
+        }
+
+        .cv-1 .title{
+        font:600 2.7rem/50px 'Volte' !important;letter-spacing: -1px;}
+
+
+
+
+
+        .cover-1-size{height:750px;}
+        .typo.title{ font:600 38px/46px 'Volte' !important;letter-spacing: -1px;color:#A8A8A8;margin-top:35px;}
+        .typo.p{font:400 22px 'Volte' !important;letter-spacing: -1px;color:#6A6F77;}
+        @media (min-width: 768px){  
+            .typo.title{ font:600 2.9rem/54px 'Volte' !important;letter-spacing: -1px;color:#A8A8A8;margin-top:0;}
+            .typo.p{font:500 24px 'Volte' !important;letter-spacing: -1px;color:#6A6F77;}
+            .cover-1-size{height:600px;}
+        }
+
+        
+
+        .typo.title span{color:#EF5929;}
+
+
+        .cv-x .btn-cta{
+                    font-family: Montserrat, sans-serif;
+                    font-size: 16px;
+                    background: #ef5929;
+                    border: 1px solid #ef5929;
+                    border-radius: 30px;
+                    padding: 13px 30px;
+                    font-weight: 500;
+                    color: #fff;
+                    font:500 15px/24px 'MontSerrat',Arial,sans-serif;
+        }
+
+        
+    
+    </style>
+    <div class="cover-0-bg">
+    <div class="container">
+        <div class="row cover-1-size">
+            <div class="col-12 col-md-6 d-flex justify-content-start justify-content-md-center align-items-start align-items-md-center">
+
+                    <div style="max-width:500px;padding:10px;margin:0 auto;" class="d-flex align-items-start flex-column">
+                    <h1 class="typo title">
+                        Tecnologia de dados que otimiza rotinas e multiplica resultados para empresas.
+                    </h1>
+                    <p class="typo p" style="margin-top:22px;">Alta expertise em soluções práticas!</p>
+
+
+                    <div class="cv-x" style="padding-bottom:50px;padding-top:36px;">
+                    <a href="#" class="btn-cta">SAIBA MAIS</a>
+                    </div>
+
+                    </div>
+                    
+            </div>
+            <div class="col-12 col-md-6"></div>
+        </div>
+    </div>
+    
+    </div>
+
+
+
+
+
+
+
+
+
+    <style>
+
+
+    :root{
+
+        /*Home Cover Titulos*/
+        --home-title:'Volte',Arial,sans-serif;
+        --home-title-color:#EF5929;
+        /*--home-title-color:#2c2b2b;*/
+
+        /*Home Cover Textos*/
+        --home-texto:system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue","Noto Sans","Liberation Sans",Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
+        --home-texto-color:#6A6F77;
+
+        /*Home Cover Botoes*/
+        --home-btn-bg:#ef5929;
+        --home-btn-bg-hover:#1A1A1A;
+        --home-btn-color:#fff;
+        --home-btn-font:'MontSerrat',Arial,sans-serif;
+        --home-btn-radius:30px;
+
+        
+
+    }
+
+
+    
+
+    
+
+
+
+    /*CSS Global for Home*/
+    .cv-home-divider{width:57px;height:6px;background:linear-gradient(90deg, #EE5929  0%, #ff7a00 100%);}
+
+    /*Typography for Home*/
+    .cv-home h2 {font-size: calc(1.375rem + 2.5vw);}
+    @media (min-width: 992px){ 
+    .cv-home h2 {font-size: 2.7rem;}
+    .cv-home p{ font-size:17px;line-height:1.6;  }
+    }
+    .cv-home h2{ 
+        font-family: var(--home-title);
+        color: var(--home-title-color);
+        letter-spacing:-1px;
+        font-weight:600;
+        
+    }
+    .cv-home p{ 
+        font-family:var(--home-texto);
+        color:var(--home-texto-color);
+        max-width:410px;
+    }
+    .cv-home .btn-cta{
+        font:500 15px/20px var(--home-btn-font);
+        background: var(--home-btn-bg);
+        border-radius: var(--home-btn-radius);
+        color: var(--home-btn-color);
+        padding: 12px 24px;
+        white-space: nowrap;
+    }
+    .cv-home .btn-cta:hover{background:var(--home-btn-bg-hover);}
+    /*END Typography*/
+x
+
+    /*Cover DataTag - Estrutura*/
+    .cv-datatag{margin:30px 0;}
+    .cv-datamind{margin:30px 0;}
+    .cv-dataquiz{margin:30px 0;}
+    .cv-datacrm{margin:30px 0;background:#f5f6fa;}
+    .cv-datacob{margin:30px 0;}
+    .cv-datamulti{margin:30px 0;}
+
+    /*<p> Custom to Dataquiz*/
+    .cv-dataquiz p{max-width:450px;}
+
+   /*<p> Custom to Datacrm*/
+    .cv-datacrm p{max-width:430px;}
+
+    /*<h2><p> Custom to Datamulti*/
+     .cv-datamulti h2{max-width:380px;}
+     .cv-datamulti p{max-width:430px;}
+     .cv-datamulti .row > div:first-child{border-right:2px solid #F3F3F3;}
+     .cv-datamulti .row > div:last-child{border-left:2px solid #F3F3F3;}
+     .cv-datamulti-ball{width:54px;height:54px;border-radius:50%;background:#EE5929;margin-bottom:30px;}
+     .cv-datamulti-ball.right{margin-top:10px;}
+
+
+     
+     @media (min-width: 768px){
+
+        /*Cover DataTag - Estrutura*/
+        .cv-datatag{margin:60px 0;}
+        .cv-datamind{margin:60px 0;}
+        .cv-dataquiz{margin:60px 0;}
+        .cv-datacrm{margin:60px 0;}
+        .cv-datacob{margin:60px 0;}
+        .cv-datamulti{margin:60px 0;}
+        .cv-datamulti-ball.right{margin-top:100px;}
+
+     }
+
+    @media (min-width: 992px){ 
+
+        /*Cover DataTag - Estrutura*/
+        .cv-datatag{margin:100px 0;}
+        .cv-datamind{margin:100px 0;}
+        .cv-dataquiz{margin:100px 0;}
+        .cv-datacrm{margin:100px 0;}
+        .cv-datacob{margin:100px 0;}
+        .cv-datamulti{margin:100px 0;}
+        
+
+    }
+
+
+    
+    </style>
+
+
+
+
+
+
+    <section class="cv-home cv-datatag">
+    <div class="container">
+    <div class="row align-items-center justify-content-between">
+        <div class="col-12 col-md-5 col-lg-6">
+
+            <div class="p-2 p-md-0 px-md-4" style="max-width:500px;margin:0 auto;">
+                <h2>Você sabe o perfil de quem visita o seu site?</h2>
+                <div class="my-4 cv-home-divider"></div>
+                <p>Somente 5% dos internautas brasileiros fazem login ou preenchem formulários nos sites que visitam. <br/>O grupo que não se loga, não preenche ou abandona os formulários corresponde a 95% da sua audiência.</p>
+                <p class="py-2"><span class="f-700">O DATATAG resolve este problema!</span></p>
+                <p class="d-block d-sm-none d-lg-block">Com o <span class="f-700">DATATAG</span> você pode reverter essa estatística e identificar muitos dos visitantes anônimos de seu site. Conheça o público que se interessa por sua marca ou seu produto, ajuste o foco de suas campanhas e venda mais!</p>   
+                <div class="pt-4"><a href="#" class="btn-cta">Conheça o DATATAG</a></div>
+            </div>
+
+        </div>
+        <div class="col-12 col-md-7 col-lg-6">
+            
+            <div class="p-2 pt-5 p-md-0 mx-auto" style="max-width:550px;">
+                <img src="images/bg-home-cv-3.png" style="width:100%;height:100%;">
+            </div>
+
+        </div>
+    </div>
+    </div>
+    </section>
+
+
+
+    
+
+    <section class="cv-home cv-datamind">
+    <div class="container">
+    <div class="row flex-column-reverse flex-md-row align-items-center justify-content-between">
+        <div class="col-12 col-md-6 col-lg-6">
+
+            <div class="p-2 p-md-0 mt-5 mt-md-0 mx-auto" style="max-width:520px;">
+                <img src="images/xxx.png" style="width:100%;height:100%;">
+            </div>
+
+        </div>
+        <div class="col-12 col-md-6 col-lg-6">
+            
+            <div class="p-2 p-md-0" style="max-width:500px;margin:0 auto;">
+                <h2>Você sofre com fraude e inadimplência?</h2>
+                <div class="my-4 cv-home-divider"></div>
+                <p>A tecnologia de dados dá segurança à gestão financeira da sua empresa para que você se concentre na sua especialidade.</p>
+                <p class="py-2"><span class="f-700">O DATAMIND ajuda você a evitar situações vulneráveis a fraudes e à inadimplência!</span></p>
+                <p class="d-block d-sm-none d-lg-block">O <b>DATAMIND</b> é uma tecnologia de análise de dados que tem sido utilizada para otimizar e garantir mais qualidade aos processos, evitando erros e entregando bons insights ao seu usuário.</p>   
+                <div class="pt-4"><a href="#" class="btn-cta">Conheça o DATAMIND</a></div>
+            </div>
+
+        </div>
+    </div>
+    </div>
+    </section>
+
+
+    <section class="cv-home cv-datamulti">
+        <div class="container">
+            <div class="row align-items-stretch">
+                <div class="col-12 col-md-6 d-flex justify-content-center justify-content-md-end">
+
+                    <div class="p-2 p-md-0 px-md-4 py-md-5 px-lg-5 text-end d-flex flex-column align-items-end" style="max-width:500px;">
+                        <div class="cv-datamulti-ball"></div>
+                        <h2>Quer obter mais produtividade da equipe de vendas?</h2>
+                        <div class="my-4 cv-home-divider"></div>
+                        <p>Uma análise de dados feita por profissional experiente aumenta o faturamento da empresa em 15%, segundo dados da McKinsey, referência de consultoria americana de negócios.</p>
+                        <p>O DATACRM ajuda sua equipe a aumentar o caixa da empresa!</p>
+                        <p>A experiência da compra vem depois de toda uma estratégia de análise, abordagem e ofertas específicas aos prospects segundo seus hábitos de consumo.</p>
+                        <p>O DATACRM tem essa visão macro do consumidor, e faz análises e segmentações para ações certeiras, que maximizam resultados de vendas.</p>
+                        <div class="pt-4 pb-4"><a href="#" class="btn-cta">Conheça o DATAQUIZ</a></div>
+                    </div>
+
+
+
+                </div>
+                <div class="col-12 col-md-6 d-flex justify-content-center justify-content-md-start">
+
+                    <div class="p-2 p-md-0 px-md-4 py-md-5 px-lg-5 text-left" style="max-width:500px;">
+                        <div class="cv-datamulti-ball right"></div>
+                        <h2>Sua base de contato não está performando?</h2>
+                        <div class="my-4 cv-home-divider"></div>
+                        <p>Encontrar pessoas e empresas é uma de nossas especialidades. Somos referência no mercado e nosso principal compromisso é estar sempre atualizado.</p>
+                        <p>O DATABUSCA encontra quem você procura, enriquece e atualiza a sua base de contatos!</p>
+                        <p>Com mais de 25 anos de atuação e processo permanente de depuração, o DATABUSCA capta e cruza informações de diversas fontes públicas de dados, o que o torna um sistema superpotente de localização de pessoas e empresas.</p>
+                        <div class="pt-4 pb-4"><a href="#" class="btn-cta">Conheça o DATABUSCA</a></div>
+                    </div>
+
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+
+    <section class="cv-home cv-dataquiz">
+    <div class="container">
+    <div class="row align-items-center justify-content-between">
+        <div class="col-12 col-md-6 col-lg-5">
+
+            <div class="p-2 p-md-0 mb-4 mb-md-0 mx-auto d-none d-md-block" style="max-width:400px;">
+                <img src="images/yyy.png" style="width:100%;height:100%;">
+            </div>
+
+            <div class="p-2 p-md-0 mb-4 mb-md-0 mx-auto d-block d-md-none">
+            <div style="background: url(images/yyy.png) no-repeat top -50px center; width: 100%; height: 250px; border-radius: 20px;background-size:cover;"></div>
+            </div>
+
+            
+
+        </div>
+        <div class="col-12 col-md-6 col-lg-7">
+            
+            <div class="p-2 p-md-0 px-md-2" style="max-width:580px;">
+                <h2>Quer um módulo de reforço em segurança que previne fraude online e offline?</h2>
+                <div class="my-4 cv-home-divider"></div>
+                <p>Sua empresa precisa ter uma superferramenta antifraude para validar em tempo real, as informações do seu cliente no ato da compra.</p>
+                <p>O <b>DATAQUIZ</b> é essa proteção adicional pra sua segurança!</p>
+                <p class="d-block d-sm-none d-lg-block">O <b>DATAQUIZ</b> trabalha com inteligência de dados e da informação, faz apontamentos-surpresa para captar e cancelar situações fraudulentas.</p>   
+                <div class="pt-4"><a href="#" class="btn-cta">Conheça o DATAQUIZ</a></div>
+            </div>
+
+        </div>
+    </div>
+    </div>
+    </section>
+
+
+
+    <section class="cv-home cv-datacrm py-3 pb-5 py-md-5">
+    <div class="container">
+    <div class="row flex-column-reverse flex-md-row align-items-center justify-content-between">
+        <div class="col-12 col-md-6 col-lg-6">
+
+
+            <div class="p-2 p-md-0 px-md-4" style="max-width:580px;">
+                <h2>Quer organizar e agilizar as ações de vendas de sua empresa?</h2>
+                <div class="my-4 cv-home-divider"></div>
+                <p>Ajuste sua estrutura, distribua sua carteira, ganhe mais velocidade e praticidade nas suas ações comerciais.</p>
+                <p>O <b>DATACRM</b> te dá essa clareza e organização comercial!</p>
+                <p class="d-block d-sm-none d-lg-block">O <b>DATACRM</b> é a ferramenta que organiza e facilita as análises, dá rapidez aos processos, para maximizar os bons resultados!</p>   
+                <div class="pt-4"><a href="#" class="btn-cta">Conheça o DATACRM</a></div>
+            </div>
+
+            
+              
+        </div>
+        <div class="col-12 col-md-6 col-lg-6">
+            
+            <div class="p-2 p-md-0 mx-auto d-none d-md-block" style="max-width:420px;">
+                <img src="images/www.png" style="width:100%;height:100%;">
+            </div>
+
+            <div class="p-2 p-md-0 mt-4 mb-4 mx-auto d-block d-md-none">
+            <div style="background: url(images/www.png) no-repeat center center; width: 100%; height: 250px; border-radius: 20px;background-size:cover;"></div>
+            </div>
+            
+
+        </div>
+    </div>
+    </div>
+    </section>
+
+
+
+
+    <section class="cv-home cv-datacob">
+    <div class="container">
+    <div class="row align-items-center justify-content-between">
+        <div class="col-12 col-md-6 col-lg-5">
+
+            <div class="p-2 p-md-0 mx-auto d-none d-md-block" style="max-width:400px;">
+                <img src="images/vvv.png" style="width:100%;height:100%;">
+            </div>
+
+            <div class="p-2 p-md-0 mt-4 mb-4 mt-0 mb-md-0 mx-auto d-block d-md-none">
+            <div style="background: url(images/vvv.png) no-repeat top -50px center; width: 100%; height: 250px; border-radius: 20px;background-size:cover;"></div>
+            </div>
+
+
+        </div>
+        <div class="col-12 col-md-6 col-lg-7">
+            
+            <div class="p-2 p-md-0 px-md-2" style="max-width:580px;">
+                <h2 class="d-none d-md-inline">Seu setor ou assessoria de cobrança têm resultados apenas médios?</h2>
+                <h2 class="d-inline d-md-none">Seu setor de cobrança têm resultados ruins?</h2>
+                <div class="my-4 cv-home-divider"></div>
+                <p>A tecnologia de dados com CRM inteligente aumenta a velocidade dos processos e melhora a produtividade.</p>
+                <p>O <b>DATACOB</b> é o CRM que organiza as estratégias de cobrança pra você!</p>
+                <p class="d-block d-sm-none d-lg-block">O <b>DATACOB</b> possui o módulo online de negociação, segmenta os grupos e agiliza os processos. O resultado você vê nos relatórios de produtividade.</p>   
+                <div class="pt-4"><a href="#" class="btn-cta">Conheça o DATACOB</a></div>
+            </div>
+
+        </div>
+    </div>
+    </div>
+    </section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+</body>
+</html>

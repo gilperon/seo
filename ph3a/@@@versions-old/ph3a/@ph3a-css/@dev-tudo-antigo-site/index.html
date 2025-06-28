@@ -1,0 +1,476 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PH3A - Tecnologia</title>
+
+    <!-- Bootstrap 5.0 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
+
+
+    
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script   script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    <!--Ionicons
+    <link href="http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css" rel="stylesheet" >
+    -->
+
+
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+
+    <style>
+        :root{
+            --primary-bg-color:orange;
+            --primary-link-color:blue;
+        }
+    </style>
+
+
+        <!-- FontStack -->
+        <link href='https://fonts.googleapis.com/css?family=Raleway|Montserrat:300,400,500,600,700' rel='stylesheet'>
+
+        <!--Volte Font-->
+        <link href="https://fonts.cdnfonts.com/css/volte" rel="stylesheet">
+
+</head>
+<body>
+
+
+    <style>
+
+        /**/
+        :root{
+            font-family: Montserrat, sans-serif;
+        }
+
+        /*CSS Global*/
+        a{cursor:pointer;text-decoration:none;transition:color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out}
+        a:hover, a:focus, a:active{color:inherit;}
+
+        .cv-1 h1{
+                font:600 42px/44px 'Volte',Arial,sans-serif;
+                color:#161616;
+                margin-bottom:25px;
+        }
+
+        p{
+            font:400 16px/22px 'Volte',Arial,sans-serif;
+            color:#6a6c72;
+        }
+
+
+
+
+
+
+
+
+
+        /*
+        *
+        * Menu Navigation
+        *
+        */
+
+        .custom-toggler .navbar-toggler-icon {
+        background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(0,0,0, 1)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E"); }
+        .custom-toggler.navbar-toggler { border-color: transparent;} 
+        .navbar-toggler:focus{box-shadow:none;} /*Remove box-shadow do Menu_Icon toggle*/
+        .navbar-toggler{padding:0;} /*Remove padding do Menu_Icon toggle*/
+
+       
+
+
+        /*Menu Wrap Fixed*/
+        .v2-header-wrap{
+            background-color:transparent;
+            width:100%;
+            min-height:80px;
+        }
+
+        /*Menu Principal Navigation Relative & Fixed*/
+        .v2-navbar{
+            position:relative;
+            width:100%;
+            top:0;
+            left:0;
+            background:#F5F6FA !important;
+            background:#fff;
+            min-height:80px;
+        }
+        .v2-navbar.fixed{
+            position:fixed;
+            -webkit-box-shadow: 0 2px 4px rgb(3 27 78 / 10%);
+            box-shadow: 0 2px 4px rgb(3 27 78 / 10%);
+            -webkit-animation: navbarFixed 0.8s;
+            animation: navbarFixed 0.8s;
+        }
+
+        /*Menu Principal Links and Effects*/
+        
+        
+            
+            .v2-nav-custom > li > a.v2-link {
+                font-family: Volte, sans-serif;
+                font-size: 16px;
+                font-weight: 500;
+                line-height: 20px;
+                color: #1f1845;
+                padding: 8px 0 0;
+                position: relative;
+                display: block;
+                -webkit-transition: 0.3s ease-in-out;
+                -o-transition: 0.3s ease-in-out;
+                transition: 0.3s ease-in-out;
+            }
+            .v2-nav-custom > li {margin-left:35px;}
+            .v2-nav-custom > li:last-child {margin-left:25px;}
+            .v2-nav-custom > li > a.v2-link:before,
+            .v2-nav-custom > li > a.v2-link:focus:before,
+            .v2-nav-custom > li > a.v2-link:hover:before {
+                width: 60%;
+            }
+            .v2-nav-custom li > a.v2-link::before {
+                position: absolute;
+                left: 0;
+                bottom: -5px;
+                content: "";
+                height: 3px;
+                width: 0;
+                background-color: orange;
+                -webkit-transition: width 300ms ease-in-out;
+                -o-transition: width 300ms ease-in-out;
+                transition: width 300ms ease-in-out;
+            }
+            .v2-nav-btn, .v2-nav-btn.second{   
+                font-family: Montserrat, sans-serif;
+                font-size: 13px;
+                background: #ff7a00;
+                border:1px solid #ff7a00;
+                border-radius: 8px;
+                padding: 7px 18px 7px;
+                font-weight: 500;
+                /* max-width: 110px; */
+                color: #fff;
+            }
+            .v2-nav-btn:hover,.v2-nav-btn:active,.v2-nav-btn:focus{color:#fff;}
+            .v2-nav-btn.second{color:#ff7a00;background:none;}
+
+        /*Menu Animation*/
+        @-webkit-keyframes navbarFixed {
+            0% {
+                opacity: 0;
+                -webkit-transform: translateY(-100%);
+                transform: translateY(-100%);
+            }
+
+            100% {
+                opacity: 1;
+                -webkit-transform: translateY(0);
+                transform: translateY(0);
+            }
+            }
+
+            @keyframes navbarFixed {
+            0% {
+                opacity: 0;
+                -webkit-transform: translateY(-100%);
+                transform: translateY(-100%);
+            }
+
+            100% {
+                opacity: 1;
+                -webkit-transform: translateY(0);
+                transform: translateY(0);
+            }
+        }
+
+        
+
+
+    </style>
+
+    <script>
+        $(document).ready(function() {
+            /* Menu Flutuante */
+            $(window).bind('scroll', function () {
+                if ($(window).scrollTop() > 100) {
+                    $('#v2-navbar').addClass('fixed');
+                } else {
+                    $('#v2-navbar').removeClass('fixed');
+                }
+            });
+        });
+    </script>
+
+
+
+        <div style="position:relative;background: url(land-1.jpg) no-repeat top  center;height: 800px;background-size: contain;clip-path: polygon(0 0, 100% 0%, 100% 80%, 0% 100%);">
+        <header class="v2-header-wrap">
+
+            <!--Menu-->
+            <nav id="v2-navbar" class="v2-navbar navbar navbar-expand-md">
+            <div class="container-fluid container-md">
+  
+                            <a href="#"><img src="https://blog.ph3a.com.br/content/images/2022/08/logo-ph3.webp" width="105"></a>
+                            <button class="navbar-toggler custom-toggler p-3 px-2 p-md-0 py-md-2" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent">
+                                <span class="navbar-toggler-icon"></span>
+                            </button>
+                            <div class="collapse navbar-collapse p-3 p-md-0" id="navbarSupportedContent">
+                                <ul class="v2-nav-custom align-items-start align-items-md-center navbar-nav ms-auto">
+                                <li class="v2-item">
+                                    <a class="v2-link">Início</a>
+                                </li>
+                                <li class="v2-item">
+                                    <a class="v2-link">Sobre nós</a>
+                                </li>
+                                <li class="nav-item dropdown">
+                                    <a class="v2-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                    Produtos
+                                    </a>
+                                    <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
+                                        <li><a class="dropdown-item" href="#">Action</a></li>
+                                        <li><a class="dropdown-item" href="#">Another action</a></li>
+                                        <li><hr class="dropdown-divider"></li>
+                                        <li><a class="dropdown-item" href="#">Something else here</a></li>
+                                    </ul>
+                                </li>
+                                <li class="v2-item">
+                                    <a class="v2-link">Contato</a>
+                                </li>
+                                <li class="v2-item destaq">
+                                    <a class="v2-nav-btn">Área do cliente</a>
+                                </li>
+                                <li class="v2-item destaq">
+                                    <a class="v2-nav-btn second">Login</a>
+                                </li>
+                                </ul>
+                            </div>
+
+
+                        
+            </div>
+            </nav>
+
+        </header>
+        </div>
+
+
+
+        <div class="container cv-1" style="margin-top:150px;">
+            <div class="row">
+                
+                <div class="col-12 col-md-6 d-flex justify-content-center justify-content-md-end ps-4">
+                    <div style="max-width:500px;">
+                    <h1>Conheça o perfil de quem visita o seu site</h1>
+                    <p>Somente 5% dos internautas brasileiros fazem login ou preenchem formulários nos sites que visitam. O grupo que não se loga, não preenche ou abandona os formulários corresponde a 95% da sua audiência.</p>
+                    </div>
+                </div>
+
+                <div class="col-12 col-md-6 d-flex justify-content-center justify-content-md-start pe-4">
+
+                    <div style="width:100%;max-width:400px;">
+                        <img src="https://astenassinatura.com.br/wp-content/uploads/2021/10/image-recursos.jpeg" width="100%">
+                        </div>
+
+                </div>
+            </div>
+        </div>
+
+
+
+
+
+        <div class="container cv-1" style="margin-top:150px;">
+            <div class="row">
+                <div class="col-12 col-md-6 d-flex justify-content-center justify-content-md-end pe-4">
+
+                    
+
+                        <div style="width:100%;">
+                        <img src="ab1.jpg" width="100%">
+                        </div>
+
+                </div>
+                <div class="col-12 col-md-6 d-flex justify-content-center justify-content-md-start ps-4">
+                    <div style="max-width:500px;">
+                    <h1>Aumente a produtividade da equipe de vendas</h1>
+                    <div class="na-midia retangulo" style="margin:20px 0;width: 57px; height: 6px; background: linear-gradient(90deg, #EE5929  0%, #ff7a00 100%);"></div>
+                    <p>A análise de dados feita por profissionais experientes aumenta o faturamento da empresa em 15%, segundo dados da McKinsey, referência de consultoria.</p>
+
+                    
+                    <style>
+                        .remessa-box{
+			width:560px;padding:15px 30px 15px;padding-left:60px;position:relative;margin-bottom:5px;
+			border-radius:16px;
+		}
+        .remessa-box .circle{
+		display: flex; justify-content: center; align-items: center;width:50px;height:50px;border-radius:50%;position:absolute;top:10px;left:0;text-align:center;
+	}
+	.remessa-box .title{ font:600 20px/32px Volte;}
+	.remessa-box .sub-title{ font:16px/28px Volte;color:#858585;max-width:360px;}
+
+
+                        ion-icon {
+                        font-size: 44px;
+                        color: #ff7a00;
+                        }
+                    </style>
+
+                        <div class="remessa-box">
+                            <div class="circle s-wise-bg">
+                                <ion-icon name="analytics-outline"></ion-icon>
+                                
+                                
+                            </div>
+                            <div class="title s-wise-color">O DATACRM ajuda você</div>
+                            <div class="sub-title">
+                                A experiência da compra vem depois de toda uma estratégia de análise, abordagem e ofertas específicas aos prospects segundo seus hábitos de consumo.
+                                
+                            </div>
+                        </div>
+
+                        <div class="remessa-box">
+                            <div class="circle s-wise-bg">
+                                <ion-icon name="checkmark-done-outline"></ion-icon>
+                            </div>
+                            <div class="title s-wise-color">O DATACRM ajuda você</div>
+                            <div class="sub-title">
+                                O DATACRM tem essa visão macro do consumidor, e faz análises e segmentações para ações certeiras, que maximizam resultados de vendas.
+                            </div>
+                        </div>
+
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+
+
+
+
+
+
+        <div class="container cv-1" style="margin-top:150px;">
+            <div class="row">
+                <div class="col-12 col-md-6 d-flex justify-content-center justify-content-md-end pe-4">
+
+                    
+
+                        <div style="width:100%;">
+                        <img src="ab1.jpg" width="100%">
+                        </div>
+
+                </div>
+                <div class="col-12 col-md-6 d-flex justify-content-center justify-content-md-start ps-4">
+                    <div style="max-width:450px;">
+                    <h1>Aumente a produtividade da equipe de vendas</h1>
+                    <div class="na-midia retangulo" style="margin:20px 0;width: 57px; height: 6px; background: #5AB464;"></div>
+                    <p>A análise de dados feita por profissionais experientes aumenta o faturamento da empresa em 15%, segundo dados da McKinsey, referência de consultoria.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <div class="container cv-1" style="margin-top:550px;">
+        <div class="row g-2">
+            <div class="col-12 col-md-6 d-flex justify-content-center justify-content-md-end">
+
+                <div style="width:100%;max-width:400px;">
+                <img src="https://astenassinatura.com.br/wp-content/uploads/2021/10/image-recursos.jpeg" width="100%">
+                </div>
+
+            </div>
+            <div class="col-12 col-md-5 offset-md-1 d-flex justify-content-center justify-content-md-start">
+                <div style="max-width:350px;">
+                <h1>Você entra no shopping e ainda ganha.</h1>
+                <p>Tudo o que você procura em um só lugar. No Inter Shop você tem dinheiro de volta direto na sua conta.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+
+    <br><Br><Br><br><Br><Br><br><Br><Br><br><Br><Br><br><Br><Br>
+
+    <div class="container-fluid" style="background:#26242F;height:680px;overflow:hidden;">
+        <div class="row" style="height:100%;">
+            <div class="col-md-6">a</div>
+            <div class="col-md-6 p-0 d-flex justify-content-end align-items-end">
+            
+                <div style="display:block;">
+                <img src="https://www.navegg.com/sites/default/files/2022-04/banner-home.jpg" style="width:100%;height:100%;">
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+
+    <br><br><br>
+
+
+    <div style="background:url(https://www.navegg.com/sites/default/files/2022-04/banner-home.jpg) no-repeat right bottom #25232E;background-size:48% auto;color:#fff;">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">a</div>
+                <div class="col-md-6" style="height:700px;">b</div>
+            </div>
+        </div>
+    </div>
+
+    <br><br><Br>
+
+            <div class="container-fluid" style="background:#26242F;height:690px;">
+                <div class="row">
+                    <div class="col-md-6">a</div>
+                    <div class="col-md-6 p-0 d-flex justify-content-end align-items-end">
+                    
+                        <div style="display:block">
+
+                        <img src="https://www.navegg.com/sites/default/files/2022-04/banner-home.jpg" width="767" height="696" alt="banner home" loading="lazy" typeof="foaf:Image" style="width:100%;height:100%;">
+
+                        </div>
+
+
+
+                    </div>
+                </div>
+            </div>
+
+
+
+    <video loop="" autoplay="" playsinline="" class="ImageWithTitle-module__imgWrapper--2-FTJ" src="//videos.ctfassets.net/1ayf56kd8zjj/4mWWQ105WKfG5RSEEt1NFC/3047768738b9bfba884addf726d0c12d/Key_Telco_Challenges_film__1_.mp4"></video>
+    
+</body>
+</html>

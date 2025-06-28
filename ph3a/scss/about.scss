@@ -1,0 +1,295 @@
+
+/*
+*
+* Typography Variables to Sobre Nós (About Us)
+*
+*/
+    /* Titulos */
+    $about-title-ff:'Volte',Arial,sans-serif;
+    $about-title-color:#2c2b2b;
+    /* Textos */
+    $about-texto-ff:system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue","Noto Sans","Liberation Sans",Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
+    $about-texto-color:#6A6F77;
+    
+
+/*
+*
+*  CSS Global for About us Covers 
+*
+*/
+
+
+    .cv-about {
+
+        /*Space for Covers*/
+        margin:30px 0 0;
+        @media (min-width: 768px){ margin:60px 0 0; }
+        @media (min-width: 992px){ margin:100px 0 0; }
+
+        .dash-divider{width:57px;height:6px;background:linear-gradient(90deg, #EE5929  0%, #ff7a00 100%);}
+
+        h2 {
+            font-size: calc(1.375rem + 2.5vw);
+            font-family: $about-title-ff;
+            color: $about-title-color;
+            letter-spacing: -1px;
+            font-weight: 600;
+        }
+        p {
+            font-family: $about-texto-ff;
+            color: $about-texto-color;
+        }
+        @media (min-width: 992px) {
+            h2 {font-size: 2.7rem; }
+            p {font-size: 17px;line-height: 1.6;}
+        }
+        
+        .btn-cta {
+            font: 500 14px/20px 'General Sans', sans-serif;
+            background: #ef5929;
+            border:1px solid #ef5929;
+            border-radius: 2px;
+            color: #fff;
+            padding: 14px 24px 17px;
+            white-space: nowrap;
+            -webkit-transform-style: preserve-3d;
+            transform-style: preserve-3d;
+            &:hover {
+                background: #fff;
+                color:#151515;
+                border: 1px solid #b9b9b9;
+            }
+        }
+
+        .btn-cta-opaco {
+            font: 500 14px/20px 'General Sans', sans-serif;
+            background: #fff;
+            border:1px solid #b9b9b9;
+            border-radius: 2px;
+            color: #151515;
+            padding: 14px 24px 17px;
+            white-space: nowrap;
+            -webkit-transform-style: preserve-3d;
+            transform-style: preserve-3d;
+            &:hover {
+                background: #ef5929;
+                color:#fff;
+                border: 1px solid #ef5929;
+            }
+        }
+
+    }
+
+
+/*
+*
+*  CSS Specific for About Covers 
+*
+*/
+
+.cv-leadership{
+
+    background: #f5f6fa;
+    clip-path: polygon(0 12vw, 100% 0, 100% 100%, 0% 100%);
+    padding-bottom: 85px;
+    margin-top:-4vw;
+
+    .dash-divider.leadership{width:7vw;min-width:80px;margin:0 auto;}
+
+}
+
+
+.cv-trajetory{
+
+    background: #f5f6fa;
+    clip-path: polygon(0 8vw, 100% 0, 100% 100%, 0% 100%);
+    margin-top:-70px;
+
+}
+
+.cv-ceo{
+
+    /*Fix to Scroll to Lideranca*/
+    &::before {
+    content: '';
+    display: block;
+    height:      115px;
+    margin-top: -115px;
+    visibility: hidden;
+    }
+
+}
+
+
+
+/*
+*
+*  About us Hero Cover
+*
+*/
+
+    .wrap-about{
+
+        .cover-logo{width: 170px;height: 54px;}
+        @media (min-width: 768px){ .cover-logo{width:200px;height: 65px;} }
+
+        /*Hero Background*/
+        .cover-hero{
+
+                .hero-bg{
+                    background-repeat:no-repeat;background-position:center center;background-size:cover;
+                    background-blend-mode: multiply;background-color: #555555;
+                    height:60vh;min-height:450px;max-height:735px;
+                    clip-path: polygon(100% 0, 100% 90%, 50% 100%, 50% 100%, 0 90%, 0 0);
+                }
+                .hero-content{height:50vh;min-height:350px;max-height:635px;}
+
+                h1 {font:600 calc(1.375rem + 9vw) 'Volte',Arial,sans-serif;color: #fff;letter-spacing: -1px;}
+                p{font:300 16px/1.4 'MontSerrat',Arial,sans-serif;color: #fff;text-align: center;max-width: 800px;}
+
+
+                @media (min-width: 768px){ 
+                   .hero-bg{
+                        height:85vh;clip-path: polygon(100% 0, 100% 95%, 50% 100%, 50% 100%, 0 95%, 0 0);
+                    }
+                    .hero-content{height:75vh;}
+                    h1 {font:600 calc(1.375rem + 4.5vw) 'Volte',Arial,sans-serif;color: #fff;letter-spacing: -1px;}
+                    p{font:300 20px/1.4 'MontSerrat',Arial,sans-serif;color: #fff;text-align: center;max-width: 800px;}
+                }
+
+        }
+
+        /*Hero Box*/
+        .cover-hero-box{
+
+            margin-top: -18vh;position:relative;z-index:1;
+            @media (min-width: 768px){ margin-top: -17vh; }
+
+            .hero-box-inside{background:#ef5929;max-width:800px;margin:0 auto;border-radius:10px;}
+
+            h3 {font:600 calc(1.375rem + 3.8vw) 'Volte',Arial,sans-serif;color: #fff;letter-spacing: -1px;text-align: center;}
+            p{font:300 16px/1.4 'MontSerrat',Arial,sans-serif;color: #fff;text-align: center;max-width: 800px;}
+
+            @media (min-width: 768px){
+                h3 {font:600 calc(1.375rem + 1.5vw) 'Volte',Arial,sans-serif;color: #fff;letter-spacing: -1px;}
+                p{font:300 20px/1.4 'MontSerrat',Arial,sans-serif;color: #fff;text-align: center;max-width: 800px;}
+            }
+
+        }
+    }
+
+
+
+
+    .cv-history{
+
+        /*Space for Cover specific to History*/
+        margin:30px 0 0;
+        @media (min-width: 768px){ margin:60px 0 0; }
+        @media (min-width: 992px){ margin:70px 0 0; }
+    
+        .dash-divider.history{width:7vw;min-width:80px;margin:0 auto;}
+    
+    
+                    /*
+                    *
+                    *  CSS Timeline for Sobre-Nós
+                    *
+                    */
+                    .time-about {
+                        max-width: 700px;
+                        margin: auto;
+                        p {
+                            font-size: 1em;
+                            line-height: 1.75em;
+                            border-top: 3px solid;
+                            -o-border-image: linear-gradient(to right, #ffaf32 0%, #ff8008 100%);
+                            border-image: linear-gradient(to right, #ffaf32 0%, #ff8008 100%);
+                            border-image-slice: 1;
+                            border-width: 3px;
+                            margin: 0;
+                            padding: 40px;
+                            counter-increment: section;
+                            position: relative;
+                            color: #34435e;
+                            &:before {
+                                content: '1995';
+                                position: absolute;
+                                border-radius: 4px;
+                                padding: 6px 8px 8px;
+                                background: linear-gradient(90deg, #EE5929 0%, #ff7a00 100%);
+                                text-align: center;
+                                line-height: 1.25em;
+                                color: #ffffff;
+                                font-size: 1em;
+                                z-index: 10;
+                            }
+                            &:nth-child(2) {
+                                &::before {
+                                    content: '2007';
+                                }
+                            }
+                            &:nth-child(3) {
+                                &::before {
+                                    content: '2008';
+                                }
+                            }
+                            &:nth-child(4) {
+                                &::before {
+                                    content: '2013';
+                                }
+                            }
+                            &:nth-child(odd) {
+                                border-right: 3px solid;
+                                padding-left: 0;
+                                &:before {
+                                    left: 100%;
+                                    margin-left: -30px;
+                                }
+                            }
+                            &:nth-child(even) {
+                                border-left: 3px solid;
+                                padding-right: 0;
+                                &:before {
+                                    right: 100%;
+                                    margin-right: -30px;
+                                }
+                            }
+                            &:first-child {
+                                border-top: 0;
+                                border-top-right-radius: 0;
+                                border-top-left-radius: 0;
+                            }
+                            &:last-child {
+                                border-bottom-right-radius: 0;
+                                border-bottom-left-radius: 0;
+                            }
+                        }
+                        span {
+                            color: #ef5929;
+                            font-size: 1.10rem;
+                            font-weight: 500;
+                        }
+                    }
+                    @media (min-width: 576px) {
+                        .time-about {
+                            p {
+                                &:nth-child(odd) {
+                                    &:before {
+                                        left: 100%;
+                                        margin-left: -25px;
+                                    }
+                                }
+                                &:nth-child(even) {
+                                    &:before {
+                                        right: 100%;
+                                        margin-right: -25px;
+                                    }
+                                }
+                            }
+                        }
+                    }
+    
+        
+        
+    }

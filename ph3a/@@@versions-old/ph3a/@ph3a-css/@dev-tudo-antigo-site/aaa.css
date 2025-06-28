@@ -1,0 +1,25 @@
+.cv-hero{
+    background: url(images/banner-1.png) bottom 0 right -20px no-repeat #f5f6fa;
+    background-size: 94%;
+    /* min-height:700px; */
+    margin-top:0 auto 10px;
+}
+/* .cv-hero .container > .row {height:750px;} */
+@media (min-width: 768px){
+    .cv-hero{background: url(images/banner-1.png) top 0 right 0px no-repeat #f5f6fa;
+        background-size: 50%;
+        /* min-height:550px; */
+        margin:0 auto 10px;
+    }
+    /* .cv-hero .container > .row { height:600px;} */
+}
+
+@media (min-width: 992px){
+    .cv-hero{
+        background: url(images/banner-1.png) top 0 right 0px no-repeat #f5f6fa;
+        background-size: 45% auto;
+        /* min-height:600px; */
+    }
+    .cv-hero .container > .row { height:550px;} 
+    
+}
